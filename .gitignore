@@ -1,0 +1,7 @@
+Ressourcen/
+.superpowers/
+docs/
+.claude/
+ruvector.db
+.DS_Store
+*.DS_Store
