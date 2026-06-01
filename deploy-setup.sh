@@ -11,7 +11,8 @@ echo ""
 
 read -p "  SSH Hostname (z.B. gc1.cyon.ch): " SSH_HOST
 read -p "  SSH Benutzername:                 " SSH_USER
-read -e -i "~/www/marke.vka-albis.ch" -p "  Web-Verzeichnis auf cyon:        " WEB_ROOT
+read -p "  Web-Verzeichnis auf cyon [~/www/marke.vka-albis.ch]: " WEB_ROOT
+WEB_ROOT="${WEB_ROOT:-~/www/marke.vka-albis.ch}"
 REPO_PATH="~/repos/marke.git"
 
 echo ""
