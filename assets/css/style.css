@@ -39,6 +39,31 @@ body {
 /* ── LAYOUT ── */
 .container { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad); }
 
+/* ── ABT-BAR ── */
+.abt-bar {
+  background: var(--blue);
+}
+.abt-bar-inner {
+  max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad);
+  height: 34px; display: flex; align-items: center; gap: 12px;
+  overflow-x: auto; scrollbar-width: none;
+}
+.abt-bar-inner::-webkit-scrollbar { display: none; }
+.abt-label {
+  font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.5);
+  text-transform: uppercase; letter-spacing: 0.15em; white-space: nowrap; flex-shrink: 0;
+}
+.abt-pills { display: flex; gap: 4px; }
+.abt-pill {
+  font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.65);
+  background: transparent; border: 1px solid rgba(255,255,255,0.2);
+  padding: 3px 11px; border-radius: 3px; cursor: pointer; white-space: nowrap;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  font-family: inherit;
+}
+.abt-pill:hover { background: rgba(255,255,255,0.12); color: white; border-color: rgba(255,255,255,0.4); }
+.abt-pill.active { background: rgba(255,255,255,0.18); color: white; border-color: rgba(255,255,255,0.6); }
+
 /* ── NAV ── */
 .site-nav {
   position: sticky; top: 0; z-index: 100;
@@ -95,9 +120,12 @@ body {
 .hero-logo-box {
   background: var(--off-white); border: 1px solid var(--border);
   border-radius: 12px; padding: 36px;
-  display: flex; align-items: center; justify-content: center;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0;
 }
-.hero-logo-box img { width: 100%; height: auto; max-width: 220px; }
+.hero-logo-box > img { width: 100%; height: auto; max-width: 220px; }
+.hero-abt-slot { display: flex; flex-direction: column; align-items: center; width: 100%; }
+.hero-abt-sep { width: 40px; height: 1px; background: var(--border); margin: 16px 0; }
+#hero-abt-img { max-height: 44px; max-width: 180px; width: auto; height: auto; }
 
 /* ── SECTIONS ── */
 .section {
@@ -199,7 +227,45 @@ body {
 .type-scale td:first-child { color: var(--black); font-weight: 700; width: 140px; }
 .type-scale tr:last-child td { border-bottom: none; }
 
-/* ── 05 DOWNLOADS ── */
+/* ── 05 BILDSPRACHE ── */
+.bild-criteria {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px;
+}
+.bild-tag {
+  font-size: 11px; font-weight: 700; color: var(--orange);
+  background: #fff4ee; border: 1px solid #ffd5b0;
+  padding: 5px 12px; border-radius: 20px; letter-spacing: 0.04em;
+}
+
+.bild-examples {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 8px;
+}
+
+.bild-col-title {
+  font-size: 12px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.1em; margin-bottom: 12px; padding-bottom: 10px;
+  border-bottom: 2px solid;
+}
+.bild-col-title--good { color: #2d7a4f; border-color: #2d7a4f; }
+.bild-col-title--bad  { color: #c0392b; border-color: #c0392b; }
+
+.bild-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+}
+.bild-placeholder {
+  aspect-ratio: 4/3;
+  background: var(--off-white); border: 1.5px dashed var(--border);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px; font-weight: 700; color: #ccc;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  overflow: hidden;
+}
+.bild-placeholder img {
+  width: 100%; height: 100%; object-fit: cover; border-radius: 6px;
+}
+
+/* ── 06 DOWNLOADS ── */
 .dl-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .dl-item {
   border: 1px solid var(--border); border-radius: 10px; padding: 22px;
@@ -239,6 +305,7 @@ body {
   .hero-title { font-size: 40px; }
   .nav-links { display: none; }
   .id-grid, .family-grid, .dos-donts { grid-template-columns: 1fr; }
+  .bild-examples { grid-template-columns: 1fr; }
   .logo-grid { grid-template-columns: repeat(2, 1fr); }
   .color-grid { grid-template-columns: repeat(2, 1fr); }
   .dl-grid { grid-template-columns: repeat(2, 1fr); }

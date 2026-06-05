@@ -11,6 +11,12 @@
 
 <!-- ══ NAV ══ -->
 <header class="site-nav" id="site-nav">
+  <div class="abt-bar">
+    <div class="abt-bar-inner">
+      <span class="abt-label">Abteilung</span>
+      <div class="abt-pills" id="abt-pills"></div>
+    </div>
+  </div>
   <div class="nav-inner">
     <a href="#" class="nav-logo">
       <img src="assets/logos/Verkehrskadetten_Kombination_RGB_orange+schwarz-cropped.svg" alt="Verkehrskadetten">
@@ -22,6 +28,7 @@
         <li><a href="#logo">Logo</a></li>
         <li><a href="#farben">Farben</a></li>
         <li><a href="#typografie">Typografie</a></li>
+        <li><a href="#bildsprache">Bildsprache</a></li>
         <li><a href="#downloads">Downloads</a></li>
       </ul>
     </nav>
@@ -43,15 +50,19 @@
   </div>
   <div class="hero-logo-box">
     <img src="assets/logos/Verkehrskadetten_Kombination_RGB_orange+schwarz-cropped.svg" alt="Verkehrskadetten Logo">
+    <div class="hero-abt-slot" id="hero-abt-slot" style="display:none">
+      <div class="hero-abt-sep"></div>
+      <img id="hero-abt-img" src="" alt="">
+    </div>
   </div>
 </div>
 
 <!-- ══ 01 MARKENIDENTITÄT ══ -->
 <section class="section" id="marke">
-  <p class="section-label">01 — Markenidentität</p>
+  <p class="section-label">Markenidentität</p>
   <h2 class="section-title">Warum eine Marke?</h2>
   <p class="section-desc">
-    Über 20 Abteilungen in der ganzen Schweiz tragen dasselbe orange Weste —
+    Über 20 Abteilungen in der ganzen Schweiz tragen dieselbe orange Uniform —
     ein einheitliches Erscheinungsbild schafft Wiedererkennung und Vertrauen
     bei Jugendlichen, Eltern, Behörden und Veranstaltenden.
     Der Slogan <strong>«Jugend bewegt Verkehr»</strong> verbindet drei Ebenen:
@@ -69,14 +80,14 @@
     </div>
     <div class="id-card">
       <p class="id-card-q">Was verbindet uns?</p>
-      <p class="id-card-a">Gemeinschaft, Disziplin — und der orange Streifen auf der Weste.</p>
+      <p class="id-card-a">Gemeinschaft, Disziplin — und die orange Uniform.</p>
     </div>
   </div>
 </section>
 
 <!-- ══ 02 LOGO-SYSTEM ══ -->
 <section class="section" id="logo">
-  <p class="section-label">02 — Logo-System</p>
+  <p class="section-label">Logo-System</p>
   <h2 class="section-title">Logos &amp; Varianten</h2>
   <p class="section-desc">
     Das Logo-System besteht aus Bildmarke, Wort-Bild-Kombination und Schriftmarke —
@@ -151,6 +162,11 @@
     </div>
   </div>
 
+  <div class="logo-subsection" id="abt-logos-section" style="display:none">
+    <h3 id="abt-logos-heading"></h3>
+    <div class="logo-grid" id="abt-logos-grid"></div>
+  </div>
+
   <div class="logo-subsection">
     <h3>Familienmarken-Architektur</h3>
     <div class="family-grid">
@@ -221,7 +237,7 @@
 
 <!-- ══ 03 FARBEN ══ -->
 <section class="section" id="farben">
-  <p class="section-label">03 — Farben</p>
+  <p class="section-label">Farben</p>
   <h2 class="section-title">Farbpalette</h2>
   <p class="section-desc">
     VK Orange ist die Primärfarbe — klar, energetisch, unverwechselbar.
@@ -277,7 +293,7 @@
 
 <!-- ══ 04 TYPOGRAFIE ══ -->
 <section class="section" id="typografie">
-  <p class="section-label">04 — Typografie</p>
+  <p class="section-label">Typografie</p>
   <h2 class="section-title">Fakt Typeface</h2>
   <p class="section-desc">
     Fakt von OurType ist die exklusive Hausschrift der Verkehrskadetten.
@@ -322,9 +338,67 @@
   </div>
 </section>
 
-<!-- ══ 05 DOWNLOADS ══ -->
+<!-- ══ 05 BILDSPRACHE ══ -->
+<section class="section" id="bildsprache">
+  <p class="section-label">Bildsprache</p>
+  <h2 class="section-title">Bildwelt</h2>
+  <p class="section-desc">
+    Die Bildwelt zeigt Jugendliche im echten Einsatz — authentisch, nah und kompetent.
+    Bilder transportieren, was Worte allein nicht können: echte Verantwortung, echter Teamgeist.
+  </p>
+
+  <div class="bild-criteria">
+    <span class="bild-tag">Authentische Situationen</span>
+    <span class="bild-tag">Sichtbare Verantwortung</span>
+    <span class="bild-tag">Nähe zu den Menschen</span>
+    <span class="bild-tag">Teamgeist</span>
+    <span class="bild-tag">Kompetenz &amp; Professionalität</span>
+  </div>
+
+  <div class="bild-examples">
+    <div class="bild-col">
+      <h3 class="bild-col-title bild-col-title--good">Gute Beispiele</h3>
+      <div class="bild-grid">
+        <div class="bild-placeholder"><img src="assets/fotos/kaderausbildung.webp" alt="Kaderausbildung — Kompetenz und Professionalität"></div>
+        <div class="bild-placeholder"><img src="assets/fotos/verkehrskadett-portrait-zebrastreifen.webp" alt="Verkehrskadett am Zebrastreifen — Gesicht, Verantwortung"></div>
+        <div class="bild-placeholder"><img src="assets/fotos/verkehrskadetten-gruppenfoto-abend.webp" alt="Gruppenfoto am Abend — Teamgeist und Gemeinschaft"></div>
+      </div>
+    </div>
+    <div class="bild-col">
+      <h3 class="bild-col-title bild-col-title--bad">Schlechte Beispiele</h3>
+      <div class="bild-grid">
+        <div class="bild-placeholder"><img src="assets/fotos/aus-und-weiterbildung.webp" alt="Schlechtes Beispiel — unklarer Kontext"></div>
+        <div class="bild-placeholder"><img src="assets/fotos/verkehrsdienst-kreuzung.webp" alt="Schlechtes Beispiel — Aufnahme von hinten, kein Gesichtsbezug"></div>
+        <div class="bild-placeholder"><img src="assets/fotos/verkehrsregelung.webp" alt="Schlechtes Beispiel — Aufnahme von hinten, kein Gesichtsbezug"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dos-donts" style="margin-top: 24px;">
+    <div class="dos">
+      <h4>Verwenden</h4>
+      <ul>
+        <li>Authentische Situationen im echten Einsatz</li>
+        <li>Sichtbare Verantwortung der Jugendlichen</li>
+        <li>Nähe zu den Menschen — Gesichter, Emotionen</li>
+        <li>Teamgeist und Gemeinschaft</li>
+        <li>Kompetenz und Professionalität</li>
+      </ul>
+    </div>
+    <div class="donts">
+      <h4>Vermeiden</h4>
+      <ul>
+        <li>Unklare Bildaussagen ohne erkennbaren Kontext</li>
+        <li>Aufnahmen von hinten ohne Gesichtsbezug</li>
+        <li>Unscharfe oder technisch schlechte Bilder</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 06 DOWNLOADS ══ -->
 <section class="section" id="downloads">
-  <p class="section-label">05 — Downloads</p>
+  <p class="section-label">Downloads</p>
   <h2 class="section-title">Brand Assets</h2>
   <p class="section-desc">
     Alle offiziellen Dateien zum Download. Nur diese freigegebenen Versionen verwenden.
