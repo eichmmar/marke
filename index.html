@@ -13,8 +13,8 @@
 <header class="site-nav" id="site-nav">
   <div class="abt-bar">
     <div class="abt-bar-inner">
-      <span class="abt-label">Abteilung</span>
-      <div class="abt-pills" id="abt-pills"></div>
+      <label class="abt-label" for="abt-select">Abteilung</label>
+      <select id="abt-select" class="abt-select"></select>
     </div>
   </div>
   <div class="nav-inner">
@@ -159,6 +159,46 @@
         </div>
       </div>
 
+      <div class="logo-card">
+        <div class="logo-preview bg-dark">
+          <img src="assets/logos/Verkehrskadetten_Schriftmarke_RGB_weiss.svg" alt="Schriftmarke weiss">
+        </div>
+        <div class="logo-footer">
+          <span class="logo-name">Schriftmarke weiss</span>
+          <a href="assets/logos/Verkehrskadetten_Schriftmarke_RGB_weiss.svg" download class="logo-dl">↓ SVG</a>
+        </div>
+      </div>
+
+      <div class="logo-card">
+        <div class="logo-preview bg-dark">
+          <img src="assets/logos/Verkehrskadetten_Kombination_RGB_outline+weiss.svg" alt="Kombination outline+weiss">
+        </div>
+        <div class="logo-footer">
+          <span class="logo-name">Kombination outline w</span>
+          <a href="assets/logos/Verkehrskadetten_Kombination_RGB_outline+weiss.svg" download class="logo-dl">↓ SVG</a>
+        </div>
+      </div>
+
+      <div class="logo-card">
+        <div class="logo-preview bg-white">
+          <img src="assets/logos/Verkehrskadetten_Bildmarke_RGB_outline+schwarz.svg" alt="Bildmarke outline+schwarz">
+        </div>
+        <div class="logo-footer">
+          <span class="logo-name">Bildmarke outline sw</span>
+          <a href="assets/logos/Verkehrskadetten_Bildmarke_RGB_outline+schwarz.svg" download class="logo-dl">↓ SVG</a>
+        </div>
+      </div>
+
+      <div class="logo-card">
+        <div class="logo-preview bg-dark">
+          <img src="assets/logos/Verkehrskadetten_Bildmarke_RGB_outline+weiss.svg" alt="Bildmarke outline+weiss">
+        </div>
+        <div class="logo-footer">
+          <span class="logo-name">Bildmarke outline w</span>
+          <a href="assets/logos/Verkehrskadetten_Bildmarke_RGB_outline+weiss.svg" download class="logo-dl">↓ SVG</a>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -167,48 +207,18 @@
     <div class="logo-grid" id="abt-logos-grid"></div>
   </div>
 
-  <div class="logo-subsection">
-    <h3>Familienmarken-Architektur</h3>
-    <div class="family-grid">
-
-      <div class="family-card">
-        <div class="family-preview">
-          <img src="assets/logos/VK-Albis_Kombination_RGB_orange+schwarz-cropped.svg" alt="VK Albis — Endorsed">
-        </div>
-        <div class="family-body">
-          <p class="family-type">Endorsed</p>
-          <p class="family-name">z.B. VK Albis</p>
-          <p class="family-desc">Eigener Sektionsname mit VK-Bildmarke. Für Sektionen mit starker regionaler Identität.</p>
-        </div>
-      </div>
-
-      <div class="family-card">
-        <div class="family-preview" style="background: #f0f4f8;">
-          <span style="font-size: 11px; color: #aaa; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;">Beispiel folgt</span>
-        </div>
-        <div class="family-body">
-          <p class="family-type">Familie</p>
-          <p class="family-name">VK + Sektionsname</p>
-          <p class="family-desc">Dachmarke VK mit Sektionsname. Stärkere Anlehnung an die nationale Marke.</p>
-        </div>
-      </div>
-
-      <div class="family-card">
-        <div class="family-preview" style="background: #f0f4f8;">
-          <span style="font-size: 11px; color: #aaa; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;">Beispiel folgt</span>
-        </div>
-        <div class="family-body">
-          <p class="family-type">Kollaboration</p>
-          <p class="family-name">VK + Partner</p>
-          <p class="family-desc">Für gemeinsame Auftritte mit externen Partnern und Veranstaltenden.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
   <div class="logo-subsection" style="margin-bottom: 0;">
     <h3>Anwendungsregeln</h3>
+
+    <div class="schutzraum-demo" aria-label="Schutzraum-Diagramm">
+      <div class="schutzraum-outer">
+        <div class="schutzraum-inner">
+          <img src="assets/logos/Verkehrskadetten_Kombination_RGB_orange+schwarz-cropped.svg" alt="Logo">
+        </div>
+      </div>
+      <p class="schutzraum-caption">Schutzraum = Mindestabstand × (Höhe des Logos) rundum freilassen</p>
+    </div>
+
     <div class="dos-donts">
       <div class="dos">
         <h4>So verwenden</h4>
@@ -252,6 +262,7 @@
         <p class="color-name">VK Orange</p>
         <p class="color-hex">#FF6300</p>
         <p class="color-rgb">RGB 255 · 99 · 0</p>
+        <p class="color-cmyk">CMYK 0 · 61 · 100 · 0</p>
       </div>
       <div class="color-toast">Kopiert!</div>
     </div>
@@ -263,6 +274,7 @@
         <p class="color-name">VK Schwarz</p>
         <p class="color-hex">#1A1A1A</p>
         <p class="color-rgb">RGB 26 · 26 · 26</p>
+        <p class="color-cmyk">CMYK 0 · 0 · 0 · 93</p>
       </div>
       <div class="color-toast">Kopiert!</div>
     </div>
@@ -274,6 +286,7 @@
         <p class="color-name">VK Blau</p>
         <p class="color-hex">#2F5D77</p>
         <p class="color-rgb">RGB 47 · 93 · 119</p>
+        <p class="color-cmyk">CMYK 60 · 22 · 0 · 53</p>
       </div>
       <div class="color-toast">Kopiert!</div>
     </div>
@@ -285,6 +298,7 @@
         <p class="color-name">VK Weiss</p>
         <p class="color-hex">#F8F8F8</p>
         <p class="color-rgb">RGB 248 · 248 · 248</p>
+        <p class="color-cmyk">CMYK 0 · 0 · 0 · 2</p>
       </div>
       <div class="color-toast">Kopiert!</div>
     </div>
@@ -335,6 +349,36 @@
         <td>10–12 px · Bold · Grossbuchstaben + Letter-Spacing</td>
       </tr>
     </table>
+  </div>
+
+  <div class="type-download">
+    <a href="downloads/fakt-schriften.zip" download class="dl-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Fakt Schriftarten herunterladen
+    </a>
+    <p class="type-download-note">TTF + OTF · Lizenz: OurType — nur für interne VK-Nutzung</p>
+  </div>
+
+  <div class="type-fallback">
+    <h4>Ersatzschriftarten</h4>
+    <p class="type-fallback-intro">Falls Fakt nicht verfügbar ist (externe Kommunikation, E-Mail, Office), diese Alternativen verwenden:</p>
+    <div class="fallback-grid">
+      <div class="fallback-card">
+        <span class="fallback-tag">Web</span>
+        <span class="fallback-name" style="font-family: 'Inter', sans-serif;">Inter</span>
+        <span class="fallback-desc">Google Fonts — kostenlos, geometrisch, sehr nah an Fakt</span>
+      </div>
+      <div class="fallback-card">
+        <span class="fallback-tag">E-Mail · Office</span>
+        <span class="fallback-name" style="font-family: Calibri, sans-serif;">Calibri</span>
+        <span class="fallback-desc">Vorinstalliert auf Windows/macOS, ähnliche Proportionen</span>
+      </div>
+      <div class="fallback-card">
+        <span class="fallback-tag">Universal</span>
+        <span class="fallback-name" style="font-family: Arial, sans-serif;">Arial / Helvetica</span>
+        <span class="fallback-desc">Universell verfügbar — nur als letzter Fallback</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -402,7 +446,7 @@
   <h2 class="section-title">Brand Assets</h2>
   <p class="section-desc">
     Alle offiziellen Dateien zum Download. Nur diese freigegebenen Versionen verwenden.
-    Bei Fragen: <a href="mailto:mark.eichmann@vka-albis.ch" style="color: var(--orange);">mark.eichmann@vka-albis.ch</a>
+    Bei Fragen: <a href="mailto:marke-vk@vka-albis.ch" style="color: var(--orange);">marke-vk@vka-albis.ch</a>
   </p>
 
   <div class="dl-grid">
@@ -414,9 +458,9 @@
           <path d="M6 9h6M9 6v6" stroke="#ff6300" stroke-width="1.5" stroke-linecap="round"/>
         </svg>
       </div>
-      <p class="dl-name">Logos SVG (RGB)</p>
-      <p class="dl-desc">Alle Varianten für Digital: Kombination, Bildmarke, Schriftmarke in orange, weiss und outline.</p>
-      <a href="downloads/logos-svg.zip" download class="dl-btn unavailable">Demnächst</a>
+      <p class="dl-name">Logos Dachmarke</p>
+      <p class="dl-desc">Alle Varianten: Kombination, Bildmarke, Schriftmarke — SVG (RGB) und PDF (CMYK) in orange, weiss und outline.</p>
+      <a href="downloads/logos-dachmarke.zip" download class="dl-btn">↓ ZIP</a>
     </div>
 
     <div class="dl-item">
@@ -427,9 +471,9 @@
           <path d="M9 10v3M7.5 11.5l1.5 1.5 1.5-1.5" stroke="#ff6300" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
-      <p class="dl-name">Logos PDF (CMYK)</p>
-      <p class="dl-desc">Druckoptimierte Versionen für Offset- und Digitaldruck. Alle Varianten als CMYK-PDF.</p>
-      <a href="downloads/logos-pdf-cmyk.zip" download class="dl-btn unavailable">Demnächst</a>
+      <p class="dl-name" id="dl-abt-name">Logos Abteilungen</p>
+      <p class="dl-desc" id="dl-abt-desc">Wähle deine Abteilung im Header — der Download passt sich automatisch an.</p>
+      <a id="dl-abt-btn" class="dl-btn unavailable">Abteilung wählen</a>
     </div>
 
     <div class="dl-item">
@@ -448,26 +492,13 @@
     <div class="dl-item">
       <div class="dl-icon">
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-          <rect x="2" y="5" width="14" height="9" rx="1.5" stroke="#ff6300" stroke-width="1.5"/>
-          <path d="M6 5V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1" stroke="#ff6300" stroke-width="1.5"/>
-          <circle cx="9" cy="9.5" r="1.5" fill="#ff6300"/>
-        </svg>
-      </div>
-      <p class="dl-name">Social Media Vorlagen</p>
-      <p class="dl-desc">Instagram und Facebook: Endorsed, Familie und Kollaboration — alle drei Markentypen.</p>
-      <a href="downloads/social-media.zip" download class="dl-btn unavailable">Demnächst</a>
-    </div>
-
-    <div class="dl-item">
-      <div class="dl-icon">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
           <polygon points="9,2 16,6 16,12 9,16 2,12 2,6" stroke="#ff6300" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
           <circle cx="9" cy="9" r="2" stroke="#ff6300" stroke-width="1.5"/>
         </svg>
       </div>
       <p class="dl-name">Adobe Illustrator</p>
       <p class="dl-desc">Original-.ai-Dateien für alle Marken und Familienmarken. Für Druckproduktionen.</p>
-      <a href="downloads/illustrator.zip" download class="dl-btn unavailable">Demnächst</a>
+      <a href="downloads/illustrator.zip" download class="dl-btn">↓ ZIP</a>
     </div>
 
     <div class="dl-item">
@@ -481,7 +512,19 @@
       </div>
       <p class="dl-name">Farbpalette</p>
       <p class="dl-desc">Alle Farbwerte als Adobe ASE Swatch-Datei. HEX, RGB und CMYK für alle Adobe-Programme.</p>
-      <a href="downloads/farbpalette.ase" download class="dl-btn unavailable">Demnächst</a>
+      <a href="downloads/farbpalette.ase" download class="dl-btn">↓ ASE</a>
+    </div>
+
+    <div class="dl-item">
+      <div class="dl-icon">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <rect x="2" y="2" width="14" height="14" rx="2" stroke="#ff6300" stroke-width="1.5"/>
+          <path d="M5 6h8M5 9h8M5 12h5" stroke="#ff6300" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <p class="dl-name">Web Guidelines</p>
+      <p class="dl-desc">Richtlinien für digitale Auftritte: Farben, Typografie und Logonutzung im Web.</p>
+      <a href="downloads/web-guidelines.pdf" download class="dl-btn">↓ PDF</a>
     </div>
 
   </div>
@@ -494,8 +537,8 @@
       <img src="assets/logos/Verkehrskadetten_Schriftmarke_RGB_weiss.svg" alt="Verkehrskadetten">
     </div>
     <div class="footer-meta">
-      Markenportal betrieben von VK Albis<br>
-      <a href="mailto:mark.eichmann@vka-albis.ch">mark.eichmann@vka-albis.ch</a><br>
+      Markenportal der Verkehrskadetten<br>
+      <a href="mailto:marke-vk@vka-albis.ch">marke-vk@vka-albis.ch</a><br>
       © 2026 Schweizerischer Verkehrskadetten Verband
     </div>
   </div>

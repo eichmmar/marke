@@ -12,14 +12,17 @@ Statisches Brand-Manual-Portal für die Dachmarke «Verkehrskadetten».
 ## Dateistruktur
 
 ```
-index.html          ← Gesamte Seite (single scrolling page)
+index.html               ← Gesamte Seite (single scrolling page)
+crop-svg.py              ← Tool: SVG-Whitespace entfernen (viewBox anpassen)
 assets/
-  css/style.css     ← Alle Styles, CSS Custom Properties am Anfang
-  js/main.js        ← Sticky nav (IntersectionObserver) + Farb-Clipboard
-  fonts/            ← FaktBold.ttf, FaktNormal.ttf/.otf
-  logos/            ← SVGs aus Ressourcen/Verkehrskadetten_SVG_Dateien/
-downloads/          ← Downloadbare Assets (ZIPs + PDFs)
-Ressourcen/         ← Quelldateien (nicht im Git, nicht auf Server)
+  css/style.css          ← Alle Styles, CSS Custom Properties am Anfang
+  js/main.js             ← Sticky nav (IntersectionObserver) + Farb-Clipboard
+  fonts/                 ← FaktBold.ttf, FaktNormal.ttf/.otf
+  logos/                 ← Dachmarken-SVGs (viewBox auf Inhalt gercroppt)
+  logos/abteilungen/     ← Abteilungslogos (viewBox auf Inhalt gercroppt)
+  social-media-preview.png ← OG-Image
+downloads/               ← Downloadbare Assets (ZIPs + PDFs)
+Ressourcen/              ← Quelldateien (nicht im Git, nicht auf Server)
 ```
 
 ## Sektionen in index.html
@@ -27,7 +30,7 @@ Ressourcen/         ← Quelldateien (nicht im Git, nicht auf Server)
 | ID | Inhalt |
 |---|---|
 | `#marke` | Markenidentität — 3 Karten: Wofür / Wie / Was verbindet |
-| `#logo` | Logo-System — Dachmarke SVGs + Familienmarken-Architektur |
+| `#logo` | Logo-System — Dachmarke SVGs + Abteilungslogos |
 | `#farben` | Farbpalette — 4 Kacheln, Klick kopiert HEX in Clipboard |
 | `#typografie` | Fakt Bold/Normal + Schriftgrössentabelle |
 | `#bildsprache` | Bildwelt — Kriterien-Chips + Gut/Schlecht-Beispiele + Dos&Don'ts |
@@ -57,14 +60,27 @@ git add . && git commit -m "Beschreibung" && git push origin main
 Remote `origin` → `ssh://vkaalbis@s078.cyon.net/home/vkaalbis/repos/marke.git`  
 Post-receive Hook deployt nach `~/public_html/marke/`
 
-## Downloads (noch ausstehend)
+## Downloads
 
-Dateien in `downloads/` ablegen, dann `class="dl-btn unavailable"` → `class="dl-btn"` in index.html:
+Verfügbare Dateien in `downloads/`. Nicht verfügbare Buttons tragen `class="dl-btn unavailable"` → `class="dl-btn"` sobald bereit.
 
-| Datei | Quelle |
+| Datei | Status |
 |---|---|
-| `logos-svg.zip` | `Ressourcen/Verkehrskadetten_SVG_Dateien/` zippen |
-| `logos-pdf-cmyk.zip` | `Ressourcen/Verkehrskadetten_PDF_Dateien/` zippen |
-| `social-media.zip` | `Ressourcen/…/Verkehrskadetten_SocialMedia/` zippen |
-| `illustrator.zip` | `Ressourcen/Verkehrskadetten_AdobeIllustrator_Dateien/` zippen |
-| `farbpalette.ase` | Manuell aus Adobe exportieren |
+| `logos-dachmarke.zip` | ✅ vorhanden |
+| `logos-abteilungen.zip` | ✅ vorhanden |
+| `illustrator.zip` | ✅ vorhanden |
+| `farbpalette.ase` | ✅ vorhanden |
+| `social-media.zip` | ✅ vorhanden |
+| `fakt-schriften.zip` | ✅ vorhanden |
+| `web-guidelines.pdf` | ✅ vorhanden |
+| `logos-pdf-cmyk.zip` | ausstehend — `Ressourcen/Verkehrskadetten_PDF_Dateien/` zippen |
+
+## SVG-Whitespace entfernen
+
+```bash
+python3 crop-svg.py assets/logos/neues-logo.svg
+# oder alle auf einmal:
+python3 crop-svg.py
+```
+
+Berechnet die exakte Bounding-Box aller Pfade und setzt den viewBox entsprechend (+ 2px Padding). Benötigt `svgpathtools` (`pip3 install svgpathtools`).

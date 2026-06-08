@@ -53,16 +53,15 @@ body {
   font-size: 10px; font-weight: 700; color: rgba(255,255,255,0.5);
   text-transform: uppercase; letter-spacing: 0.15em; white-space: nowrap; flex-shrink: 0;
 }
-.abt-pills { display: flex; gap: 4px; }
-.abt-pill {
-  font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.65);
-  background: transparent; border: 1px solid rgba(255,255,255,0.2);
-  padding: 3px 11px; border-radius: 3px; cursor: pointer; white-space: nowrap;
+.abt-select {
+  font-size: 11px; font-weight: 700; color: white;
+  background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.3);
+  padding: 3px 8px; border-radius: 3px; cursor: pointer;
+  font-family: inherit; min-width: 180px;
   transition: background 0.15s, color 0.15s, border-color 0.15s;
   font-family: inherit;
 }
-.abt-pill:hover { background: rgba(255,255,255,0.12); color: white; border-color: rgba(255,255,255,0.4); }
-.abt-pill.active { background: rgba(255,255,255,0.18); color: white; border-color: rgba(255,255,255,0.6); }
+.abt-select:hover, .abt-select:focus { background: rgba(255,255,255,0.2); outline: none; }
 
 /* ── NAV ── */
 .site-nav {
@@ -120,12 +119,12 @@ body {
 .hero-logo-box {
   background: var(--off-white); border: 1px solid var(--border);
   border-radius: 12px; padding: 36px;
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0;
+  display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 0;
 }
-.hero-logo-box > img { width: 100%; height: auto; max-width: 220px; }
-.hero-abt-slot { display: flex; flex-direction: column; align-items: center; width: 100%; }
+.hero-logo-box > img { height: 72px; width: auto; max-width: 100%; }
+.hero-abt-slot { display: flex; flex-direction: column; align-items: flex-start; width: 100%; }
 .hero-abt-sep { width: 40px; height: 1px; background: var(--border); margin: 16px 0; }
-#hero-abt-img { max-height: 44px; max-width: 180px; width: auto; height: auto; }
+#hero-abt-img { height: 72px; width: auto; max-width: 100%; }
 
 /* ── SECTIONS ── */
 .section {
@@ -150,15 +149,27 @@ body {
 .logo-subsection { margin-bottom: 40px; }
 .logo-subsection h3 { font-size: 14px; font-weight: 700; color: var(--black); margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
 
+.architektur-grid { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 12px; }
+.architektur-card { flex: 1; min-width: 160px; border: 1px solid var(--border); border-radius: 10px; padding: 16px; text-align: center; background: white; }
+.architektur-label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--orange); }
+.architektur-logo { height: 80px; display: flex; align-items: center; justify-content: center; margin: 12px 0; }
+.architektur-logo img { max-height: 64px; max-width: 100%; }
+.architektur-logo--abt img { max-height: 56px; }
+.architektur-placeholder { font-size: 11px; color: #aaa; }
+.architektur-desc { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+.architektur-plus { font-size: 28px; font-weight: 700; color: var(--orange); flex-shrink: 0; }
+.architektur-note { font-size: 11px; color: #888; background: #fff8f4; border-left: 3px solid var(--orange); padding: 8px 12px; border-radius: 0 6px 6px 0; }
+
 .logo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.logo-card { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.logo-card { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
 .logo-preview { height: 110px; display: flex; align-items: center; justify-content: center; padding: 20px; }
 .logo-preview.bg-white { background: white; border-bottom: 1px solid var(--border); }
 .logo-preview.bg-dark { background: var(--black); }
+.logo-preview.bg-blue { background: var(--blue); }
 .logo-preview.bg-orange { background: var(--orange); }
 .logo-preview img { max-height: 64px; max-width: 100%; width: auto; }
 .logo-footer {
-  padding: 10px 14px; background: var(--off-white); border-top: 1px solid var(--border);
+  flex: 1; padding: 10px 14px; background: var(--off-white); border-top: 1px solid var(--border);
   display: flex; align-items: center; justify-content: space-between;
 }
 .logo-name { font-size: 11px; font-weight: 700; color: var(--black); }
@@ -168,6 +179,7 @@ body {
   text-decoration: none; transition: background 0.15s; white-space: nowrap;
 }
 .logo-dl:hover { background: #ffe8d6; }
+.logo-dl-group { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
 
 .family-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 8px; }
 .family-card { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
@@ -181,6 +193,12 @@ body {
 .family-type { font-size: 10px; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 3px; }
 .family-name { font-size: 13px; font-weight: 700; color: var(--black); }
 .family-desc { font-size: 12px; color: var(--text-muted); margin-top: 3px; line-height: 1.45; }
+
+.schutzraum-demo { display: flex; flex-direction: column; align-items: center; margin: 16px 0 24px; }
+.schutzraum-outer { border: 2px dashed var(--orange); border-radius: 4px; padding: 20px; background: white; position: relative; }
+.schutzraum-inner { border: 1px solid var(--border); border-radius: 4px; padding: 20px; background: white; }
+.schutzraum-inner img { height: 40px; display: block; }
+.schutzraum-caption { margin-top: 8px; font-size: 11px; color: #888; text-align: center; }
 
 .dos-donts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 8px; }
 .dos { padding: 20px; background: #f0faf4; border: 1px solid #c3e6d0; border-radius: 10px; }
@@ -205,6 +223,7 @@ body {
 .color-name { font-size: 13px; font-weight: 700; color: var(--black); }
 .color-hex { font-size: 12px; color: var(--text-muted); font-family: monospace; margin-top: 2px; }
 .color-rgb { font-size: 11px; color: #aaa; font-family: monospace; }
+.color-cmyk { font-size: 11px; color: #bbb; font-family: monospace; }
 .color-toast {
   position: absolute; top: 8px; right: 8px;
   background: var(--black); color: white;
@@ -226,6 +245,19 @@ body {
 .type-scale td { padding: 7px 0; font-size: 13px; border-bottom: 1px solid var(--border); color: var(--text-muted); }
 .type-scale td:first-child { color: var(--black); font-weight: 700; width: 140px; }
 .type-scale tr:last-child td { border-bottom: none; }
+
+.type-download { margin-top: 1.5rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.type-download .dl-btn { margin-top: 0; }
+.type-download-note { font-size: 0.75rem; color: #888; margin: 0; }
+
+.type-fallback { margin-top: 2.5rem; }
+.type-fallback h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #888; margin-bottom: 0.5rem; }
+.type-fallback-intro { font-size: 0.9rem; color: #555; margin-bottom: 1.25rem; }
+.fallback-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+.fallback-card { background: #fff; border: 1px solid #e8e8e8; border-radius: 8px; padding: 1rem 1.25rem; display: flex; flex-direction: column; gap: 0.35rem; }
+.fallback-tag { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #ff6300; }
+.fallback-name { font-size: 1.4rem; font-weight: 700; line-height: 1.2; }
+.fallback-desc { font-size: 0.78rem; color: #777; }
 
 /* ── 05 BILDSPRACHE ── */
 .bild-criteria {
@@ -284,15 +316,17 @@ body {
 }
 .dl-btn:hover { background: var(--orange); }
 .dl-btn.unavailable { background: #ccc; pointer-events: none; }
+.dl-preview { width: 100%; border-radius: 6px; margin: 8px 0 4px; object-fit: cover; max-height: 120px; border: 1px solid #eee; }
 
 /* ── FOOTER ── */
 .site-footer { background: var(--black); padding: 36px var(--pad); }
 .footer-inner {
   max-width: var(--max-w); margin: 0 auto;
+  padding: 0 var(--pad);
   display: flex; align-items: center; justify-content: space-between;
   flex-wrap: wrap; gap: 16px;
 }
-.footer-logo img { height: 28px; width: auto; filter: brightness(0) invert(1); }
+.footer-logo img { height: 56px; width: auto; filter: brightness(0) invert(1); }
 .footer-meta { font-size: 12px; color: #555; line-height: 1.7; text-align: right; }
 .footer-meta a { color: #888; text-decoration: none; }
 .footer-meta a:hover { color: var(--orange); }

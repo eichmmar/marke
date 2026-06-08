@@ -6,39 +6,48 @@ Bereits kopiert nach `assets/fonts/`:
 - `FaktBold.ttf` — Überschriften (700)
 - `FaktNormal.ttf` / `FaktNormal.otf` — Fliesstext (400)
 
-## Downloads vorbereiten
+## Downloads
 
-Folgende Dateien in `downloads/` ablegen:
-
-| Datei | Quelle |
+| Datei | Status |
 |---|---|
-| `logos-svg.zip` | `Ressourcen/Verkehrskadetten_SVG_Dateien/` zippen |
-| `logos-pdf-cmyk.zip` | `Ressourcen/Verkehrskadetten_PDF_Dateien/` zippen |
-| `Verkehrskadetten_Marken-Manual.pdf` | ✅ bereits vorhanden |
-| `social-media.zip` | `Ressourcen/…/Verkehrskadetten_SocialMedia/` zippen |
-| `illustrator.zip` | `Ressourcen/Verkehrskadetten_AdobeIllustrator_Dateien/` zippen |
-| `farbpalette.ase` | Manuell aus Adobe exportieren |
+| `logos-dachmarke.zip` | ✅ vorhanden |
+| `logos-abteilungen.zip` | ✅ vorhanden |
+| `illustrator.zip` | ✅ vorhanden |
+| `farbpalette.ase` | ✅ vorhanden |
+| `social-media.zip` | ✅ vorhanden |
+| `fakt-schriften.zip` | ✅ vorhanden |
+| `web-guidelines.pdf` | ✅ vorhanden |
+| `logos-pdf-cmyk.zip` | ausstehend — `Ressourcen/Verkehrskadetten_PDF_Dateien/` zippen |
 
-Bis die ZIPs bereit sind, zeigen die Buttons «Demnächst» — kein Fehler im Browser.
+Fehlende Buttons tragen `class="dl-btn unavailable"` in `index.html` → auf `class="dl-btn"` ändern sobald Datei bereit.
+
+## SVG-Whitespace entfernen
+
+```bash
+# Einzelne Datei
+python3 crop-svg.py assets/logos/neues-logo.svg
+
+# Alle Logos auf einmal
+python3 crop-svg.py
+```
+
+Benötigt `svgpathtools`:
+```bash
+pip3 install svgpathtools
+```
 
 ## Lokal testen
 
 ```bash
 # Mit lokalem Server (empfohlen — Fonts laden korrekt)
-cd /Users/mark/sites/vka-albis.ch/marke
+cd /Users/mark/sites/verkehrskadetten.ch/marke
 python3 -m http.server 8080
 # → http://localhost:8080
 ```
-
-## Deploy auf cyon
-
-1. Per FTP/SFTP alle Dateien ausser `Ressourcen/` und `.superpowers/` hochladen
-2. Subdomain `marke.vka-albis.ch` auf cyon einrichten (falls noch nicht vorhanden)
-3. Kein Build-Schritt — reine statische Dateien
 
 ## Inhalte pflegen
 
 - **Texte:** `index.html` direkt bearbeiten
 - **Farben/Spacing:** CSS Custom Properties am Anfang von `assets/css/style.css`
 - **Neue Logo-Variante:** `.logo-card` Block in Section 02 kopieren + anpassen
-- **E-Mail:** 2× in `index.html` suchen nach `mark.eichmann@vka-albis.ch`
+- **E-Mail:** 2× in `index.html` suchen nach `marke-vk@vka-albis.ch`
