@@ -123,7 +123,7 @@ body {
 }
 .hero-logo-box > img { height: 72px; width: auto; max-width: 100%; }
 .hero-abt-slot { display: flex; flex-direction: column; align-items: flex-start; width: 100%; }
-.hero-abt-sep { width: 40px; height: 1px; background: var(--border); margin: 16px 0; }
+.hero-abt-sep { width: 100%; height: 1px; background: var(--border); margin: 16px 0; }
 #hero-abt-img { height: 72px; width: auto; max-width: 100%; }
 
 /* ── SECTIONS ── */
