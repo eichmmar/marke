@@ -1,7 +1,7 @@
 # Markenportal Verkehrskadetten
 
 Statisches Brand-Manual-Portal für die Dachmarke «Verkehrskadetten».  
-**URL:** marke.vka-albis.ch | **Betrieben von:** VK Albis
+**URL:** marke.verkehrskadetten.ch | **Betrieben von:** VK Albis
 
 ## Tech Stack
 
@@ -34,7 +34,7 @@ Ressourcen/              ← Quelldateien (nicht im Git, nicht auf Server)
 | `#farben` | Farbpalette — 4 Kacheln, Klick kopiert HEX in Clipboard |
 | `#typografie` | Fakt Bold/Normal + Schriftgrössentabelle |
 | `#bildsprache` | Bildwelt — Kriterien-Chips + Gut/Schlecht-Beispiele + Dos&Don'ts |
-| `#downloads` | Brand Assets — 6 Download-Karten |
+| `#downloads` | Brand Assets — Download-Karten |
 
 ## Marke
 
@@ -74,6 +74,9 @@ Verfügbare Dateien in `downloads/`. Nicht verfügbare Buttons tragen `class="dl
 | `fakt-schriften.zip` | ✅ vorhanden |
 | `web-guidelines.pdf` | ✅ vorhanden |
 | `logos-pdf-cmyk.zip` | ausstehend — `Ressourcen/Verkehrskadetten_PDF_Dateien/` zippen |
+| `design-system.json` | ✅ vorhanden |
+| `design-system.md` | ✅ vorhanden |
+| `favicons.zip` | ✅ vorhanden |
 
 ## SVG-Whitespace entfernen
 

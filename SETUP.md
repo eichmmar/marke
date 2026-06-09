@@ -18,6 +18,9 @@ Bereits kopiert nach `assets/fonts/`:
 | `fakt-schriften.zip` | ✅ vorhanden |
 | `web-guidelines.pdf` | ✅ vorhanden |
 | `logos-pdf-cmyk.zip` | ausstehend — `Ressourcen/Verkehrskadetten_PDF_Dateien/` zippen |
+| `design-system.json` | ✅ vorhanden |
+| `design-system.md` | ✅ vorhanden |
+| `favicons.zip` | ✅ vorhanden |
 
 Fehlende Buttons tragen `class="dl-btn unavailable"` in `index.html` → auf `class="dl-btn"` ändern sobald Datei bereit.
 

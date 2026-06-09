@@ -1,0 +1,721 @@
+{
+  "$schema": "https://json-schema.org/draft/07/schema",
+  "$id": "https://marke.verkehrskadetten.ch/design-system.json",
+  "meta": {
+    "name": "Verkehrskadetten Markenportal",
+    "version": "1.0.0",
+    "updated": "2026-06-09",
+    "url": "https://marke.verkehrskadetten.ch",
+    "operator": "VK Albis",
+    "contact": "marke-vk@vka-albis.ch",
+    "description": "Offizielles Design-System der Dachmarke Verkehrskadetten. Enthält alle visuellen Tokens, Komponenten, Regeln und Assets für konsistente Markenkommunikation über 20+ Abteilungen in der Schweiz.",
+    "language": "de-CH",
+    "tech": {
+      "stack": "Plain HTML5 + CSS3 + Vanilla JS",
+      "framework": null,
+      "bundler": null,
+      "deployment": "Static files via FTP / Git post-receive hook"
+    }
+  },
+
+  "brand": {
+    "name": "Verkehrskadetten",
+    "fullName": "Schweizerischer Verkehrskadetten Verband",
+    "slogan": "Jugend bewegt Verkehr",
+    "mission": "Jugend in Verantwortung. Sicherheit durch freiwilliges Engagement.",
+    "values": [
+      "Professionell ausgebildet",
+      "Verlässlich im Einsatz",
+      "Einheitlich im Auftritt"
+    ],
+    "identity_pillars": [
+      {
+        "question": "Wofür stehen wir?",
+        "answer": "Jugend in Verantwortung. Sicherheit durch freiwilliges Engagement."
+      },
+      {
+        "question": "Wie arbeiten wir?",
+        "answer": "Professionell ausgebildet, verlässlich im Einsatz, einheitlich im Auftritt."
+      },
+      {
+        "question": "Was verbindet uns?",
+        "answer": "Gemeinschaft, Disziplin — und die orange Uniform."
+      }
+    ],
+    "tone_of_voice": {
+      "character": ["Klar", "Direkt", "Professionell"],
+      "principle": "Reduce to the max",
+      "do": [
+        "Kurze, präzise Sätze",
+        "Aktive Sprache",
+        "Fakten vor Adjektiven"
+      ],
+      "dont": [
+        "Marketingfloskeln",
+        "Übertriebene Begeisterung",
+        "Mehrdeutige Formulierungen"
+      ],
+      "terminology": {
+        "correct": "Uniform",
+        "incorrect": "Weste",
+        "note": "Immer 'Uniform', nie 'Weste'"
+      }
+    }
+  },
+
+  "colors": {
+    "palette": [
+      {
+        "token": "--orange",
+        "role": "primary",
+        "name": "VK Orange",
+        "hex": "#FF6300",
+        "hexLower": "#ff6300",
+        "rgb": { "r": 255, "g": 99, "b": 0 },
+        "rgbString": "rgb(255, 99, 0)",
+        "cmyk": { "c": 0, "m": 61, "y": 100, "k": 0 },
+        "cmykString": "CMYK 0 · 61 · 100 · 0",
+        "usage": "Primärfarbe für CTAs, Akzente, Icons, aktive Zustände, Eyebrows",
+        "onColor": "white",
+        "notes": "Unverwechselbares Markenfarbe — sparsam einsetzen für maximale Wirkung"
+      },
+      {
+        "token": "--black",
+        "role": "secondary",
+        "name": "VK Schwarz",
+        "hex": "#1A1A1A",
+        "hexLower": "#1a1a1a",
+        "rgb": { "r": 26, "g": 26, "b": 26 },
+        "rgbString": "rgb(26, 26, 26)",
+        "cmyk": { "c": 0, "m": 0, "y": 0, "k": 93 },
+        "cmykString": "CMYK 0 · 0 · 0 · 93",
+        "usage": "Headlines, Body-Text, Footer-Hintergrund, primäre Textfarbe",
+        "onColor": "white",
+        "notes": "Kein reines Schwarz (#000) — weiches Dunkelgrau für bessere Lesbarkeit"
+      },
+      {
+        "token": "--blue",
+        "role": "accent",
+        "name": "VK Blau",
+        "hex": "#2F5D77",
+        "hexLower": "#2f5d77",
+        "rgb": { "r": 47, "g": 93, "b": 119 },
+        "rgbString": "rgb(47, 93, 119)",
+        "cmyk": { "c": 60, "m": 22, "y": 0, "k": 53 },
+        "cmykString": "CMYK 60 · 22 · 0 · 53",
+        "usage": "Abteilungs-Bar (Header), sekundäre Akzente, Tabellen-Header",
+        "onColor": "white",
+        "notes": "Akzentfarbe für strukturelle Elemente — komplementär zu Orange"
+      },
+      {
+        "token": "--off-white",
+        "role": "background",
+        "name": "VK Weiss",
+        "hex": "#F8F8F8",
+        "hexLower": "#f8f8f8",
+        "rgb": { "r": 248, "g": 248, "b": 248 },
+        "rgbString": "rgb(248, 248, 248)",
+        "cmyk": { "c": 0, "m": 0, "y": 0, "k": 2 },
+        "cmykString": "CMYK 0 · 0 · 0 · 2",
+        "usage": "Karten-Hintergründe, Sektions-Hintergründe, Formfelder",
+        "onColor": "var(--black)",
+        "notes": "Kein reines Weiss — Off-White verhindert harten Kontrast auf weissem Seitengrund"
+      }
+    ],
+    "functional": {
+      "border": "#eeeeee",
+      "textMuted": "#777777",
+      "success": "#2d7a4f",
+      "successBg": "#f0faf4",
+      "successBorder": "#c3e6d0",
+      "error": "#c0392b",
+      "errorBg": "#fef5f5",
+      "errorBorder": "#f5c6c6",
+      "orangeTint": "#fff4ee",
+      "orangeTintBorder": "#ffd5b0",
+      "orangeTintHover": "#ffe8d6"
+    },
+    "rules": {
+      "background": "white (#ffffff) für Seitengrund, #f8f8f8 für Karten/Sektionen",
+      "text": "#1a1a1a für Haupttext, #777777 für Nebentext/Beschriftungen",
+      "interactive": "#ff6300 für aktive Links und CTAs",
+      "noGradients": true,
+      "noShadows": "Nur subtile Schatten für interaktive Karten (box-shadow on hover)"
+    }
+  },
+
+  "typography": {
+    "primary": {
+      "family": "Fakt",
+      "foundry": "OurType",
+      "license": "Intern — nur für VK-Nutzung. Nicht für externe Weitergabe.",
+      "files": {
+        "bold": ["assets/fonts/FaktBold.ttf"],
+        "normal": ["assets/fonts/FaktNormal.ttf", "assets/fonts/FaktNormal.otf"]
+      },
+      "weights": {
+        "400": "Normal — Fliesstext, Beschreibungen",
+        "700": "Bold — Headlines, Labels, CTAs, Nav-Links"
+      },
+      "cssDeclaration": "font-family: 'Fakt', system-ui, sans-serif;"
+    },
+    "fallbacks": [
+      {
+        "context": "Web (extern)",
+        "font": "Inter",
+        "source": "Google Fonts",
+        "reason": "Geometrisch, sehr nah an Fakt — kostenlos"
+      },
+      {
+        "context": "E-Mail / Office",
+        "font": "Calibri",
+        "source": "System",
+        "reason": "Vorinstalliert Windows/macOS, ähnliche Proportionen"
+      },
+      {
+        "context": "Universal (letzter Fallback)",
+        "font": "Arial / Helvetica",
+        "source": "System",
+        "reason": "Universell verfügbar"
+      }
+    ],
+    "scale": [
+      {
+        "level": "Display / H1",
+        "sizePx": "40–64",
+        "weight": 700,
+        "lineHeight": "1.0–1.1",
+        "letterSpacing": "-0.025em",
+        "usage": "Hero-Titel, Hauptüberschriften",
+        "example": "56px in Hero"
+      },
+      {
+        "level": "Headline / H2",
+        "sizePx": "24–32",
+        "weight": 700,
+        "lineHeight": "1.15",
+        "usage": "Sektions-Titel",
+        "example": "32px für .section-title"
+      },
+      {
+        "level": "Subheading / H3",
+        "sizePx": "16–20",
+        "weight": 700,
+        "lineHeight": "1.3",
+        "usage": "Subsektionen, Karten-Titel"
+      },
+      {
+        "level": "Body Text",
+        "sizePx": "14–16",
+        "weight": 400,
+        "lineHeight": "1.6–1.7",
+        "usage": "Fliesstext, Beschreibungen"
+      },
+      {
+        "level": "Caption / Label",
+        "sizePx": "9–12",
+        "weight": 700,
+        "lineHeight": "1.4",
+        "letterSpacing": "0.10–0.20em",
+        "textTransform": "uppercase",
+        "usage": "Section-Labels (Eyebrows), Farb-Rollen, Icon-Beschriftungen"
+      }
+    ],
+    "rules": {
+      "noItalics": "Italic-Schnitt nicht verwenden — Fakt nur Regular und Bold",
+      "lineHeight": "body: 1.6, headlines: 1.0–1.15",
+      "maxLineLength": "580px für Fliesstext-Absätze"
+    }
+  },
+
+  "spacing": {
+    "tokens": {
+      "--pad": "40px (horizontal padding, 20px auf Mobile)",
+      "--section-gap": "64px (vertikal zwischen Sektionen, 48px auf Mobile)",
+      "--max-w": "900px (maximale Inhaltsbreite)"
+    },
+    "scale": {
+      "3": "3px",
+      "4": "4px",
+      "8": "8px",
+      "10": "10px",
+      "12": "12px",
+      "14": "14px",
+      "16": "16px",
+      "20": "20px",
+      "24": "24px",
+      "28": "28px",
+      "32": "32px",
+      "36": "36px",
+      "40": "40px (--pad Desktop)",
+      "48": "48px (--section-gap Mobile)",
+      "64": "64px (--section-gap Desktop)",
+      "72": "72px (Hero-Padding oben)"
+    },
+    "notes": "Kein striktes 8px-Grid — Spacings orientieren sich an Lesbarkeit und optischer Balance"
+  },
+
+  "borderRadius": {
+    "small": "3px (select, toast)",
+    "medium": "4–5px (buttons, tags)",
+    "large": "8px (fallback cards)",
+    "card": "10px (Karten, Subsektionen)",
+    "pill": "20px (bild-tag chips)",
+    "hero": "12px (hero-logo-box)"
+  },
+
+  "shadows": {
+    "nav": "0 2px 16px rgba(0,0,0,0.08) — nur bei scrolled",
+    "cardHover": "0 6px 20px rgba(0,0,0,0.1)",
+    "dlItemHover": "0 4px 16px rgba(255,99,0,0.08)",
+    "notes": "Schatten nur für interaktive Hover-States — keine permanenten Schatten"
+  },
+
+  "transitions": {
+    "default": "0.15s ease",
+    "nav": "box-shadow 0.2s",
+    "colorCard": "transform 0.15s, box-shadow 0.15s",
+    "links": "color 0.15s"
+  },
+
+  "layout": {
+    "maxWidth": "900px",
+    "containerPadding": "0 40px (Desktop), 0 20px (Mobile ≤768px)",
+    "grid": {
+      "identityCards": "repeat(3, 1fr) — 1fr auf Mobile",
+      "logoGrid": "repeat(3, 1fr) — 2fr auf Mobile, 1fr auf <480px",
+      "colorGrid": "repeat(4, 1fr) — repeat(2) auf Mobile",
+      "downloadGrid": "repeat(3, 1fr) — repeat(2) auf Mobile, 1fr auf <480px",
+      "familyGrid": "repeat(3, 1fr) — 1fr auf Mobile",
+      "bilderGrid": "1fr 1fr — 1fr auf Mobile",
+      "dosdonts": "1fr 1fr — 1fr auf Mobile"
+    }
+  },
+
+  "components": {
+    "abteilungsBar": {
+      "description": "Schmaler blauer Banner über der Navigation. Erlaubt Abteilungsauswahl per Dropdown.",
+      "height": "34px",
+      "background": "var(--blue) = #2F5D77",
+      "textColor": "white",
+      "labelStyle": "10px, 700, uppercase, letter-spacing 0.15em, rgba(255,255,255,0.5)",
+      "selectStyle": "11px, 700, rgba(255,255,255,0.12) background, 1px rgba(255,255,255,0.3) border",
+      "behavior": "Abteilung-Auswahl beeinflusst Hero-Logo, Logo-Sektion und Download-Button. Auswahl wird 1 Jahr als Cookie gespeichert."
+    },
+    "navigation": {
+      "position": "sticky top:0",
+      "zIndex": 100,
+      "height": "60px",
+      "background": "white",
+      "borderBottom": "1px solid #eee",
+      "scrolledShadow": "0 2px 16px rgba(0,0,0,0.08)",
+      "logo": {
+        "height": "36px",
+        "label": "10px, 700, uppercase, letter-spacing 0.12em, color: #777"
+      },
+      "links": {
+        "fontSize": "13px",
+        "fontWeight": 700,
+        "color": "#777 → #ff6300 (hover/active)",
+        "activeIndicator": "2px solid var(--orange) border-bottom",
+        "gap": "28px"
+      },
+      "mobile": "Nav-Links ausgeblendet auf ≤768px"
+    },
+    "hero": {
+      "layout": "grid 1fr 280px, gap 48px — auf Mobile: 1fr, logo-box ausgeblendet",
+      "padding": "72px 40px 64px",
+      "borderBottom": "1px solid #eee",
+      "eyebrow": "11px, 700, uppercase, letter-spacing 0.2em, color: var(--orange)",
+      "title": "56px, 700, line-height 1.0, letter-spacing -0.025em — accent span in orange",
+      "lead": "16px, 400, color: #777, line-height 1.65, max-width 380px",
+      "rule": "48px × 4px, background: var(--orange), border-radius 2px",
+      "logoBox": {
+        "background": "#f8f8f8",
+        "border": "1px solid #eee",
+        "borderRadius": "12px",
+        "padding": "36px",
+        "logoHeight": "72px",
+        "separator": "1px solid #eee (zwischen Dachmarke und Abteilungslogo)"
+      }
+    },
+    "section": {
+      "padding": "64px 40px (Desktop), 48px 20px (Mobile)",
+      "maxWidth": "900px",
+      "borderBottom": "1px solid #eee",
+      "label": "11px, 700, uppercase, letter-spacing 0.18em, color: var(--orange)",
+      "title": "32px, 700, color: var(--black)",
+      "description": "15px, 400, color: #777, line-height 1.65, max-width 580px, margin-bottom 32px"
+    },
+    "identityCard": {
+      "background": "#f8f8f8",
+      "borderRadius": "10px",
+      "borderLeft": "3px solid var(--orange)",
+      "padding": "24px",
+      "questionStyle": "10px, 700, uppercase, letter-spacing 0.12em, color: var(--orange)",
+      "answerStyle": "14px, 700, color: var(--black), line-height 1.5"
+    },
+    "logoCard": {
+      "border": "1px solid #eee",
+      "borderRadius": "10px",
+      "overflow": "hidden",
+      "previewHeight": "110px",
+      "previewPadding": "20px",
+      "backgrounds": {
+        "bg-white": "#ffffff (border-bottom 1px solid #eee)",
+        "bg-dark": "#1a1a1a",
+        "bg-blue": "#2F5D77",
+        "bg-orange": "#ff6300"
+      },
+      "logoMaxHeight": "64px",
+      "footerBackground": "#f8f8f8",
+      "footerPadding": "10px 14px",
+      "nameStyle": "11px, 700, color: var(--black)",
+      "downloadButton": "10px, 700, color: var(--orange), background: #fff4ee, padding 4px 10px, border-radius 4px"
+    },
+    "colorCard": {
+      "borderRadius": "10px",
+      "border": "1px solid #eee",
+      "swatchHeight": "80px",
+      "bodyPadding": "12px 14px",
+      "roleStyle": "9px, 700, uppercase, letter-spacing 0.12em, color: var(--orange)",
+      "nameStyle": "13px, 700, color: var(--black)",
+      "hexStyle": "12px, color: #777, monospace",
+      "rgbStyle": "11px, color: #aaa, monospace",
+      "cmykStyle": "11px, color: #bbb, monospace",
+      "behavior": "Klick kopiert HEX in Clipboard, Toast-Feedback ('Kopiert!')",
+      "hoverEffect": "translateY(-2px) + box-shadow"
+    },
+    "downloadCard": {
+      "border": "1px solid #eee",
+      "borderRadius": "10px",
+      "padding": "22px",
+      "hoverBorder": "1px solid var(--orange)",
+      "hoverShadow": "0 4px 16px rgba(255,99,0,0.08)",
+      "iconBackground": "#fff4ee",
+      "iconSize": "36px",
+      "iconBorderRadius": "8px",
+      "nameStyle": "14px, 700, color: var(--black)",
+      "descStyle": "12px, color: #777, line-height 1.45",
+      "button": {
+        "background": "#1a1a1a → #ff6300 (hover)",
+        "fontSize": "10px, 700, uppercase, letter-spacing 0.08em",
+        "padding": "8px 14px",
+        "borderRadius": "5px",
+        "unavailable": "background: #ccc, pointer-events: none"
+      }
+    },
+    "dosDonts": {
+      "dos": {
+        "background": "#f0faf4",
+        "border": "1px solid #c3e6d0",
+        "headingColor": "#2d7a4f",
+        "bulletIcon": "✓ (color: #2d7a4f)"
+      },
+      "donts": {
+        "background": "#fef5f5",
+        "border": "1px solid #f5c6c6",
+        "headingColor": "#c0392b",
+        "bulletIcon": "✗ (color: #c0392b)"
+      },
+      "sharedStyle": "border-radius 10px, padding 20px, font-size 13px, gap 7px"
+    },
+    "footer": {
+      "background": "#1a1a1a",
+      "padding": "36px 40px",
+      "logo": "height 56px, filter: brightness(0) invert(1) — weisses Logo",
+      "metaStyle": "12px, color: #555, line-height 1.7, text-align right",
+      "linkStyle": "color: #888 → var(--orange) (hover)"
+    }
+  },
+
+  "logos": {
+    "dachmarke": {
+      "name": "Verkehrskadetten",
+      "description": "Offizielle Logos der Dachmarke in allen genehmigten Varianten",
+      "variants": [
+        {
+          "name": "Kombination orange+schwarz",
+          "file": "assets/logos/Verkehrskadetten_Kombination_RGB_orange+schwarz.svg",
+          "preview": "assets/logos/Verkehrskadetten_Kombination_RGB_orange+schwarz-cropped.svg",
+          "colorMode": "RGB",
+          "background": "hell (weiss, off-white)",
+          "usage": "Standard-Verwendung, digitale Medien",
+          "preferred": true
+        },
+        {
+          "name": "Kombination orange+weiss",
+          "file": "assets/logos/Verkehrskadetten_Kombination_RGB_orange+weiss.svg",
+          "preview": "assets/logos/Verkehrskadetten_Kombination_RGB_orange+weiss-cropped.svg",
+          "colorMode": "RGB",
+          "background": "dunkel (#1a1a1a, #2F5D77)",
+          "usage": "Auf dunklen Hintergründen"
+        },
+        {
+          "name": "Kombination outline+schwarz",
+          "file": "assets/logos/Verkehrskadetten_Kombination_RGB_outline+schwarz.svg",
+          "colorMode": "RGB",
+          "background": "hell",
+          "usage": "Einfarbige Anwendungen, Prägungen"
+        },
+        {
+          "name": "Kombination outline+weiss",
+          "file": "assets/logos/Verkehrskadetten_Kombination_RGB_outline+weiss.svg",
+          "colorMode": "RGB",
+          "background": "dunkel",
+          "usage": "Einfarbige Anwendungen auf dunklem Grund"
+        },
+        {
+          "name": "Bildmarke orange+schwarz",
+          "file": "assets/logos/Verkehrskadetten_Bildmarke_RGB_orange+schwarz.svg",
+          "preview": "assets/logos/Verkehrskadetten_Bildmarke_RGB_orange+schwarz-cropped.svg",
+          "colorMode": "RGB",
+          "background": "hell",
+          "usage": "Wenn kein Text-Kontext nötig (App-Icons, Social-Media)"
+        },
+        {
+          "name": "Bildmarke orange+weiss",
+          "file": "assets/logos/Verkehrskadetten_Bildmarke_RGB_orange+weiss.svg",
+          "preview": "assets/logos/Verkehrskadetten_Bildmarke_RGB_orange+weiss-cropped.svg",
+          "colorMode": "RGB",
+          "background": "dunkel"
+        },
+        {
+          "name": "Bildmarke outline+schwarz",
+          "file": "assets/logos/Verkehrskadetten_Bildmarke_RGB_outline+schwarz.svg",
+          "colorMode": "RGB",
+          "background": "hell"
+        },
+        {
+          "name": "Bildmarke outline+weiss",
+          "file": "assets/logos/Verkehrskadetten_Bildmarke_RGB_outline+weiss.svg",
+          "colorMode": "RGB",
+          "background": "dunkel"
+        },
+        {
+          "name": "Schriftmarke schwarz",
+          "file": "assets/logos/Verkehrskadetten_Schriftmarke_RGB_schwarz.svg",
+          "colorMode": "RGB",
+          "background": "hell",
+          "usage": "Minimale Verwendung, Textkontexte"
+        },
+        {
+          "name": "Schriftmarke weiss",
+          "file": "assets/logos/Verkehrskadetten_Schriftmarke_RGB_weiss.svg",
+          "colorMode": "RGB",
+          "background": "dunkel",
+          "usage": "Footer, dunkle Hintergründe"
+        }
+      ],
+      "schutzraum": "Mindestabstand = Höhe des Logos rundum freilassen",
+      "rules": {
+        "do": [
+          "Nur freigegebene SVG- und PDF-Dateien verwenden",
+          "Ausreichend Schutzraum um das Logo freilassen",
+          "Auf kontrastreichem Hintergrund platzieren",
+          "Proportionen beim Skalieren beibehalten",
+          "Bei Unklarheiten das Markenteam kontaktieren"
+        ],
+        "dont": [
+          "Logo verzerren, drehen oder neu einfärben",
+          "Elemente entfernen oder umordnen",
+          "Auf ähnlich farbenem Hintergrund platzieren",
+          "Schatten, Verläufe oder Effekte hinzufügen",
+          "Eigene Varianten oder Kombinationen erstellen"
+        ]
+      }
+    },
+    "abteilungen": {
+      "description": "Jede Abteilung hat eigene Logos nach demselben Schema wie die Dachmarke",
+      "filePattern": "assets/logos/abteilungen/{id}_{colorMode}_{farbe}.svg",
+      "variants": ["RGB_schwarz", "RGB_weiss", "CMYK_schwarz", "CMYK_weiss"],
+      "colorModes": {
+        "RGB": "Für digitale Medien (SVG, PNG, Webseiten)",
+        "CMYK": "Für Druckproduktionen (PDF, AI)"
+      },
+      "list": [
+        { "id": "albis",                  "name": "VK Albis" },
+        { "id": "ausserschwyz",           "name": "VK Ausserschwyz" },
+        { "id": "basel",                  "name": "VK Basel" },
+        { "id": "chur",                   "name": "VK Chur" },
+        { "id": "fuerstenland",           "name": "VK Fürstenland" },
+        { "id": "glarnerland",            "name": "VK Glarnerland" },
+        { "id": "luzern",                 "name": "VK Luzern" },
+        { "id": "nordwest-schweiz",       "name": "VK Nordwest Schweiz" },
+        { "id": "rapperswil-jona",        "name": "VK Rapperswil-Jona" },
+        { "id": "saanenland",             "name": "VK Saanenland" },
+        { "id": "samstagern-richterswil", "name": "VK Samstagern-Richterswil" },
+        { "id": "schaffhausen",           "name": "VK Schaffhausen" },
+        { "id": "st-gallen",              "name": "VK St. Gallen" },
+        { "id": "st-galler-oberland",     "name": "VK St. Galler Oberland" },
+        { "id": "thurgau",                "name": "VK Thurgau" },
+        { "id": "winterthur",             "name": "VK Winterthur" },
+        { "id": "zuerich-oberland",       "name": "VK Zürich Oberland" },
+        { "id": "zuerich-unterland",      "name": "VK Zürich Unterland" },
+        { "id": "zuerichsee",             "name": "VK Zürichsee" },
+        { "id": "zug",                    "name": "VK Zug" }
+      ]
+    }
+  },
+
+  "imagery": {
+    "style": "Authentische Fotografie — keine gestellten Stock-Bilder",
+    "subjects": "Jugendliche im echten Einsatz",
+    "criteria": [
+      "Authentische Situationen",
+      "Sichtbare Verantwortung",
+      "Nähe zu den Menschen",
+      "Teamgeist",
+      "Kompetenz & Professionalität"
+    ],
+    "do": [
+      "Authentische Situationen im echten Einsatz",
+      "Sichtbare Verantwortung der Jugendlichen",
+      "Nähe zu den Menschen — Gesichter, Emotionen",
+      "Teamgeist und Gemeinschaft",
+      "Kompetenz und Professionalität"
+    ],
+    "dont": [
+      "Unklare Bildaussagen ohne erkennbaren Kontext",
+      "Aufnahmen von hinten ohne Gesichtsbezug",
+      "Unscharfe oder technisch schlechte Bilder"
+    ],
+    "format": "webp bevorzugt für Web-Assets",
+    "aspectRatio": "4:3 für Bildplatzhalter",
+    "objectFit": "cover"
+  },
+
+  "cssVariables": {
+    "--orange":      "#ff6300",
+    "--black":       "#1a1a1a",
+    "--blue":        "#2F5D77",
+    "--off-white":   "#f8f8f8",
+    "--border":      "#eeeeee",
+    "--text-muted":  "#777777",
+    "--max-w":       "900px",
+    "--pad":         "40px",
+    "--section-gap": "64px"
+  },
+
+  "breakpoints": {
+    "mobile": {
+      "max": "768px",
+      "changes": [
+        "--pad: 20px",
+        "--section-gap: 48px",
+        "Hero: 1-Spalten-Layout, Logo-Box ausgeblendet",
+        "Hero-Titel: 40px",
+        "Nav-Links: ausgeblendet",
+        "id-grid, family-grid, dos-donts: 1fr",
+        "bild-examples: 1fr",
+        "logo-grid: 2fr",
+        "color-grid: 2fr",
+        "dl-grid: 2fr",
+        "section-title: 26px",
+        "footer-meta: text-align left"
+      ]
+    },
+    "small": {
+      "max": "480px",
+      "changes": [
+        "logo-grid: 1fr",
+        "dl-grid: 1fr"
+      ]
+    }
+  },
+
+  "downloads": {
+    "availableFiles": [
+      {
+        "name": "Logos Dachmarke",
+        "file": "downloads/logos-dachmarke.zip",
+        "format": "ZIP",
+        "contents": "SVG (RGB) + PDF (CMYK): Kombination, Bildmarke, Schriftmarke in orange, weiss, outline",
+        "status": "available"
+      },
+      {
+        "name": "Logos Abteilungen",
+        "file": "downloads/logos-abteilungen/{id}.zip",
+        "format": "ZIP",
+        "contents": "Alle Logos der gewählten Abteilung — SVG + PDF (CMYK/RGB)",
+        "status": "dynamic — abhängig von Abteilungsauswahl"
+      },
+      {
+        "name": "Brand Manual",
+        "file": "downloads/Verkehrskadetten_Marken-Manual.pdf",
+        "format": "PDF",
+        "contents": "Vollständiges Marken-Manual: Strategie, Identität, Anwendung",
+        "status": "available"
+      },
+      {
+        "name": "Adobe Illustrator",
+        "file": "downloads/illustrator.zip",
+        "format": "ZIP",
+        "contents": "Original-.ai-Dateien für Dach- und Abteilungsmarken — für Druckproduktionen",
+        "status": "available"
+      },
+      {
+        "name": "Farbpalette",
+        "file": "downloads/farbpalette.ase",
+        "format": "ASE",
+        "contents": "Adobe Swatch Exchange: HEX, RGB und CMYK für alle Adobe-Programme",
+        "status": "available"
+      },
+      {
+        "name": "Web Guidelines",
+        "file": "downloads/web-guidelines.pdf",
+        "format": "PDF",
+        "contents": "Richtlinien für digitale Auftritte: Farben, Typografie, Logonutzung",
+        "status": "available"
+      },
+      {
+        "name": "Fakt Schriftarten",
+        "file": "downloads/fakt-schriften.zip",
+        "format": "ZIP",
+        "contents": "TTF + OTF — Lizenz: OurType, nur für interne VK-Nutzung",
+        "status": "available"
+      }
+    ]
+  },
+
+  "navigation": {
+    "sections": [
+      { "id": "marke",       "label": "Marke",       "title": "Markenidentität" },
+      { "id": "logo",        "label": "Logo",        "title": "Logos & Varianten" },
+      { "id": "farben",      "label": "Farben",      "title": "Farbpalette" },
+      { "id": "typografie",  "label": "Typografie",  "title": "Fakt Typeface" },
+      { "id": "bildsprache", "label": "Bildsprache", "title": "Bildwelt" },
+      { "id": "downloads",   "label": "Downloads",   "title": "Brand Assets" }
+    ]
+  },
+
+  "interactions": {
+    "colorCopy": "Klick auf Farbkachel → HEX in Clipboard → Toast 1.5s sichtbar",
+    "activeNav": "IntersectionObserver (rootMargin -50%) setzt .active Klasse auf aktiven Link",
+    "scrolledNav": "scrollY > 10 → .scrolled Klasse → box-shadow",
+    "abteilungPicker": {
+      "trigger": "Select-Dropdown in Abteilungs-Bar",
+      "effects": [
+        "Hero zeigt Abteilungslogo unter Dachmarken-Logo",
+        "Logo-Sektion zeigt Abteilungs-Logos",
+        "Download-Karte 'Logos Abteilungen' wird aktiv mit korrektem ZIP"
+      ],
+      "persistence": "Cookie 'abteilung', 365 Tage, SameSite=Lax"
+    }
+  },
+
+  "accessibility": {
+    "lang": "de",
+    "colorContrast": {
+      "orangeOnWhite": "Nicht WCAG AA für Kleintext — ausschliesslich für grosse Bold-Elemente und Dekor verwenden",
+      "blackOnWhite": "Sehr hoher Kontrast — primäre Textkombination",
+      "whiteOnBlue": "Ausreichend für Navigationstext"
+    },
+    "notes": [
+      "Logo-Bilder haben alt-Texte",
+      "Schutzraum-Demo hat aria-label",
+      "Keine skip-navigation vorhanden",
+      "Mobile-Nav fehlt (kein Hamburger-Menu) — bekannte Lücke"
+    ]
+  }
+}
