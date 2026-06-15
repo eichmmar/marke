@@ -26,7 +26,6 @@ sections.forEach(s => observer.observe(s));
 const ABTEILUNGEN = [
   { id: 'albis',                  name: 'VK Albis' },
   { id: 'ausserschwyz',           name: 'VK Ausserschwyz' },
-  { id: 'basel',                  name: 'VK Basel' },
   { id: 'chur',                   name: 'VK Chur' },
   { id: 'fuerstenland',           name: 'VK Fürstenland' },
   { id: 'glarnerland',            name: 'VK Glarnerland' },
@@ -40,8 +39,8 @@ const ABTEILUNGEN = [
   { id: 'st-galler-oberland',     name: 'VK St. Galler Oberland' },
   { id: 'thurgau',                name: 'VK Thurgau' },
   { id: 'winterthur',             name: 'VK Winterthur' },
-  { id: 'zuerich-oberland',       name: 'VK Zürich Oberland' },
-  { id: 'zuerich-unterland',      name: 'VK Zürich Unterland' },
+  { id: 'zuerich-oberland',       name: 'VK Zürcher Oberland' },
+  { id: 'zuerich-unterland',      name: 'VK Zürcher Unterland' },
   { id: 'zuerichsee',             name: 'VK Zürichsee' },
   { id: 'zug',                    name: 'VK Zug' },
 ].map(abt => ({

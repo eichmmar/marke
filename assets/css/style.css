@@ -62,6 +62,7 @@ body {
   font-family: inherit;
 }
 .abt-select:hover, .abt-select:focus { background: rgba(255,255,255,0.2); outline: none; }
+.abt-select option { background-color: #fff; color: #1a1a1a; }
 
 /* ── NAV ── */
 .site-nav {
@@ -165,7 +166,8 @@ body {
 .logo-preview { height: 110px; display: flex; align-items: center; justify-content: center; padding: 20px; }
 .logo-preview.bg-white { background: white; border-bottom: 1px solid var(--border); }
 .logo-preview.bg-dark { background: var(--black); }
-.logo-preview.bg-blue { background: var(--blue); }
+.logo-preview.bg-blue { background: white; }
+.logo-preview.bg-blue img { width: 80px; height: 80px; max-height: 80px; max-width: 80px; border-radius: 50%; overflow: hidden; background: var(--blue); object-fit: contain; display: block; }
 .logo-preview.bg-orange { background: var(--orange); }
 .logo-preview img { max-height: 64px; max-width: 100%; width: auto; }
 .logo-footer {

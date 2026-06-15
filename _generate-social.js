@@ -22,21 +22,22 @@ const ABTEILUNGEN = [
   { slug: 'nordwest-schweiz',        line1: 'Nordwest',   line2: 'Schweiz' },
   { slug: 'rapperswil-jona',         line1: 'Rapperswil', line2: 'Jona' },
   { slug: 'saanenland',              line1: 'Saanen',     line2: 'land' },
-  { slug: 'samstagern-richterswil',  line1: 'Samstagern', line2: 'Richterswil' },
+  { slug: 'samstagern-richterswil',  line1: 'Samstagern', line2: 'Richterswil', line2LetterSpacing: '-0.1em' },
   { slug: 'schaffhausen',            line1: 'Schaff',     line2: 'hausen' },
   { slug: 'st-gallen',               line1: 'St. Gallen' },
   { slug: 'st-galler-oberland',      line1: 'St. Galler', line2: 'Oberland' },
   { slug: 'thurgau',                 line1: 'Thurgau' },
   { slug: 'winterthur',              line1: 'Winter',     line2: 'thur' },
   { slug: 'zuerich-oberland',        line1: 'Zürcher',    line2: 'Oberland' },
-  { slug: 'zuerich-unterland',       line1: 'Zürcher',    line2: 'Unterland' },
+  { slug: 'zuerich-unterland',       line1: 'Zürcher',    line2: 'Unterland', line2LetterSpacing: '-0.02em'  },
   { slug: 'zuerichsee',              line1: 'Zürichsee' },
   { slug: 'zug',                     line1: 'Zug' },
 ];
 
-function html(line1, line2) {
+function html(line1, line2, fontSize = 128, line2LetterSpacing = '') {
+  const line2Style = line2LetterSpacing ? ` style="letter-spacing:${line2LetterSpacing}"` : '';
   const nameHtml = line2
-    ? `<div class="name">${line1}<br>${line2}</div>`
+    ? `<div class="name">${line1}<br><span${line2Style}>${line2}</span></div>`
     : `<div class="name">${line1}</div>`;
   return `<!DOCTYPE html>
 <html>
@@ -63,7 +64,7 @@ function html(line1, line2) {
   .name {
     font-family: 'Fakt', 'Arial Black', sans-serif;
     font-weight: 700;
-    font-size: 128px;
+    font-size: ${fontSize}px;
     color: white;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -86,8 +87,10 @@ const server = http.createServer((req, res) => {
   if (url.pathname === '/card') {
     const line1 = url.searchParams.get('line1') || '';
     const line2 = url.searchParams.get('line2') || '';
+    const fontSize = parseInt(url.searchParams.get('fontSize') || '128', 10);
+    const line2LetterSpacing = url.searchParams.get('line2LetterSpacing') || '';
     res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-    res.end(html(line1, line2));
+    res.end(html(line1, line2, fontSize, line2LetterSpacing));
     return;
   }
   // Serve static files
@@ -111,7 +114,9 @@ const server = http.createServer((req, res) => {
 
   for (const abt of ABTEILUNGEN) {
     const l2 = abt.line2 ? `&line2=${encodeURIComponent(abt.line2)}` : '';
-    await page.goto(`http://localhost:8091/card?line1=${encodeURIComponent(abt.line1)}${l2}`);
+    const fsParam = abt.fontSize ? `&fontSize=${abt.fontSize}` : '';
+    const lsParam = abt.line2LetterSpacing ? `&line2LetterSpacing=${encodeURIComponent(abt.line2LetterSpacing)}` : '';
+    await page.goto(`http://localhost:8091/card?line1=${encodeURIComponent(abt.line1)}${l2}${fsParam}${lsParam}`);
     await page.waitForLoadState('networkidle');
     const out = path.join(OUT, `${abt.slug}.png`);
     await page.screenshot({ path: out, type: 'png' });

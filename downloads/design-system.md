@@ -1,8 +1,8 @@
 # Design System — Verkehrskadetten
 
 **Version:** 1.0.0 · **Stand:** 2026-06-09  
-**URL:** marke.verkehrskadetten.ch · **Betrieben von:** VK Albis  
-**Kontakt:** marke-vk@vka-albis.ch
+**URL:** marke.verkehrskadetten.ch
+**Kontakt:** marke@svkv.ch
 
 ---
 
@@ -176,7 +176,6 @@ Kein Italic-Schnitt verwenden.
 |---|---|
 | albis | VK Albis |
 | ausserschwyz | VK Ausserschwyz |
-| basel | VK Basel |
 | chur | VK Chur |
 | fuerstenland | VK Fürstenland |
 | glarnerland | VK Glarnerland |
@@ -190,8 +189,8 @@ Kein Italic-Schnitt verwenden.
 | st-galler-oberland | VK St. Galler Oberland |
 | thurgau | VK Thurgau |
 | winterthur | VK Winterthur |
-| zuerich-oberland | VK Zürich Oberland |
-| zuerich-unterland | VK Zürich Unterland |
+| zuerich-oberland | VK Zürcher Oberland |
+| zuerich-unterland | VK Zürcher Unterland |
 | zuerichsee | VK Zürichsee |
 | zug | VK Zug |
 
@@ -269,8 +268,8 @@ Kein Italic-Schnitt verwenden.
 Sprache:     Plain HTML5 + CSS3 + Vanilla JS
 Framework:   keins
 Build-Step:  keiner
-Deploy:      git push → SSH Post-receive Hook → ~/public_html/marke/
-Server:      s078.cyon.net (User: vkaalbis)
+Deploy:      git push origin main → SSH Post-receive Hook → ~/public_html/marke/
+Server:      cyon (s078.cyon.net, User: vkaalbis)
 Dev:         python3 -m http.server 8080
 ```
 

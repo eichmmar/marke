@@ -39,6 +39,21 @@ Benötigt `svgpathtools`:
 pip3 install svgpathtools
 ```
 
+## Social-Media-PNGs generieren
+
+```bash
+node _generate-social.js
+# → downloads/abteilungen/social/<slug>.png  (1080×1080 px je Abteilung)
+```
+
+Benötigt Playwright:
+```bash
+npm install
+npx playwright install chromium
+```
+
+Abteilungsnamen und optionale Overrides (`fontSize`, `line2LetterSpacing`) in `_generate-social.js` → `ABTEILUNGEN`-Array anpassen.
+
 ## Lokal testen
 
 ```bash
@@ -53,4 +68,4 @@ python3 -m http.server 8080
 - **Texte:** `index.html` direkt bearbeiten
 - **Farben/Spacing:** CSS Custom Properties am Anfang von `assets/css/style.css`
 - **Neue Logo-Variante:** `.logo-card` Block in Section 02 kopieren + anpassen
-- **E-Mail:** 2× in `index.html` suchen nach `marke-vk@vka-albis.ch`
+- **E-Mail:** 2× in `index.html` suchen nach `marke@svkv.ch`
