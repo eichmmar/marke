@@ -588,6 +588,35 @@
   </div>
 </footer>
 
+<!-- ══ MARKEN-COACH (Chat-Widget) ══ -->
+<button id="chat-fab" class="chat-fab" aria-label="Marken-Coach öffnen" aria-expanded="false">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M4 4h16a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H8l-4 4V5a1 1 0 0 1 1-1z" fill="currentColor"/>
+  </svg>
+  <span class="chat-fab-label">Marken-Coach</span>
+</button>
+
+<div id="chat-panel" class="chat-panel" role="dialog" aria-label="Marken-Coach Chat">
+  <div class="chat-header">
+    <div class="chat-header-title">
+      <span class="chat-header-dot"></span>
+      Marken-Coach
+    </div>
+    <button id="chat-close" class="chat-close" aria-label="Schliessen">&times;</button>
+  </div>
+  <div id="chat-messages" class="chat-messages"></div>
+  <form id="chat-form" class="chat-form">
+    <input id="chat-input" class="chat-input" type="text" autocomplete="off"
+           placeholder="Frage zur Marke stellen …" maxlength="4000">
+    <button id="chat-send" class="chat-send" aria-label="Senden">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M4 12l16-8-6 16-3-7-7-1z" fill="currentColor"/>
+      </svg>
+    </button>
+  </form>
+</div>
+
 <script src="assets/js/main.js"></script>
+<script src="assets/js/chat.js"></script>
 </body>
 </html>

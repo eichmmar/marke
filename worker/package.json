@@ -1,0 +1,13 @@
+{
+  "name": "marke-coach-worker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cloudflare Worker — Proxy zur Anthropic-API für den Marken-Coach Chat-Agenten.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}

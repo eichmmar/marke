@@ -17,11 +17,13 @@ crop-svg.py              ← Tool: SVG-Whitespace entfernen (viewBox anpassen)
 assets/
   css/style.css          ← Alle Styles, CSS Custom Properties am Anfang
   js/main.js             ← Sticky nav (IntersectionObserver) + Farb-Clipboard
+  js/chat.js             ← Marken-Coach Chat-Widget (Frontend, spricht den Worker an)
   fonts/                 ← FaktBold.ttf, FaktNormal.ttf/.otf
   logos/                 ← Dachmarken-SVGs (viewBox auf Inhalt gercroppt)
   logos/abteilungen/     ← Abteilungslogos (viewBox auf Inhalt gercroppt)
   social-media-preview.png ← OG-Image
 downloads/               ← Downloadbare Assets (ZIPs + PDFs)
+worker/                  ← Cloudflare Worker: Proxy zur Anthropic-API (Marken-Coach)
 Ressourcen/              ← Quelldateien (nicht im Git, nicht auf Server)
 ```
 
@@ -59,6 +61,41 @@ git add . && git commit -m "Beschreibung" && git push origin main
 
 Remote `origin` → `ssh://vkaalbis@s078.cyon.net/home/vkaalbis/repos/marke.git`  
 Post-receive Hook deployt nach `~/public_html/marke/`
+
+## Marken-Coach (Chat-Agent)
+
+Chat-Widget unten rechts, das Abteilungen hilft, das CI/CD umzusetzen (Fragen,
+Texte, Checklisten, Asset-Lotse). Frontend: `assets/js/chat.js` + Markup/Styles
+in `index.html`/`style.css`. Backend: Cloudflare Worker in `worker/` (hält den
+Anthropic-API-Key, der **nie** im Browser stehen darf).
+
+**Funktionsweise:** `chat.js` schickt `{messages, abteilung}` an den Worker →
+Worker baut den System-Prompt (Wissensbasis = live geladene `design-system.md`,
+gecacht via Prompt-Caching; Abteilung aus dem `abteilung`-Cookie) → ruft Claude
+mit Streaming → reicht Text-Deltas als SSE an den Browser zurück.
+
+**Modell:** `claude-sonnet-4-6` (in `worker/wrangler.toml` unter `[vars] MODEL`
+änderbar — Alternativen `claude-haiku-4-5` / `claude-opus-4-8`).
+
+**Worker-Setup / Deploy:**
+
+```bash
+cd worker
+npm install
+npx wrangler login                       # einmalig
+npx wrangler secret put ANTHROPIC_API_KEY # API-Key eingeben (nicht committen)
+npx wrangler deploy                       # gibt die Worker-URL aus
+```
+
+Nach dem Deploy die ausgegebene URL in `assets/js/chat.js` bei `WORKER_URL_PROD`
+eintragen, dann Portal deployen.
+
+**Lokal testen:** `cd worker && npx wrangler dev` (Port 8787) — `chat.js` zeigt auf
+`localhost` automatisch dorthin. Portal parallel mit `python3 -m http.server 8080`.
+
+**Wissensbasis:** Single Source of Truth ist `downloads/design-system.md` (wird vom
+Worker zur Laufzeit geladen + 1 h gecacht). Bei Design-Änderungen reicht das
+Portal-Deploy — der Worker muss **nicht** neu deployt werden.
 
 ## Downloads
 
