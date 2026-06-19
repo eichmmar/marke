@@ -4,9 +4,12 @@
 // ── Konfiguration ──
 // Nach dem Deploy hier die echte Worker-URL eintragen (npx wrangler deploy gibt sie aus).
 const WORKER_URL_PROD = 'https://marke-coach.mark-eichmann.workers.dev/';
-// Lokal (python http.server auf :8080) zeigt das Widget auf `wrangler dev` (:8787).
+// Standardmässig immer der deployte Worker (funktioniert auch beim lokalen Testen,
+// da dessen CORS localhost:8080 erlaubt). Nur für echte lokale Worker-Entwicklung
+// (npx wrangler dev + worker/.dev.vars mit dem API-Key) auf true setzen:
+const USE_LOCAL_WORKER = false;
 const isLocal = ['localhost', '127.0.0.1'].includes(location.hostname);
-const WORKER_URL = isLocal ? 'http://localhost:8787/' : WORKER_URL_PROD;
+const WORKER_URL = (USE_LOCAL_WORKER && isLocal) ? 'http://localhost:8787/' : WORKER_URL_PROD;
 
 (function initChat() {
   const fab = document.getElementById('chat-fab');
