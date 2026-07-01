@@ -3,7 +3,7 @@ Ressourcen/
 docs/
 .claude/
 ruvector.db
-.DS_Store
+agentdb.rvf.lock
 *.DS_Store
 .env
 node_modules/

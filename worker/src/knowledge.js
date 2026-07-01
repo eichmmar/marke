@@ -34,7 +34,7 @@ export const ABTEILUNGEN = {
 // Kompakter Fallback, falls die Live-MD nicht erreichbar ist.
 export const FALLBACK_KNOWLEDGE = [
   'Farben: VK Orange #FF6300 (Primär), VK Schwarz #1A1A1A (Text), VK Blau #2F5D77 (Akzent), VK Weiss #F8F8F8 (Flächen). Keine Verläufe.',
-  'Schrift: Fakt — Bold (700) für Headlines, Normal (400) für Fliesstext. Kein Italic. Web-Ersatz: Inter; Office: Calibri.',
+  'Schrift: Inter (Hausschrift, SIL OFL) — Bold (700) für Schriftmarke/Titel/Slogans, Regular (400) für Fliesstext, Light (300) für Claim/Fliesstext, Italic punktuell. Office-Ersatz: Calibri. Fakt wird nur noch im Logo verwendet.',
   'Tonalität: «Reduce to the max» — kurze, präzise, aktive Sätze. Immer «Uniform», nie «Weste».',
   'Logos: nur freigegebene SVG/PDF verwenden, Schutzraum einhalten, nicht verzerren/umfärben/mit Effekten versehen.',
   'Abteilungslogos: assets/logos/abteilungen/{id}_{RGB|CMYK}_{schwarz|weiss}.svg; ZIP: downloads/logos-abteilungen/{id}.zip.',

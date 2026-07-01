@@ -59,18 +59,26 @@
 
 ## Typografie
 
-### Hausschrift: Fakt (OurType)
+### Hausschrift: Inter
 
-**Lizenz:** Intern — nur für VK-Nutzung. Nicht für externe Weitergabe.  
-**Dateien:** `assets/fonts/FaktBold.ttf`, `FaktNormal.ttf`, `FaktNormal.otf`  
-**CSS:** `font-family: 'Fakt', system-ui, sans-serif;`
+**Lizenz:** SIL Open Font License 1.1 — frei verwendbar (auch extern).  
+**Web-Einbindung:** via rsms.me CDN (kein Self-Hosting). Im `<head>`: `<link rel="preconnect" href="https://rsms.me/">` + `<link rel="stylesheet" href="https://rsms.me/inter/inter.css">`. CSS nutzt `font-family: Inter` bzw. `InterVariable` (Variable Font, wenn unterstützt) — deckt alle Gewichte 100–900 + Italic ab.  
+**Bezug:** gratis via https://rsms.me/inter/ oder Google Fonts; Download-Paket (OTF/TTF) unter `downloads/inter.zip`  
+**CSS:** `font-family: 'Inter', system-ui, sans-serif;`
 
 | Schnitt | Weight | Verwendung |
 |---|---|---|
-| Fakt Bold | 700 | Headlines, Labels, CTAs, Navigation |
-| Fakt Normal | 400 | Fliesstext, Beschreibungen |
+| Inter Bold | 700 | Schriftmarke, Titel, Slogans, Labels, CTAs, Navigation |
+| Inter Regular | 400 | Fliesstext, Beschreibungen |
+| Inter Light | 300 | Claim, ruhiger Fliesstext |
+| Inter Italic | — | punktuell für Betonungen/Zitate, in allen Gewichten |
 
-Kein Italic-Schnitt verwenden.
+### Logo-Schrift: Fakt (OurType)
+
+Fakt wird **ausschliesslich im Logo** verwendet. Die Schriftmarke ist in den
+Logo-SVGs als Pfade hinterlegt — Fakt ist **nicht** für Text/Fliesstext einzusetzen.
+Lizenz: OurType, intern. Dateien verbleiben unter `assets/fonts/FaktBold.ttf`,
+`FaktNormal.ttf`, `FaktNormal.otf` (nur für Logo/Asset-Erstellung).
 
 ### Schriftgrössen-Skala
 
@@ -84,9 +92,10 @@ Kein Italic-Schnitt verwenden.
 
 ### Ersatzschriften
 
+Falls Inter nicht verfügbar ist (z. B. E-Mail/Office ohne Installation):
+
 | Kontext | Schrift | Quelle |
 |---|---|---|
-| Web (extern) | Inter | Google Fonts — geometrisch, sehr nah an Fakt |
 | E-Mail / Office | Calibri | System — ähnliche Proportionen |
 | Universal | Arial / Helvetica | System — letzter Fallback |
 
@@ -176,6 +185,7 @@ Kein Italic-Schnitt verwenden.
 |---|---|
 | albis | VK Albis |
 | ausserschwyz | VK Ausserschwyz |
+| basel | VK Basel |
 | chur | VK Chur |
 | fuerstenland | VK Fürstenland |
 | glarnerland | VK Glarnerland |
@@ -285,7 +295,7 @@ Dev:         python3 -m http.server 8080
 | `downloads/illustrator.zip` | ZIP | Original-.ai-Dateien für Druck |
 | `downloads/farbpalette.ase` | ASE | Adobe Swatch Exchange (HEX, RGB, CMYK) |
 | `downloads/web-guidelines.pdf` | PDF | Richtlinien für digitale Auftritte |
-| `downloads/fakt-schriften.zip` | ZIP | TTF + OTF (nur intern) |
+| `downloads/inter.zip` | ZIP | Inter OTF + TTF (Light/Regular/Bold + Italics), SIL OFL |
 | `downloads/design-system.json` | JSON | Maschinenlesbares Design System |
 | `downloads/design-system.md` | MD | Dieses Dokument |
 | `downloads/favicons.zip` | ZIP | Favicon-Set: ICO, SVG, PNG 16–512 px, Apple Touch Icon |

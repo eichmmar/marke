@@ -2,9 +2,18 @@
 
 ## Fonts
 
-Bereits kopiert nach `assets/fonts/`:
-- `FaktBold.ttf` — Überschriften (700)
-- `FaktNormal.ttf` / `FaktNormal.otf` — Fliesstext (400)
+Hausschrift **Inter** (SIL OFL) wird im Web über das **rsms.me CDN** geladen — kein
+Self-Hosting. Im `<head>` von `index.html`:
+```html
+<link rel="preconnect" href="https://rsms.me/">
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+```
+CSS: `font-family: Inter` bzw. `InterVariable` (Variable Font, wenn unterstützt).
+Schnitte: Light 300 / Regular 400 / Bold 700 + Italic. Desktop-Fonts für Print/Office
+liegen in `downloads/inter.zip`.
+
+Logo-Schrift **Fakt** (nur Logo/Social-Preview) in `assets/fonts/`:
+- `FaktBold.ttf`, `FaktNormal.ttf`, `FaktNormal.otf`
 
 ## Downloads
 
@@ -15,7 +24,7 @@ Bereits kopiert nach `assets/fonts/`:
 | `illustrator.zip` | ✅ vorhanden |
 | `farbpalette.ase` | ✅ vorhanden |
 | `social-media.zip` | ✅ vorhanden |
-| `fakt-schriften.zip` | ✅ vorhanden |
+| `inter.zip` | ✅ vorhanden |
 | `web-guidelines.pdf` | ✅ vorhanden |
 | `logos-pdf-cmyk.zip` | ausstehend — `Ressourcen/Verkehrskadetten_PDF_Dateien/` zippen |
 | `design-system.json` | ✅ vorhanden |

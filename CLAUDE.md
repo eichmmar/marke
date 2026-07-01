@@ -6,7 +6,7 @@ Statisches Brand-Manual-Portal für die Dachmarke «Verkehrskadetten».
 ## Tech Stack
 
 - Plain HTML5 + CSS3 + Vanilla JS — kein Framework, kein Build-Step
-- Font: Fakt (OurType) — Bold 700, Normal 400 — Dateien in `assets/fonts/`
+- Font: Inter (SIL OFL) — Light 300 / Regular 400 / Bold 700 + Italic — im Web via rsms.me CDN (`inter.css`, kein Self-Hosting). Fakt (OurType) nur noch im Logo.
 - Deploy: `git push origin main` → cyon SSH (s078.cyon.net, User: vkaalbis)
 
 ## Dateistruktur
@@ -18,7 +18,7 @@ assets/
   css/style.css          ← Alle Styles, CSS Custom Properties am Anfang
   js/main.js             ← Sticky nav (IntersectionObserver) + Farb-Clipboard
   js/chat.js             ← Marken-Coach Chat-Widget (Frontend, spricht den Worker an)
-  fonts/                 ← FaktBold.ttf, FaktNormal.ttf/.otf
+  fonts/                 ← FaktBold/Normal (nur Logo/Social); Inter kommt via rsms.me CDN
   logos/                 ← Dachmarken-SVGs (viewBox auf Inhalt gercroppt)
   logos/abteilungen/     ← Abteilungslogos (viewBox auf Inhalt gercroppt)
   social-media-preview.png ← OG-Image
@@ -34,7 +34,7 @@ Ressourcen/              ← Quelldateien (nicht im Git, nicht auf Server)
 | `#marke` | Markenidentität — 3 Karten: Wofür / Wie / Was verbindet |
 | `#logo` | Logo-System — Dachmarke SVGs + Abteilungslogos |
 | `#farben` | Farbpalette — 4 Kacheln, Klick kopiert HEX in Clipboard |
-| `#typografie` | Fakt Bold/Normal + Schriftgrössentabelle |
+| `#typografie` | Inter (Light/Regular/Bold + Italic) + Schriftgrössentabelle |
 | `#bildsprache` | Bildwelt — Kriterien-Chips + Gut/Schlecht-Beispiele + Dos&Don'ts |
 | `#downloads` | Brand Assets — Download-Karten |
 
@@ -42,7 +42,7 @@ Ressourcen/              ← Quelldateien (nicht im Git, nicht auf Server)
 
 - **Primärfarbe:** `#ff6300` (VK Orange)
 - **Schwarz:** `#1a1a1a` | **Blau (Accent):** `#2F5D77` | **Background:** `#f8f8f8`
-- **Schrift:** Fakt Bold für Headlines, Normal für Fliesstext
+- **Schrift:** Inter — Bold (Titel/Slogans), Regular (Fliesstext), Light (Claim), Italic punktuell; Fakt nur im Logo
 - **Sprache:** Deutsch — immer «Uniform», nie «Weste»
 - **Ton:** Klar, direkt, professionell — «Reduce to the max»
 
@@ -108,7 +108,7 @@ Verfügbare Dateien in `downloads/`. Nicht verfügbare Buttons tragen `class="dl
 | `illustrator.zip` | ✅ vorhanden |
 | `farbpalette.ase` | ✅ vorhanden |
 | `social-media.zip` | ✅ vorhanden |
-| `fakt-schriften.zip` | ✅ vorhanden |
+| `inter.zip` | ✅ vorhanden |
 | `web-guidelines.pdf` | ✅ vorhanden |
 | `logos-pdf-cmyk.zip` | ausstehend — `Ressourcen/Verkehrskadetten_PDF_Dateien/` zippen |
 | `design-system.json` | ✅ vorhanden |

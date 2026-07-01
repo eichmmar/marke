@@ -146,26 +146,31 @@
 
   "typography": {
     "primary": {
-      "family": "Fakt",
-      "foundry": "OurType",
-      "license": "Intern — nur für VK-Nutzung. Nicht für externe Weitergabe.",
-      "files": {
-        "bold": ["assets/fonts/FaktBold.ttf"],
-        "normal": ["assets/fonts/FaktNormal.ttf", "assets/fonts/FaktNormal.otf"]
+      "family": "Inter",
+      "foundry": "Rasmus Andersson",
+      "license": "SIL Open Font License 1.1 — frei verwendbar (auch extern).",
+      "source": "https://rsms.me/inter/ oder Google Fonts; Download-Paket (Print/Office): downloads/inter.zip",
+      "webIntegration": {
+        "method": "rsms.me CDN (kein Self-Hosting)",
+        "head": ["<link rel=\"preconnect\" href=\"https://rsms.me/\">", "<link rel=\"stylesheet\" href=\"https://rsms.me/inter/inter.css\">"],
+        "cssFamily": "Inter; InterVariable (wenn font-variation-settings unterstützt)"
       },
       "weights": {
-        "400": "Normal — Fliesstext, Beschreibungen",
-        "700": "Bold — Headlines, Labels, CTAs, Nav-Links"
+        "300": "Light — Claim, ruhiger Fliesstext",
+        "400": "Regular — Fliesstext, Beschreibungen",
+        "700": "Bold — Schriftmarke, Titel, Slogans, Labels, CTAs, Nav-Links"
       },
-      "cssDeclaration": "font-family: 'Fakt', system-ui, sans-serif;"
+      "italic": "punktuell für Betonungen/Zitate, in allen Gewichten möglich",
+      "cssDeclaration": "font-family: 'Inter', system-ui, sans-serif;"
+    },
+    "logoFont": {
+      "family": "Fakt",
+      "foundry": "OurType",
+      "license": "Intern — nur für VK-Nutzung.",
+      "usage": "Ausschliesslich im Logo. In den Logo-SVGs als Pfade hinterlegt — nicht für Text/Fliesstext.",
+      "files": ["assets/fonts/FaktBold.ttf", "assets/fonts/FaktNormal.ttf", "assets/fonts/FaktNormal.otf"]
     },
     "fallbacks": [
-      {
-        "context": "Web (extern)",
-        "font": "Inter",
-        "source": "Google Fonts",
-        "reason": "Geometrisch, sehr nah an Fakt — kostenlos"
-      },
       {
         "context": "E-Mail / Office",
         "font": "Calibri",
@@ -222,7 +227,7 @@
       }
     ],
     "rules": {
-      "noItalics": "Italic-Schnitt nicht verwenden — Fakt nur Regular und Bold",
+      "italicUsage": "Inter-Italic punktuell für Betonungen/Zitate — nicht flächig einsetzen",
       "lineHeight": "body: 1.6, headlines: 1.0–1.15",
       "maxLineLength": "580px für Fliesstext-Absätze"
     }
@@ -669,10 +674,10 @@
         "status": "available"
       },
       {
-        "name": "Fakt Schriftarten",
-        "file": "downloads/fakt-schriften.zip",
+        "name": "Inter Schriftarten",
+        "file": "downloads/inter.zip",
         "format": "ZIP",
-        "contents": "TTF + OTF — Lizenz: OurType, nur für interne VK-Nutzung",
+        "contents": "Inter OTF + TTF (Light/Regular/Bold + Italics) — Lizenz: SIL Open Font License, frei verwendbar",
         "status": "available"
       }
     ]
@@ -683,7 +688,7 @@
       { "id": "marke",       "label": "Marke",       "title": "Markenidentität" },
       { "id": "logo",        "label": "Logo",        "title": "Logos & Varianten" },
       { "id": "farben",      "label": "Farben",      "title": "Farbpalette" },
-      { "id": "typografie",  "label": "Typografie",  "title": "Fakt Typeface" },
+      { "id": "typografie",  "label": "Typografie",  "title": "Inter" },
       { "id": "bildsprache", "label": "Bildsprache", "title": "Bildwelt" },
       { "id": "downloads",   "label": "Downloads",   "title": "Brand Assets" }
     ]

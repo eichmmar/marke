@@ -26,6 +26,7 @@ sections.forEach(s => observer.observe(s));
 const ABTEILUNGEN = [
   { id: 'albis',                  name: 'VK Albis' },
   { id: 'ausserschwyz',           name: 'VK Ausserschwyz' },
+  { id: 'basel',                  name: 'VK Basel' },
   { id: 'chur',                   name: 'VK Chur' },
   { id: 'fuerstenland',           name: 'VK Fürstenland' },
   { id: 'glarnerland',            name: 'VK Glarnerland' },
