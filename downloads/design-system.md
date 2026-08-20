@@ -185,7 +185,8 @@ Falls Inter nicht verfügbar ist (z. B. E-Mail/Office ohne Installation):
 |---|---|
 | albis | VK Albis |
 | ausserschwyz | VK Ausserschwyz |
-| basel | VK Basel |
+| basel | VK Kadetten Korps Basel |
+| bern | VK Bern |
 | chur | VK Chur |
 | fuerstenland | VK Fürstenland |
 | glarnerland | VK Glarnerland |

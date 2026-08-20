@@ -48,6 +48,24 @@ Benötigt `svgpathtools`:
 pip3 install svgpathtools
 ```
 
+## Abteilungslogo erzeugen
+
+```bash
+python3 make-abteilungslogo.py bern BERN                    # einzeilig
+python3 make-abteilungslogo.py basel KADETTEN "KORPS BASEL" # zweizeilig
+```
+
+Schreibt 4 SVG (`assets/logos/abteilungen/`), 4 PDF (`downloads/abteilungen/`) und
+das ZIP (`downloads/logos-abteilungen/`). Benötigt:
+```bash
+pip3 install fonttools svgpathtools
+npm install && npx playwright install chromium
+```
+
+Danach die Abteilung an fünf Stellen nachtragen — siehe `CLAUDE.md`, Abschnitt
+«Neue Abteilung hinzufügen». Satzparameter und Begründung stehen dort ebenfalls;
+die Wortmarke wird mit Chromium gekernt, darum ist Playwright zwingend.
+
 ## Social-Media-PNGs generieren
 
 ```bash
@@ -62,6 +80,17 @@ npx playwright install chromium
 ```
 
 Abteilungsnamen und optionale Overrides (`fontSize`, `line2LetterSpacing`) in `_generate-social.js` → `ABTEILUNGEN`-Array anpassen.
+
+Die Vorschau in der Logo-Sektion ist **kreisförmig** beschnitten (`.logo-preview.bg-blue`).
+Lange zweite Zeilen ragen sonst aus dem Kreis — dann `line2LetterSpacing` setzen
+(`basel`: `-0.06em`, `samstagern-richterswil`: `-0.1em`).
+
+**Wenn `chromium.launch()` scheitert** («Executable doesn't exist at …
+chromium_headless_shell-****»), wurde Playwright aktualisiert, ohne die Browser
+nachzuziehen: `npx playwright install chromium`. Achtung — ein anderer
+Chromium-Build rendert die Karten minimal anders (Antialiasing); das Skript
+schreibt immer **alle** PNGs, darum hinterher die nicht betroffenen zurücksetzen,
+sonst stehen unnötige Binär-Diffs im Commit.
 
 ## Lokal testen
 

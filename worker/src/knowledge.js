@@ -12,6 +12,8 @@ export const KNOWLEDGE_URL =
 export const ABTEILUNGEN = {
   'albis': 'VK Albis',
   'ausserschwyz': 'VK Ausserschwyz',
+  'basel': 'VK Kadetten Korps Basel',
+  'bern': 'VK Bern',
   'chur': 'VK Chur',
   'fuerstenland': 'VK Fürstenland',
   'glarnerland': 'VK Glarnerland',

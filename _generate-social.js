@@ -14,7 +14,8 @@ fs.mkdirSync(OUT, { recursive: true });
 const ABTEILUNGEN = [
   { slug: 'albis',                   line1: 'Albis' },
   { slug: 'ausserschwyz',            line1: 'Ausser',     line2: 'schwyz' },
-  { slug: 'basel',                   line1: 'Basel' },
+  { slug: 'basel',                   line1: 'Kadetten',   line2: 'Korps Basel', line2LetterSpacing: '-0.06em' },
+  { slug: 'bern',                    line1: 'Bern' },
   { slug: 'chur',                    line1: 'Chur' },
   { slug: 'fuerstenland',            line1: 'Fürsten',    line2: 'land' },
   { slug: 'glarnerland',             line1: 'Glarner',    line2: 'land' },

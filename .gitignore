@@ -7,3 +7,6 @@ agentdb.rvf.lock
 *.DS_Store
 .env
 node_modules/
+.dev.vars
+.wrangler/
+__pycache__/

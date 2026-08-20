@@ -14,6 +14,8 @@ Statisches Brand-Manual-Portal für die Dachmarke «Verkehrskadetten».
 ```
 index.html               ← Gesamte Seite (single scrolling page)
 crop-svg.py              ← Tool: SVG-Whitespace entfernen (viewBox anpassen)
+make-abteilungslogo.py   ← Tool: neues Abteilungslogo setzen (SVG + PDF + ZIP)
+_generate-social.js      ← Tool: Social-Media-Karten 1080×1080 (Playwright)
 assets/
   css/style.css          ← Alle Styles, CSS Custom Properties am Anfang
   js/main.js             ← Sticky nav (IntersectionObserver) + Farb-Clipboard
@@ -114,6 +116,47 @@ Verfügbare Dateien in `downloads/`. Nicht verfügbare Buttons tragen `class="dl
 | `design-system.json` | ✅ vorhanden |
 | `design-system.md` | ✅ vorhanden |
 | `favicons.zip` | ✅ vorhanden |
+
+## Neue Abteilung hinzufügen
+
+```bash
+python3 make-abteilungslogo.py bern BERN                    # einzeilig
+python3 make-abteilungslogo.py basel KADETTEN "KORPS BASEL" # zweizeilig
+```
+
+Erzeugt 4 SVG + 4 PDF + das ZIP. Benötigt `pip3 install fonttools svgpathtools`
+sowie `npm install` und `npx playwright install chromium`.
+
+Danach die Abteilung an **fünf** Stellen von Hand nachtragen (die Liste ist
+dupliziert, es gibt keine Single Source of Truth):
+
+| Datei | Feld |
+|---|---|
+| `assets/js/main.js` | `ABTEILUNGEN` → `{ id, name }` |
+| `worker/src/knowledge.js` | `ABTEILUNGEN` → `'id': 'Name'` (**Worker-Deploy nötig!**) |
+| `_generate-social.js` | `ABTEILUNGEN` → `{ slug, line1, line2? }` |
+| `downloads/design-system.md` | ID-Tabelle |
+| `downloads/design-system.json` | `logos.abteilungen.list` |
+
+Dann `node _generate-social.js` für die Social-Karte. Die Karten-Vorschau ist
+kreisförmig beschnitten — lange zweite Zeilen brauchen ein
+`line2LetterSpacing` (siehe `basel`, `samstagern-richterswil`).
+
+### Wie die Wortmarke gesetzt wird
+
+Die Logos bestehen aus der immer gleichen Bildmarke plus einer Wortmarke, die als
+Pfade vorliegt (kein `<text>`, keine Font-Abhängigkeit). Satzparameter, aus der
+bestehenden Familie zurückgerechnet (Treffer ≤ 0.006 pt):
+
+- Fakt Bold, Schriftgrad **39.789 pt** (Versalhöhe 27.375 pt), Laufweite 0
+- Grundlinie der letzten Zeile **y = 107.496**, Pen-Ursprung **x = 208.503**
+- Durchschuss mehrzeilig **1.0 em** — wie die dreizeilige Dachmarken-Schriftmarke
+- Schwarz `rgb(9.162903%, 9.228516%, 9.135437%)` (≈ `#171717`, CMYK-Rich-Black —
+  **nicht** das Marken-`#1a1a1a`), Orange `#ff6300`
+
+Die Wortmarken sind **gekernt**. Fakt Bold hat keine `kern`-Tabelle, nur GPOS —
+darum shapet das Tool mit Chromium und liest die Pen-Positionen aus dem DOM.
+Unkerntes Aneinanderreihen liegt bis 3.2 pt daneben.
 
 ## SVG-Whitespace entfernen
 
