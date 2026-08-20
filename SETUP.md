@@ -66,6 +66,23 @@ Danach die Abteilung an fünf Stellen nachtragen — siehe `CLAUDE.md`, Abschnit
 «Neue Abteilung hinzufügen». Satzparameter und Begründung stehen dort ebenfalls;
 die Wortmarke wird mit Chromium gekernt, darum ist Playwright zwingend.
 
+**ZIPs nach Asset-Änderungen neu bauen.** Die ZIPs sind Kopien — ändert man SVGs
+oder PDFs, werden sie sonst still veraltet (genau das war bis August 2026 der
+Fall: die ZIPs enthielten die Vor-Crop-SVGs):
+
+```bash
+# ein ZIP je Abteilung
+for z in downloads/logos-abteilungen/*.zip; do id=$(basename "$z" .zip)
+  d=$(mktemp -d); cp assets/logos/abteilungen/${id}_*.svg downloads/abteilungen/${id}_*.pdf "$d"/
+  (cd "$d" && zip -q -X out.zip *.svg *.pdf) && cp "$d/out.zip" "$z"; rm -rf "$d"
+done
+# Sammel-ZIP
+d=$(mktemp -d); cp assets/logos/abteilungen/*.svg downloads/abteilungen/*.pdf "$d"/
+(cd "$d" && zip -q -X out.zip *.svg *.pdf) && cp "$d/out.zip" downloads/logos-abteilungen.zip; rm -rf "$d"
+```
+
+Gegenprobe: `unzip -p <zip> <datei>` muss byte-gleich zur ausgelieferten Datei sein.
+
 ## Social-Media-PNGs generieren
 
 ```bash

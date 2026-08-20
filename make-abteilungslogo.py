@@ -32,12 +32,18 @@ X0         = 208.5030           # Pen-Ursprung (nicht die Tintenkante!)
 LEAD       = SIZE               # Durchschuss 1.0 em (wie die Dachmarken-Schriftmarke)
 HEIGHT     = 140.26             # Höhe der Bildmarke, in allen Logos gleich
 
-BLACK_SVG  = 'rgb(9.162903%, 9.228516%, 9.135437%)'   # ~#171717, CMYK-Rich-Black
+BLACK_SVG  = '#1a1a1a'                                # VK-Schwarz
 WHITE_SVG  = 'rgb(100%, 100%, 100%)'
 ORANGE_SVG = '#ff6300'
+# PDF-Farben. _CMYK_ trägt die Druckwerte des Designers, _RGB_ echtes
+# DeviceRGB mit den exakten Markenwerten — die Dateinamen sagen also die
+# Wahrheit (früher waren beide Varianten CMYK).
 BLACK_K    = '0.744141 0.652344 0.621094 0.814453 k'
 WHITE_K    = '0 0 0 0 k'
 ORANGE_K   = '0.00466919 0.748047 1 0 k'
+BLACK_RG   = '0.101961 0.101961 0.101961 rg'   # VK-Schwarz #1a1a1a
+WHITE_RG   = '1 1 1 rg'
+ORANGE_RG  = '1 0.388235 0 rg'                 # #ff6300 exakt
 
 CLIP0 = ('<clipPath id="clip-0">\n<path clip-rule="nonzero" '
          'd="M 0 15 L 110 15 L 110 140.261719 L 0 140.261719 Z M 0 15 "/>\n</clipPath>')
@@ -175,9 +181,13 @@ def ink_bbox(word, pens, baseline):
 
 # ── Bildmarke (wortwörtlich aus einem bestehenden Logo) ──────────────────────
 def bildmarke_svg(color):
+    """Bildmarke aus dem Template, alle Nicht-Orange-Fills auf `color` gesetzt."""
     src = open(TEMPLATE).read()
     m = re.search(r'<path fill-rule="nonzero" fill="[^"]*"[^>]*d="M 180\.097656.*?</g>', src, re.S)
-    return re.sub(r'fill="rgb\([^)]*\)"', 'fill="%s"' % color, m.group(0))
+    block = m.group(0)
+    # Orange bleibt immer Orange; alles andere ist die Schwarz/Weiss-Fläche.
+    return re.sub(r'fill="((?!%s)[^"]*)"' % re.escape(ORANGE_SVG),
+                  'fill="%s"' % color, block)
 
 
 def bildmarke_ds():
@@ -223,7 +233,7 @@ def build_svg(lines, pens, color, width):
     return head + bildmarke_svg(color) + '\n' + '\n'.join(paths) + '\n</svg>\n'
 
 
-def build_pdf(lines, pens, black_k, width):
+def build_pdf(lines, pens, black_op, orange_op, width):
     def emit(contours):
         s = []
         for c in contours:
@@ -235,10 +245,10 @@ def build_pdf(lines, pens, black_k, width):
         return '\n'.join(s)
 
     blacks, orange = bildmarke_ds()
-    body = [black_k]
+    body = [black_op]
     for d in blacks:
         body += [emit(parse_d(d)), 'f']
-    body += [ORANGE_K, emit(parse_d(orange)), 'f', black_k]
+    body += [orange_op, emit(parse_d(orange)), 'f', black_op]
     n = len(lines)
     for i, txt in enumerate(lines):
         bl = BASE - (n - 1 - i) * LEAD
@@ -279,11 +289,14 @@ def main():
     zip_dir = os.path.join(ROOT, 'downloads/logos-abteilungen')
     written = []
     for mode in ('RGB', 'CMYK'):
-        for farbe, csvg, ck in (('schwarz', BLACK_SVG, BLACK_K), ('weiss', WHITE_SVG, WHITE_K)):
+        orange_op = ORANGE_RG if mode == 'RGB' else ORANGE_K
+        farben = (('schwarz', BLACK_SVG, BLACK_RG if mode == 'RGB' else BLACK_K),
+                  ('weiss',   WHITE_SVG, WHITE_RG if mode == 'RGB' else WHITE_K))
+        for farbe, csvg, ck in farben:
             p = os.path.join(svg_dir, '%s_%s_%s.svg' % (slug, mode, farbe))
             open(p, 'w').write(build_svg(lines, pens, csvg, width)); written.append(p)
             p = os.path.join(pdf_dir, '%s_%s_%s.pdf' % (slug, mode, farbe))
-            open(p, 'wb').write(build_pdf(lines, pens, ck, width)); written.append(p)
+            open(p, 'wb').write(build_pdf(lines, pens, ck, orange_op, width)); written.append(p)
     for p in written:
         os.chmod(p, 0o644)
 

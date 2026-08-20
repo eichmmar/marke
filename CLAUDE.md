@@ -142,6 +142,27 @@ Dann `node _generate-social.js` für die Social-Karte. Die Karten-Vorschau ist
 kreisförmig beschnitten — lange zweite Zeilen brauchen ein
 `line2LetterSpacing` (siehe `basel`, `samstagern-richterswil`).
 
+### Farbräume der Downloads
+
+| Variante | Farbraum | Werte |
+|---|---|---|
+| `*.svg` | RGB | Orange `#ff6300`, Schwarz `#1a1a1a` |
+| `_RGB_*.pdf` | echtes **DeviceRGB** | dieselben Werte wie die SVGs |
+| `_CMYK_*.pdf` | **DeviceCMYK** | Druckwerte des Designers, Orange `0/74.8/100/0` |
+
+Alle digitalen Assets tragen ausschliesslich die Markenfarben. Drei bereinigte
+Altlasten, die hier zusammenliefen:
+
+- Die `_RGB_`-PDFs waren in Wahrheit CMYK — nur der Dateiname sagte RGB.
+- Sie trugen drei verschiedene Orangetöne, teils zwischen Varianten derselben
+  Abteilung.
+- SVGs und PDFs benutzten die Rich-Black-Konversion `rgb(9.16%, …)` ≈ `#171817`
+  statt des VK-Schwarz. **`#171817` darf nicht mehr vorkommen.**
+
+Die CMYK-Dateien sind absichtlich unangetastet — sie tragen die Druckwerte des
+Designers. Offen: die PDFs haben kein ICC-Profil und keinen OutputIntent,
+Druckereien bekommen also unkalibriertes DeviceCMYK.
+
 ### Wie die Wortmarke gesetzt wird
 
 Die Logos bestehen aus der immer gleichen Bildmarke plus einer Wortmarke, die als
@@ -151,8 +172,7 @@ bestehenden Familie zurückgerechnet (Treffer ≤ 0.006 pt):
 - Fakt Bold, Schriftgrad **39.789 pt** (Versalhöhe 27.375 pt), Laufweite 0
 - Grundlinie der letzten Zeile **y = 107.496**, Pen-Ursprung **x = 208.503**
 - Durchschuss mehrzeilig **1.0 em** — wie die dreizeilige Dachmarken-Schriftmarke
-- Schwarz `rgb(9.162903%, 9.228516%, 9.135437%)` (≈ `#171717`, CMYK-Rich-Black —
-  **nicht** das Marken-`#1a1a1a`), Orange `#ff6300`
+- Schwarz `#1a1a1a`, Orange `#ff6300` (siehe «Farbräume der Downloads»)
 
 Die Wortmarken sind **gekernt**. Fakt Bold hat keine `kern`-Tabelle, nur GPOS —
 darum shapet das Tool mit Chromium und liest die Pen-Positionen aus dem DOM.
