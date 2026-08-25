@@ -2,7 +2,7 @@
 
 **Version:** 1.0.0 · **Stand:** 2026-06-09  
 **URL:** marke.verkehrskadetten.ch
-**Kontakt:** marke@svkv.ch
+**Kontakt:** marke@verkehrskadetten.ch
 
 ---
 

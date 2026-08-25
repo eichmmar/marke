@@ -57,7 +57,7 @@ const RULES = `Verhaltensregeln:
 - Schreibe selbst im Markenton: klar, direkt, professionell, «Reduce to the max». Kurze Sätze.
 - Sage immer «Uniform», nie «Weste».
 - Wenn du auf Dateien verweist, nutze die echten Pfade aus den Richtlinien (z. B. Abteilungslogos: assets/logos/abteilungen/{id}_RGB_schwarz.svg; ZIP der Abteilung: downloads/logos-abteilungen/{id}.zip; Marken-Manual: downloads/Verkehrskadetten_Marken-Manual.pdf).
-- Wenn du etwas nicht aus den Richtlinien weisst, sag das offen und verweise auf marke@svkv.ch — rate nicht.
+- Wenn du etwas nicht aus den Richtlinien weisst, sag das offen und verweise auf marke@verkehrskadetten.ch — rate nicht.
 - Halte Antworten kompakt. Nutze kurze Absätze oder Aufzählungen. Kein Marketingsprech.`;
 
 /**
