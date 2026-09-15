@@ -3,26 +3,25 @@
   "$id": "https://marke.verkehrskadetten.ch/design-system.json",
   "meta": {
     "name": "Verkehrskadetten Markenportal",
-    "version": "1.0.0",
-    "updated": "2026-06-09",
+    "version": "2.0.0",
+    "updated": "2026-09-15",
     "url": "https://marke.verkehrskadetten.ch",
     "operator": "VK Albis",
-    "contact": "marke-vk@vka-albis.ch",
+    "contact": "marke@verkehrskadetten.ch",
     "description": "Offizielles Design-System der Dachmarke Verkehrskadetten. Enthält alle visuellen Tokens, Komponenten, Regeln und Assets für konsistente Markenkommunikation über 20+ Abteilungen in der Schweiz.",
     "language": "de-CH",
     "tech": {
       "stack": "Plain HTML5 + CSS3 + Vanilla JS",
       "framework": null,
       "bundler": null,
-      "deployment": "Static files via FTP / Git post-receive hook"
-    }
+      "deployment": "FTP-Upload via deploy.sh (lftp mirror --reverse --delete), Zugang in .env"
+    },
+    "source": "Marken-Manual Verkehrskadetten, November 2025 (downloads/Verkehrskadetten_Marken-Manual.pdf)"
   },
-
   "brand": {
     "name": "Verkehrskadetten",
     "fullName": "Schweizerischer Verkehrskadetten Verband",
-    "slogan": "Jugend bewegt Verkehr",
-    "mission": "Jugend in Verantwortung. Sicherheit durch freiwilliges Engagement.",
+    "mission": "Wir sichern Verkehr und Zugänge bei Veranstaltungen — verlässlich, wirksam, ehrenamtlich.",
     "values": [
       "Professionell ausgebildet",
       "Verlässlich im Einsatz",
@@ -30,20 +29,42 @@
     ],
     "identity_pillars": [
       {
-        "question": "Wofür stehen wir?",
-        "answer": "Jugend in Verantwortung. Sicherheit durch freiwilliges Engagement."
+        "question": "WAS wir konkret tun",
+        "answer": "Wir sichern Verkehr und Zugänge bei Veranstaltungen — verlässlich, wirksam, ehrenamtlich.",
+        "details": [
+          "Verkehrsregelung, Streckensicherung, Umleitungen",
+          "Parkplatzdienst, Zufahrts- und Zugangskontrollen",
+          "Unterstützung bei Sicherheit, Orientierung und Personenlenkung",
+          "Einsätze bei Umzügen, Sportanlässen, Festen, Märkten u. v. m."
+        ]
       },
       {
-        "question": "Wie arbeiten wir?",
-        "answer": "Professionell ausgebildet, verlässlich im Einsatz, einheitlich im Auftritt."
+        "question": "WIE wir es tun",
+        "answer": "Mit geschulten Jugendlichen, klarem Ablauf, menschlichem Auftreten — und regionaler Verankerung.",
+        "details": [
+          "Gemeinnützig statt profitorientiert — aber verlässlich und präsent",
+          "Jugendliche übernehmen Verantwortung und leisten einen Beitrag zum gesellschaftlichen Miteinander",
+          "Freundlich, verbindlich, hilfsbereit — statt aggressiv oder autoritär",
+          "Klare Strukturen, Trainings, enge Zusammenarbeit mit Polizei und Veranstaltern",
+          "Einfach im Handling für Auftraggeber, unkompliziert in der Koordination"
+        ]
       },
       {
-        "question": "Was verbindet uns?",
-        "answer": "Gemeinschaft, Disziplin — und die orange Uniform."
+        "question": "WARUM wir tun, was wir tun",
+        "answer": "Weil gesellschaftliches Miteinander sichere Mobilität und Verantwortung braucht.",
+        "details": [
+          "Verkehrskadetten tragen dazu bei, dass öffentliche Anlässe sicher, geordnet und für alle zugänglich durchgeführt werden können",
+          "Sie ermöglichen gesellschaftliches Leben durch freiwilliges Engagement im Verkehrsdienst",
+          "Jugendliche erfahren Sinn, Anerkennung und Verantwortung durch reale Wirkung im Alltag"
+        ]
       }
     ],
     "tone_of_voice": {
-      "character": ["Klar", "Direkt", "Professionell"],
+      "character": [
+        "Klar",
+        "Direkt",
+        "Professionell"
+      ],
       "principle": "Reduce to the max",
       "do": [
         "Kurze, präzise Sätze",
@@ -60,69 +81,117 @@
         "incorrect": "Weste",
         "note": "Immer 'Uniform', nie 'Weste'"
       }
-    }
+    },
+    "markenName": "Verkehrskadetten",
+    "claim": "Jugend bewegt Verkehr",
+    "claimBedeutung": {
+      "Jugend": "Das Herz der Organisation: engagierte junge Menschen, die Verantwortung übernehmen.",
+      "Bewegt": "Macht sichtbar, dass echte Wirkung entsteht — sichtbar auf der Strasse, spürbar im Miteinander.",
+      "Verkehr": "Unser Einsatzfeld, aber auch Symbol für Ordnung, Sicherheit und gesellschaftliches Zusammenwirken."
+    },
+    "traeger": "Schweizerischer Verkehrskadetten Verband",
+    "traegerKurz": "SVKV",
+    "namensregel": "Die Marke heisst «Verkehrskadetten». «Schweizerischer Verkehrskadetten Verband» (kurz SVKV) ist die Trägerorganisation und gehört in rechtliche Kontexte (Copyright, Impressum, Verträge), nicht in die Markenkommunikation. «Verkehrskadetten Schweiz» ist die Absender-Schreibweise der Wortmarke im Kollaborations-Fall, kein eigener Markenname."
   },
-
   "colors": {
     "palette": [
       {
         "token": "--orange",
-        "role": "primary",
+        "role": "primaer",
         "name": "VK Orange",
         "hex": "#FF6300",
         "hexLower": "#ff6300",
-        "rgb": { "r": 255, "g": 99, "b": 0 },
+        "rgb": {
+          "r": 255,
+          "g": 99,
+          "b": 0
+        },
         "rgbString": "rgb(255, 99, 0)",
-        "cmyk": { "c": 0, "m": 61, "y": 100, "k": 0 },
-        "cmykString": "CMYK 0 · 61 · 100 · 0",
-        "usage": "Primärfarbe für CTAs, Akzente, Icons, aktive Zustände, Eyebrows",
+        "cmyk": {
+          "c": 0,
+          "m": 75,
+          "y": 100,
+          "k": 0
+        },
+        "cmykString": "CMYK 0 · 75 · 100 · 0",
+        "pantone": "Pantone 1585",
+        "usage": "Hauptsächlich für das «V» der Bildmarke, daneben als Hintergrundfarbe",
         "onColor": "white",
-        "notes": "Unverwechselbares Markenfarbe — sparsam einsetzen für maximale Wirkung"
-      },
-      {
-        "token": "--black",
-        "role": "secondary",
-        "name": "VK Schwarz",
-        "hex": "#1A1A1A",
-        "hexLower": "#1a1a1a",
-        "rgb": { "r": 26, "g": 26, "b": 26 },
-        "rgbString": "rgb(26, 26, 26)",
-        "cmyk": { "c": 0, "m": 0, "y": 0, "k": 93 },
-        "cmykString": "CMYK 0 · 0 · 0 · 93",
-        "usage": "Headlines, Body-Text, Footer-Hintergrund, primäre Textfarbe",
-        "onColor": "white",
-        "notes": "Kein reines Schwarz (#000) — weiches Dunkelgrau für bessere Lesbarkeit"
+        "notes": "Primärfarbe. Nie für Text verwenden — weder Titel noch Fliesstext."
       },
       {
         "token": "--blue",
-        "role": "accent",
+        "role": "sekundaer",
         "name": "VK Blau",
         "hex": "#2F5D77",
         "hexLower": "#2f5d77",
-        "rgb": { "r": 47, "g": 93, "b": 119 },
+        "rgb": {
+          "r": 47,
+          "g": 93,
+          "b": 119
+        },
         "rgbString": "rgb(47, 93, 119)",
-        "cmyk": { "c": 60, "m": 22, "y": 0, "k": 53 },
-        "cmykString": "CMYK 60 · 22 · 0 · 53",
-        "usage": "Abteilungs-Bar (Header), sekundäre Akzente, Tabellen-Header",
+        "cmyk": {
+          "c": 86,
+          "m": 57,
+          "y": 37,
+          "k": 15
+        },
+        "cmykString": "CMYK 86 · 57 · 37 · 15",
+        "pantone": "Pantone 7699",
+        "usage": "Ausschliesslich als Hintergrundfarbe",
         "onColor": "white",
-        "notes": "Akzentfarbe für strukturelle Elemente — komplementär zu Orange"
+        "notes": "Sekundärfarbe. Nie für Text verwenden — weder Titel noch Fliesstext."
       },
       {
-        "token": "--off-white",
-        "role": "background",
+        "token": "--white",
+        "role": "weiss",
         "name": "VK Weiss",
-        "hex": "#F8F8F8",
-        "hexLower": "#f8f8f8",
-        "rgb": { "r": 248, "g": 248, "b": 248 },
-        "rgbString": "rgb(248, 248, 248)",
-        "cmyk": { "c": 0, "m": 0, "y": 0, "k": 2 },
-        "cmykString": "CMYK 0 · 0 · 0 · 2",
-        "usage": "Karten-Hintergründe, Sektions-Hintergründe, Formfelder",
+        "hex": "#FFFFFF",
+        "hexLower": "#ffffff",
+        "rgb": {
+          "r": 255,
+          "g": 255,
+          "b": 255
+        },
+        "rgbString": "rgb(255, 255, 255)",
+        "cmyk": {
+          "c": 0,
+          "m": 0,
+          "y": 0,
+          "k": 0
+        },
+        "cmykString": "CMYK 0 · 0 · 0 · 0",
+        "usage": "«CH»/Region, Hintergrund, «V», Text",
         "onColor": "var(--black)",
-        "notes": "Kein reines Weiss — Off-White verhindert harten Kontrast auf weissem Seitengrund"
+        "notes": "Für Text auf dunklem Grund."
+      },
+      {
+        "token": "--black",
+        "role": "schwarz",
+        "name": "VK Schwarz",
+        "hex": "#000000",
+        "hexLower": "#000000",
+        "rgb": {
+          "r": 0,
+          "g": 0,
+          "b": 0
+        },
+        "rgbString": "rgb(0, 0, 0)",
+        "cmyk": {
+          "c": 100,
+          "m": 100,
+          "y": 100,
+          "k": 100
+        },
+        "cmykString": "CMYK 100 · 100 · 100 · 100",
+        "usage": "«CH»/Region, Hintergrund, «V», Text",
+        "onColor": "white",
+        "notes": "Reines Schwarz gemäss Marken-Manual, Kap. 8."
       }
     ],
     "functional": {
+      "offWhite": "#f8f8f8",
       "border": "#eeeeee",
       "textMuted": "#777777",
       "success": "#2d7a4f",
@@ -133,17 +202,20 @@
       "errorBorder": "#f5c6c6",
       "orangeTint": "#fff4ee",
       "orangeTintBorder": "#ffd5b0",
-      "orangeTintHover": "#ffe8d6"
+      "orangeTintHover": "#ffe8d6",
+      "_note": "Funktionale UI-Werte, keine Markenfarben."
     },
     "rules": {
+      "primaerfarbe": "Hauptsächlich für das «V» der Bildmarke, darüber hinaus als Hintergrundfarbe",
+      "sekundaerfarbe": "Ausschliesslich als Hintergrundfarbe",
+      "text": "Text jeder Art (Titel, Fliesstext etc.) nie in Primär- oder Sekundärfarbe — nur Schwarz oder Weiss",
       "background": "white (#ffffff) für Seitengrund, #f8f8f8 für Karten/Sektionen",
-      "text": "#1a1a1a für Haupttext, #777777 für Nebentext/Beschriftungen",
-      "interactive": "#ff6300 für aktive Links und CTAs",
+      "interactive": "#ff6300 für aktive Links und CTAs — dokumentierte Abweichung, gilt nur für das Markenportal",
       "noGradients": true,
-      "noShadows": "Nur subtile Schatten für interaktive Karten (box-shadow on hover)"
+      "noShadows": "Nur subtile Schatten für interaktive Karten (box-shadow on hover)",
+      "portalAusnahme": "Das Markenportal setzt Labels, Links und Akzente bewusst in Orange. Diese Abweichung gilt nur für marke.verkehrskadetten.ch und ist kein Vorbild für Abteilungs-Anwendungen."
     }
   },
-
   "typography": {
     "primary": {
       "family": "Inter",
@@ -152,13 +224,16 @@
       "source": "https://rsms.me/inter/ oder Google Fonts; Download-Paket (Print/Office): downloads/inter.zip",
       "webIntegration": {
         "method": "rsms.me CDN (kein Self-Hosting)",
-        "head": ["<link rel=\"preconnect\" href=\"https://rsms.me/\">", "<link rel=\"stylesheet\" href=\"https://rsms.me/inter/inter.css\">"],
+        "head": [
+          "<link rel=\"preconnect\" href=\"https://rsms.me/\">",
+          "<link rel=\"stylesheet\" href=\"https://rsms.me/inter/inter.css\">"
+        ],
         "cssFamily": "Inter; InterVariable (wenn font-variation-settings unterstützt)"
       },
       "weights": {
         "300": "Light — Claim, ruhiger Fliesstext",
         "400": "Regular — Fliesstext, Beschreibungen",
-        "700": "Bold — Schriftmarke, Titel, Slogans, Labels, CTAs, Nav-Links"
+        "700": "Bold — Titel, Slogans, Labels, CTAs, Nav-Links"
       },
       "italic": "punktuell für Betonungen/Zitate, in allen Gewichten möglich",
       "cssDeclaration": "font-family: 'Inter', system-ui, sans-serif;"
@@ -168,7 +243,11 @@
       "foundry": "OurType",
       "license": "Intern — nur für VK-Nutzung.",
       "usage": "Ausschliesslich im Logo. In den Logo-SVGs als Pfade hinterlegt — nicht für Text/Fliesstext.",
-      "files": ["assets/fonts/FaktBold.ttf", "assets/fonts/FaktNormal.ttf", "assets/fonts/FaktNormal.otf"]
+      "files": [
+        "assets/fonts/FaktBold.ttf",
+        "assets/fonts/FaktNormal.ttf",
+        "assets/fonts/FaktNormal.otf"
+      ]
     },
     "fallbacks": [
       {
@@ -232,7 +311,6 @@
       "maxLineLength": "580px für Fliesstext-Absätze"
     }
   },
-
   "spacing": {
     "tokens": {
       "--pad": "40px (horizontal padding, 20px auf Mobile)",
@@ -259,7 +337,6 @@
     },
     "notes": "Kein striktes 8px-Grid — Spacings orientieren sich an Lesbarkeit und optischer Balance"
   },
-
   "borderRadius": {
     "small": "3px (select, toast)",
     "medium": "4–5px (buttons, tags)",
@@ -268,21 +345,18 @@
     "pill": "20px (bild-tag chips)",
     "hero": "12px (hero-logo-box)"
   },
-
   "shadows": {
     "nav": "0 2px 16px rgba(0,0,0,0.08) — nur bei scrolled",
     "cardHover": "0 6px 20px rgba(0,0,0,0.1)",
     "dlItemHover": "0 4px 16px rgba(255,99,0,0.08)",
     "notes": "Schatten nur für interaktive Hover-States — keine permanenten Schatten"
   },
-
   "transitions": {
     "default": "0.15s ease",
     "nav": "box-shadow 0.2s",
     "colorCard": "transform 0.15s, box-shadow 0.15s",
     "links": "color 0.15s"
   },
-
   "layout": {
     "maxWidth": "900px",
     "containerPadding": "0 40px (Desktop), 0 20px (Mobile ≤768px)",
@@ -296,7 +370,6 @@
       "dosdonts": "1fr 1fr — 1fr auf Mobile"
     }
   },
-
   "components": {
     "abteilungsBar": {
       "description": "Schmaler blauer Banner über der Navigation. Erlaubt Abteilungsauswahl per Dropdown.",
@@ -368,7 +441,7 @@
       "previewPadding": "20px",
       "backgrounds": {
         "bg-white": "#ffffff (border-bottom 1px solid #eee)",
-        "bg-dark": "#1a1a1a",
+        "bg-dark": "#000000",
         "bg-blue": "#2F5D77",
         "bg-orange": "#ff6300"
       },
@@ -403,7 +476,7 @@
       "nameStyle": "14px, 700, color: var(--black)",
       "descStyle": "12px, color: #777, line-height 1.45",
       "button": {
-        "background": "#1a1a1a → #ff6300 (hover)",
+        "background": "#000000 → #ff6300 (hover)",
         "fontSize": "10px, 700, uppercase, letter-spacing 0.08em",
         "padding": "8px 14px",
         "borderRadius": "5px",
@@ -426,14 +499,13 @@
       "sharedStyle": "border-radius 10px, padding 20px, font-size 13px, gap 7px"
     },
     "footer": {
-      "background": "#1a1a1a",
+      "background": "#000000",
       "padding": "36px 40px",
       "logo": "height 56px, filter: brightness(0) invert(1) — weisses Logo",
       "metaStyle": "12px, color: #555, line-height 1.7, text-align right",
       "linkStyle": "color: #888 → var(--orange) (hover)"
     }
   },
-
   "logos": {
     "dachmarke": {
       "name": "Verkehrskadetten",
@@ -453,7 +525,7 @@
           "file": "assets/logos/Verkehrskadetten_Kombination_RGB_orange+weiss.svg",
           "preview": "assets/logos/Verkehrskadetten_Kombination_RGB_orange+weiss-cropped.svg",
           "colorMode": "RGB",
-          "background": "dunkel (#1a1a1a, #2F5D77)",
+          "background": "dunkel (#000000, #2F5D77)",
           "usage": "Auf dunklen Hintergründen"
         },
         {
@@ -498,21 +570,24 @@
           "background": "dunkel"
         },
         {
-          "name": "Schriftmarke schwarz",
+          "name": "Wortmarke schwarz",
           "file": "assets/logos/Verkehrskadetten_Schriftmarke_RGB_schwarz.svg",
           "colorMode": "RGB",
           "background": "hell",
           "usage": "Minimale Verwendung, Textkontexte"
         },
         {
-          "name": "Schriftmarke weiss",
+          "name": "Wortmarke weiss",
           "file": "assets/logos/Verkehrskadetten_Schriftmarke_RGB_weiss.svg",
           "colorMode": "RGB",
           "background": "dunkel",
           "usage": "Footer, dunkle Hintergründe"
         }
       ],
-      "schutzraum": "Mindestabstand = Höhe des Logos rundum freilassen",
+      "aufbau": "Das Logo besteht aus Bildmarke, Wortmarke und deren Kombination. Je nach Anwendungszweck wird die vollständige Kombination oder eine Einzelform verwendet.",
+      "schutzraum": "Rundum freilassen — die verbindliche Markierung (rote Linie) zeigt Kapitel 6 des Marken-Manuals",
+      "minimalgroesse": "Definiert sich über die Leserlichkeit der Wortmarke",
+      "terminologie": "Das Marken-Manual nennt die Textmarke «Wortmarke». Die Dateinamen tragen aus historischen Gründen weiterhin «Schriftmarke» — gemeint ist dasselbe Element.",
       "rules": {
         "do": [
           "Nur freigegebene SVG- und PDF-Dateien verwenden",
@@ -533,37 +608,104 @@
     "abteilungen": {
       "description": "Jede Abteilung hat eigene Logos nach demselben Schema wie die Dachmarke",
       "filePattern": "assets/logos/abteilungen/{id}_{colorMode}_{farbe}.svg",
-      "variants": ["RGB_schwarz", "RGB_weiss", "CMYK_schwarz", "CMYK_weiss"],
+      "variants": [
+        "RGB_schwarz",
+        "RGB_weiss",
+        "CMYK_schwarz",
+        "CMYK_weiss"
+      ],
       "colorModes": {
         "RGB": "Für digitale Medien (SVG, PNG, Webseiten)",
         "CMYK": "Für Druckproduktionen (PDF, AI)"
       },
       "list": [
-        { "id": "albis",                  "name": "VK Albis" },
-        { "id": "ausserschwyz",           "name": "VK Ausserschwyz" },
-        { "id": "basel",                  "name": "VK Kadetten Korps Basel" },
-        { "id": "bern",                   "name": "VK Bern" },
-        { "id": "chur",                   "name": "VK Chur" },
-        { "id": "fuerstenland",           "name": "VK Fürstenland" },
-        { "id": "glarnerland",            "name": "VK Glarnerland" },
-        { "id": "luzern",                 "name": "VK Luzern" },
-        { "id": "nordwest-schweiz",       "name": "VK Nordwest Schweiz" },
-        { "id": "rapperswil-jona",        "name": "VK Rapperswil-Jona" },
-        { "id": "saanenland",             "name": "VK Saanenland" },
-        { "id": "samstagern-richterswil", "name": "VK Samstagern-Richterswil" },
-        { "id": "schaffhausen",           "name": "VK Schaffhausen" },
-        { "id": "st-gallen",              "name": "VK St. Gallen" },
-        { "id": "st-galler-oberland",     "name": "VK St. Galler Oberland" },
-        { "id": "thurgau",                "name": "VK Thurgau" },
-        { "id": "winterthur",             "name": "VK Winterthur" },
-        { "id": "zuerich-oberland",       "name": "VK Zürcher Oberland" },
-        { "id": "zuerich-unterland",      "name": "VK Zürcher Unterland" },
-        { "id": "zuerichsee",             "name": "VK Zürichsee" },
-        { "id": "zug",                    "name": "VK Zug" }
+        {
+          "id": "albis",
+          "name": "VK Albis"
+        },
+        {
+          "id": "ausserschwyz",
+          "name": "VK Ausserschwyz"
+        },
+        {
+          "id": "basel",
+          "name": "VK Kadetten Korps Basel"
+        },
+        {
+          "id": "bern",
+          "name": "VK Bern"
+        },
+        {
+          "id": "chur",
+          "name": "VK Chur"
+        },
+        {
+          "id": "fuerstenland",
+          "name": "VK Fürstenland"
+        },
+        {
+          "id": "glarnerland",
+          "name": "VK Glarnerland"
+        },
+        {
+          "id": "luzern",
+          "name": "VK Luzern"
+        },
+        {
+          "id": "nordwest-schweiz",
+          "name": "VK Nordwest Schweiz"
+        },
+        {
+          "id": "rapperswil-jona",
+          "name": "VK Rapperswil-Jona"
+        },
+        {
+          "id": "saanenland",
+          "name": "VK Saanenland"
+        },
+        {
+          "id": "samstagern-richterswil",
+          "name": "VK Samstagern-Richterswil"
+        },
+        {
+          "id": "schaffhausen",
+          "name": "VK Schaffhausen"
+        },
+        {
+          "id": "st-gallen",
+          "name": "VK St. Gallen"
+        },
+        {
+          "id": "st-galler-oberland",
+          "name": "VK St. Galler Oberland"
+        },
+        {
+          "id": "thurgau",
+          "name": "VK Thurgau"
+        },
+        {
+          "id": "winterthur",
+          "name": "VK Winterthur"
+        },
+        {
+          "id": "zuerich-oberland",
+          "name": "VK Zürcher Oberland"
+        },
+        {
+          "id": "zuerich-unterland",
+          "name": "VK Zürcher Unterland"
+        },
+        {
+          "id": "zuerichsee",
+          "name": "VK Zürichsee"
+        },
+        {
+          "id": "zug",
+          "name": "VK Zug"
+        }
       ]
     }
   },
-
   "imagery": {
     "style": "Authentische Fotografie — keine gestellten Stock-Bilder",
     "subjects": "Jugendliche im echten Einsatz",
@@ -571,38 +713,42 @@
       "Authentische Situationen",
       "Sichtbare Verantwortung",
       "Nähe zu den Menschen",
+      "Unscharfer Hintergrund",
       "Teamgeist",
       "Kompetenz & Professionalität"
     ],
     "do": [
-      "Authentische Situationen im echten Einsatz",
-      "Sichtbare Verantwortung der Jugendlichen",
-      "Nähe zu den Menschen — Gesichter, Emotionen",
-      "Teamgeist und Gemeinschaft",
-      "Kompetenz und Professionalität"
+      "Jugendliche im Einsatz, Gesichtsausdruck authentisch zeigen",
+      "Situationen mit Verantwortung, Konzentration und Bewegung — möglichst von vorne fotografiert",
+      "Nähe: buchstäblich nah an der Person, Bildausschnitt optimieren",
+      "Hintergrund unscharf halten, Fokus auf die Verkehrskadett:in",
+      "Uniform als Zeichen für Haltung, nicht für Strenge",
+      "Handzeichen und Körperposition zeigen, Verkehrssituation einbeziehen",
+      "Teamgeist: mehrere Jugendliche im Einsatz, im Austausch oder in Vorbereitung"
     ],
     "dont": [
-      "Unklare Bildaussagen ohne erkennbaren Kontext",
-      "Aufnahmen von hinten ohne Gesichtsbezug",
-      "Unscharfe oder technisch schlechte Bilder"
+      "Aufnahmen von hinten — abwehrend, exkludierend, befremdend",
+      "Problematischer Bildschnitt, z. B. angeschnittene Köpfe",
+      "Keine erkennbare Bildaussage",
+      "Verkehrskadett:in in Aktion zu klein im Bild",
+      "Unscharfe Fotos"
     ],
     "format": "webp bevorzugt für Web-Assets",
     "aspectRatio": "4:3 für Bildplatzhalter",
-    "objectFit": "cover"
+    "objectFit": "cover",
+    "haltung": "Die Verkehrskadetten sind sympathisch, kompetent und ein Team — die Bilder machen das erlebbar."
   },
-
   "cssVariables": {
-    "--orange":      "#ff6300",
-    "--black":       "#1a1a1a",
-    "--blue":        "#2F5D77",
-    "--off-white":   "#f8f8f8",
-    "--border":      "#eeeeee",
-    "--text-muted":  "#777777",
-    "--max-w":       "900px",
-    "--pad":         "40px",
+    "--orange": "#ff6300",
+    "--black": "#000000",
+    "--blue": "#2F5D77",
+    "--off-white": "#f8f8f8",
+    "--border": "#eeeeee",
+    "--text-muted": "#777777",
+    "--max-w": "900px",
+    "--pad": "40px",
     "--section-gap": "64px"
   },
-
   "breakpoints": {
     "mobile": {
       "max": "768px",
@@ -629,14 +775,13 @@
       ]
     }
   },
-
   "downloads": {
     "availableFiles": [
       {
         "name": "Logos Dachmarke",
         "file": "downloads/logos-dachmarke.zip",
         "format": "ZIP",
-        "contents": "SVG (RGB) + PDF (CMYK): Kombination, Bildmarke, Schriftmarke in orange, weiss, outline",
+        "contents": "SVG (RGB) + PDF (CMYK): Kombination, Bildmarke, Wortmarke in orange, weiss, outline",
         "status": "available"
       },
       {
@@ -683,18 +828,40 @@
       }
     ]
   },
-
   "navigation": {
     "sections": [
-      { "id": "marke",       "label": "Marke",       "title": "Markenidentität" },
-      { "id": "logo",        "label": "Logo",        "title": "Logos & Varianten" },
-      { "id": "farben",      "label": "Farben",      "title": "Farbpalette" },
-      { "id": "typografie",  "label": "Typografie",  "title": "Inter" },
-      { "id": "bildsprache", "label": "Bildsprache", "title": "Bildwelt" },
-      { "id": "downloads",   "label": "Downloads",   "title": "Brand Assets" }
+      {
+        "id": "marke",
+        "label": "Marke",
+        "title": "Markenidentität"
+      },
+      {
+        "id": "logo",
+        "label": "Logo",
+        "title": "Logos & Varianten"
+      },
+      {
+        "id": "farben",
+        "label": "Farben",
+        "title": "Farbpalette"
+      },
+      {
+        "id": "typografie",
+        "label": "Typografie",
+        "title": "Inter"
+      },
+      {
+        "id": "bildsprache",
+        "label": "Bildsprache",
+        "title": "Bildwelt"
+      },
+      {
+        "id": "downloads",
+        "label": "Downloads",
+        "title": "Brand Assets"
+      }
     ]
   },
-
   "interactions": {
     "colorCopy": "Klick auf Farbkachel → HEX in Clipboard → Toast 1.5s sichtbar",
     "activeNav": "IntersectionObserver (rootMargin -50%) setzt .active Klasse auf aktiven Link",
@@ -709,7 +876,6 @@
       "persistence": "Cookie 'abteilung', 365 Tage, SameSite=Lax"
     }
   },
-
   "accessibility": {
     "lang": "de",
     "colorContrast": {
@@ -723,5 +889,148 @@
       "Keine skip-navigation vorhanden",
       "Mobile-Nav fehlt (kein Hamburger-Menu) — bekannte Lücke"
     ]
+  },
+  "markenarchitektur": {
+    "description": "Unter dem gemeinsamen Dach «Verkehrskadetten» gibt es drei Formen des Auftritts. Regionale Abteilungen nutzen den gemeinsamen Rahmen je nach Bedarf und eigener Identität.",
+    "formen": [
+      {
+        "name": "Familie",
+        "kurzformel": "Ein Auftritt, eine Marke",
+        "beschreibung": "Die Abteilung übernimmt Logo, Farben und das gesamte Design der nationalen Dachmarke. Der regionale Name wird integriert (z. B. «Verkehrskadetten Zürioberland»)."
+      },
+      {
+        "name": "Endorsed",
+        "kurzformel": "Eigenes Logo, gemeinsame Gestaltung",
+        "beschreibung": "Die Abteilung behält ihr bestehendes Logo, übernimmt aber das Designsystem der Dachmarke (Farben, Schriften, Bildsprache). Das nationale Logo wird als Absender sichtbar mitgeführt."
+      },
+      {
+        "name": "Kollaboration",
+        "kurzformel": "Zwei Marken, eine sichtbare Verbindung",
+        "beschreibung": "Die Abteilung tritt weitgehend unabhängig auf (eigenes Logo, eigenes Design), ergänzt aber punktuell durch die Wortmarke «Verkehrskadetten Schweiz»."
+      }
+    ],
+    "hinweis": "Die Abteilungslogos in diesem Portal bilden den Fall «Familie» ab."
+  },
+  "versprechen": {
+    "kern": "Wir verbinden funktionalen Nutzen mit persönlichem Wert — für Veranstalter, für Jugendliche und für Eltern.",
+    "ueberblick": [
+      "Jugendliche erleben Verantwortung, Gemeinschaft und Selbstwirksamkeit.",
+      "Eltern sehen, wie ihre Kinder wachsen — im geschützten Rahmen und mit klarer Aufgabe.",
+      "Veranstalter erhalten Verlässlichkeit, Übersicht und eine positive Wirkung nach aussen."
+    ],
+    "jugendlicheUndEltern": [
+      {
+        "titel": "Verantwortung statt Rollenspiel",
+        "kurzformel": "Nicht nur üben, wirksam sein",
+        "merksatz": "Du wirst gebraucht, nicht nur beschäftigt."
+      },
+      {
+        "titel": "Uniform mit Wirkung",
+        "kurzformel": "Anerkennung im Aussen",
+        "merksatz": "Du wirst gesehen und respektiert."
+      },
+      {
+        "titel": "Kameradschaft mit Basis",
+        "kurzformel": "Teamwork mit klaren Rollen",
+        "merksatz": "Gemeinsam etwas leisten."
+      },
+      {
+        "titel": "Sinnvolle Freizeit mit Effekt",
+        "kurzformel": "Mitwirken statt mitmachen",
+        "merksatz": "Weil Du mitmachst, wird's besser für alle."
+      },
+      {
+        "titel": "Erste, echte Berufserfahrung",
+        "kurzformel": "Gut für die eigene Zukunft",
+        "merksatz": "Erfahrungen, die man brauchen kann."
+      }
+    ],
+    "veranstaltende": [
+      {
+        "titel": "Zuverlässigkeit",
+        "kurzformel": "Ehrenamtlich, aber geschult",
+        "merksatz": "Pünktlich, geschult und einsatzbereit."
+      },
+      {
+        "titel": "Menschlichkeit & Nähe",
+        "kurzformel": "Positiv statt aggressiv",
+        "merksatz": "Verkehrslenkung ohne Ellenbogen."
+      },
+      {
+        "titel": "Image-Gewinn",
+        "kurzformel": "Funktion & Haltung",
+        "merksatz": "Wer mit VK arbeitet, zeigt Verantwortung."
+      },
+      {
+        "titel": "Einfachheit im Handling",
+        "kurzformel": "Unkompliziert",
+        "merksatz": "Gute Organisation & klare Absprachen."
+      },
+      {
+        "titel": "Kostenbewusste Professionalität",
+        "kurzformel": "Nicht profitorientiert",
+        "merksatz": "Starker Auftritt ohne Grossbudget."
+      }
+    ]
+  },
+  "botschaften": {
+    "dach": "Weil gesellschaftliches Miteinander sichere Mobilität braucht, sichern wir mit Jugendlichen den Verkehr — verlässlich, wirksam, ehrenamtlich.",
+    "obergeschoss": "Jugend bewegt Verkehr: Verkehrsdienst mit Verantwortung — gemeinnützig, verlässlich und von Jugendlichen getragen.",
+    "pfeiler": [
+      {
+        "zielgruppe": "Jugendliche",
+        "fokus": "Warum sich Mitmachen lohnt",
+        "kernbotschaft": "Bei uns übernimmst du Verantwortung — im echten Einsatz, im Team, für andere.",
+        "argumente": [
+          "Du bist Teil eines echten Einsatzes, nicht nur einer Übung.",
+          "Du trägst Verantwortung, bekommst Vertrauen und wirst ernst genommen.",
+          "Du findest Zusammenhalt, klare Rollen und Respekt; dabei entstehen Freundschaften, die ein Leben lang halten.",
+          "Mit deiner Uniform zeigst du Haltung — und wirst als Teil von etwas Grösserem wahrgenommen.",
+          "Du lernst, wie man Situationen überblickt, Menschen führt und mit Stress umgeht.",
+          "Dafür gibt's ein kleines Sackgeld, viel Erfahrung und das gute Gefühl, wirklich gebraucht zu werden."
+        ]
+      },
+      {
+        "zielgruppe": "Eltern",
+        "fokus": "Warum man uns vertrauen kann",
+        "kernbotschaft": "Ihr Kind wächst an der Aufgabe — mit Ausbildung, Struktur und echtem Vertrauen.",
+        "argumente": [
+          "Ihr Kind lernt, Verantwortung zu übernehmen, Schritt für Schritt, in verlässlichem Rahmen.",
+          "Es bewegt sich in einem strukturierten Umfeld, das Sicherheit gibt und gleichzeitig Freiraum schafft.",
+          "Wir fördern Sozialkompetenz, Teamfähigkeit und Durchsetzungsvermögen — Fähigkeiten, die weit über den Einsatz hinaus wirken.",
+          "Ihr Kind lernt, sich zu behaupten: freundlich, aber bestimmt.",
+          "Es gewinnt Einblick in sicherheitsnahe Berufe, von der Polizei bis zur Sanität.",
+          "Unsere Organisation ist gemeinnützig, lokal verankert und mit Herz geführt."
+        ]
+      },
+      {
+        "zielgruppe": "Veranstalter:innen",
+        "fokus": "Warum man mit uns gut zusammenarbeitet",
+        "kernbotschaft": "Wir sichern Ihren Anlass — verlässlich, freundlich, unkompliziert und mit Haltung.",
+        "argumente": [
+          "Unsere Jugendlichen sind pünktlich, geschult und einsatzbereit.",
+          "Sie treten freundlich auf, bringen Ruhe in Abläufe und geben Ihrem Anlass Sicherheit und Struktur.",
+          "Ob Sportanlass, Fest oder Markt: Unsere Präsenz wirkt auch bei Behörden, Publikum und Sponsoren.",
+          "Sie erhalten eine einfache Koordination, klare Absprachen und eine zuverlässige Umsetzung.",
+          "Mit dem Engagement der VK tun Sie nicht nur etwas für die Verkehrssicherheit, sondern auch für Ihr Image.",
+          "Gutes Preis-Leistungs-Verhältnis: gemeinnützig organisiert, aber professionell ausgeführt."
+        ]
+      }
+    ]
+  },
+  "anwendungen": {
+    "description": "Das Erscheinungsbild ist flexibel einsetzbar und passt sich den Kommunikationsmitteln an, ohne Wiedererkennbarkeit oder Klarheit zu verlieren.",
+    "typisch": [
+      "Gemeinsamer Webauftritt und Webauftritte der einzelnen Abteilungen",
+      "Social-Media-Kanäle der Dachorganisation oder der Abteilungen",
+      "Einsatzfahrzeuge und deren Beklebung",
+      "Sticker, Roll-ups, Flyer, Präsentationen und weitere Vorlagen im Kontakt mit Jugendlichen, Eltern, Veranstaltern und Behörden"
+    ],
+    "socialMedia": "Zwei Grössen der Bildmarke: mit Regionalnamen auf zwei Zeilen oder auf einer Zeile."
+  },
+  "rechte": {
+    "nutzungsrechte": "Die Verkehrskadetten verfügen über vollständige und uneingeschränkte Nutzungsrechte an den erstellten Designs. Ein Wechsel der betreuenden Agentur ist jederzeit möglich, ohne die Nutzungsrechte zusätzlich erwerben zu müssen.",
+    "urheberrechte": "Die Urheberrechte verbleiben stets bei LOOKINGLATELY | Heimspiel und dokumentieren, wer die Kreation erstellt hat.",
+    "bearbeitung": "Designs — beispielsweise die von LOOKINGLATELY entwickelten Logos — dürfen nur mit vorheriger Absprache und Zustimmung verändert oder von Dritten bearbeitet werden."
   }
 }

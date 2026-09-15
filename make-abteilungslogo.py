@@ -32,7 +32,7 @@ X0         = 208.5030           # Pen-Ursprung (nicht die Tintenkante!)
 LEAD       = SIZE               # Durchschuss 1.0 em (wie die Dachmarken-Schriftmarke)
 HEIGHT     = 140.26             # Höhe der Bildmarke, in allen Logos gleich
 
-BLACK_SVG  = '#1a1a1a'                                # VK-Schwarz
+BLACK_SVG  = '#000000'                                # VK-Schwarz
 WHITE_SVG  = 'rgb(100%, 100%, 100%)'
 ORANGE_SVG = '#ff6300'
 # PDF-Farben. _CMYK_ trägt die Druckwerte des Designers, _RGB_ echtes
@@ -41,7 +41,7 @@ ORANGE_SVG = '#ff6300'
 BLACK_K    = '0.744141 0.652344 0.621094 0.814453 k'
 WHITE_K    = '0 0 0 0 k'
 ORANGE_K   = '0.00466919 0.748047 1 0 k'
-BLACK_RG   = '0.101961 0.101961 0.101961 rg'   # VK-Schwarz #1a1a1a
+BLACK_RG   = '0 0 0 rg'                        # VK-Schwarz #000000
 WHITE_RG   = '1 1 1 rg'
 ORANGE_RG  = '1 0.388235 0 rg'                 # #ff6300 exakt
 

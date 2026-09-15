@@ -6,7 +6,7 @@
 
 :root {
   --orange: #ff6300;
-  --black: #1a1a1a;
+  --black: #000000;
   --blue: #2F5D77;
   --off-white: #f8f8f8;
   --border: #eee;
@@ -61,7 +61,7 @@ a:hover:not(.dl-btn) { text-decoration-color: currentColor; }
   font-family: inherit;
 }
 .abt-select:hover, .abt-select:focus { background: rgba(255,255,255,0.2); outline: none; }
-.abt-select option { background-color: #fff; color: #1a1a1a; }
+.abt-select option { background-color: #fff; color: #000000; }
 
 /* ── NAV ── */
 .site-nav {
@@ -225,6 +225,16 @@ a:hover:not(.dl-btn) { text-decoration-color: currentColor; }
 .color-hex { font-size: 12px; color: var(--text-muted); font-family: monospace; margin-top: 2px; }
 .color-rgb { font-size: 11px; color: #aaa; font-family: monospace; }
 .color-cmyk { font-size: 11px; color: #bbb; font-family: monospace; }
+.color-pantone { font-size: 11px; color: #bbb; font-family: monospace; }
+
+/* Einsatzregeln der Farbwelt (Marken-Manual, Kap. 8) */
+.color-rules { margin-top: 28px; padding: 20px 24px; background: var(--off-white); border-radius: 10px; }
+.color-rules h3 { font-size: 11px; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 12px; }
+.color-rules ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.color-rules li { font-size: 13px; color: var(--black); line-height: 1.5; padding-left: 14px; position: relative; }
+.color-rules li::before { content: '—'; position: absolute; left: 0; color: var(--text-muted); }
+.color-rules-note { font-size: 12px; color: var(--text-muted); margin-top: 14px; line-height: 1.5; }
+.color-rules-note code { font-family: monospace; font-size: 11px; }
 .color-toast {
   position: absolute; top: 8px; right: 8px;
   background: var(--black); color: white;

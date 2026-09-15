@@ -7,7 +7,7 @@ Statisches Brand-Manual-Portal für die Dachmarke «Verkehrskadetten».
 
 - Plain HTML5 + CSS3 + Vanilla JS — kein Framework, kein Build-Step
 - Font: Inter (SIL OFL) — Light 300 / Regular 400 / Bold 700 + Italic — im Web via rsms.me CDN (`inter.css`, kein Self-Hosting). Fakt (OurType) nur noch im Logo.
-- Deploy: `git push origin main` → cyon SSH (s078.cyon.net, User: vkaalbis)
+- Deploy: FTP-Upload via `bash deploy.sh` (lftp mirror) — Zugang in `.env`
 
 ## Dateistruktur
 
@@ -43,10 +43,21 @@ Ressourcen/              ← Quelldateien (nicht im Git, nicht auf Server)
 ## Marke
 
 - **Primärfarbe:** `#ff6300` (VK Orange)
-- **Schwarz:** `#1a1a1a` | **Blau (Accent):** `#2F5D77` | **Background:** `#f8f8f8`
+- **Schwarz:** `#000000` | **Blau (Sekundär):** `#2F5D77` | **UI-Background:** `#f8f8f8`
 - **Schrift:** Inter — Bold (Titel/Slogans), Regular (Fliesstext), Light (Claim), Italic punktuell; Fakt nur im Logo
 - **Sprache:** Deutsch — immer «Uniform», nie «Weste»
 - **Ton:** Klar, direkt, professionell — «Reduce to the max»
+- **Claim:** «Jugend bewegt Verkehr»
+- **Namen:** Die Marke heisst **Verkehrskadetten**. Träger ist der **Schweizerische
+  Verkehrskadetten Verband (SVKV)** — dieser Name nur in rechtlichen Kontexten
+  (Copyright, Impressum, Verträge), nicht in der Markenkommunikation.
+- **Farbregel (Manual Kap. 8):** Primärfarbe vor allem für das «V» der Bildmarke,
+  Sekundärfarbe ausschliesslich als Hintergrund, **Text nie in Primär- oder
+  Sekundärfarbe**. Das Portal selbst weicht bewusst ab (orange Labels und Links) —
+  dokumentiert in `downloads/design-system.md`.
+- **Verbindliche Quelle:** `downloads/Verkehrskadetten_Marken-Manual.pdf`
+  (Stand November 2025). Änderungen am Design nur mit Zustimmung von
+  LOOKINGLATELY | Heimspiel (Urheberrecht).
 
 ## Lokale Entwicklung
 
@@ -57,12 +68,34 @@ python3 -m http.server 8080
 
 ## Deploy
 
+Deployt wird per **FTP-Upload**, nicht über Git. Das Repository dient nur der
+Versionierung — ein `git push` veröffentlicht nichts.
+
 ```bash
-git add . && git commit -m "Beschreibung" && git push origin main
+bash deploy.sh
 ```
 
-Remote `origin` → `ssh://vkaalbis@s078.cyon.net/home/vkaalbis/repos/marke.git`  
-Post-receive Hook deployt nach `~/public_html/marke/`
+In VS Code alternativ über die Task **«Deploy: FTP Upload»** (`.vscode/tasks.json`).
+
+`deploy.sh` spiegelt das Arbeitsverzeichnis mit `lftp mirror --reverse --delete`
+auf den Server. Die Zugangsdaten stehen in `.env` (nicht im Git) — Vorlage:
+`.env.example` mit `FTP_HOST`, `FTP_USER`, `FTP_PASS`, `FTP_REMOTE_PATH`,
+`FTP_PROTOCOL` (`ftp`, `sftp` oder `ftps`).
+
+Wegen `--delete` gilt: Was lokal fehlt, wird auf dem Server gelöscht.
+
+Hochgeladen wird nur das, was die Website tatsächlich braucht: `index.html`,
+`assets/` und `downloads/`. Alles andere hält die Ausschlussliste im Skript
+zurück — Quellen (`Ressourcen/`), Git- und Editor-Verzeichnisse, Zugangsdaten
+(`.env`), die Agenten-Dokumentation (`CLAUDE.md`, `AGENTS.md`, `SETUP.md`,
+`docs/`), die Build-Tools (`*.py`, `*.sh`, `_generate-social.js`), das
+Node-Umfeld (`node_modules/`, `package*.json`), der separat deployte
+Cloudflare-Worker (`worker/`) sowie lokale Artefakte (`ruvector.db`,
+`agentdb.rvf*`, `__pycache__/`, `.DS_Store`).
+
+Ausgeschlossene Dateien werden von `lftp` komplett ignoriert — `--delete`
+entfernt sie also **nicht** vom Server, falls sie ein früherer Deploy
+hochgeladen hat. Solche Altlasten einmalig von Hand löschen.
 
 ## Marken-Coach (Chat-Agent)
 
@@ -146,7 +179,7 @@ kreisförmig beschnitten — lange zweite Zeilen brauchen ein
 
 | Variante | Farbraum | Werte |
 |---|---|---|
-| `*.svg` | RGB | Orange `#ff6300`, Schwarz `#1a1a1a` |
+| `*.svg` | RGB | Orange `#ff6300`, Schwarz `#000000` |
 | `_RGB_*.pdf` | echtes **DeviceRGB** | dieselben Werte wie die SVGs |
 | `_CMYK_*.pdf` | **DeviceCMYK** | Druckwerte des Designers, Orange `0/74.8/100/0` |
 
@@ -158,6 +191,10 @@ Altlasten, die hier zusammenliefen:
   Abteilung.
 - SVGs und PDFs benutzten die Rich-Black-Konversion `rgb(9.16%, …)` ≈ `#171817`
   statt des VK-Schwarz. **`#171817` darf nicht mehr vorkommen.**
+- Das VK-Schwarz war danach `#1a1a1a`; das Marken-Manual (Nov. 2025, Kap. 8)
+  definiert aber reines `#000000`. Seit dem Manual-Abgleich tragen alle SVGs und
+  `_RGB_`-PDFs `#000000` — die Dachmarken-SVGs hatten das schon immer (kein
+  `fill`-Attribut = SVG-Default `black`). **`#1a1a1a` darf nicht mehr vorkommen.**
 
 Die CMYK-Dateien sind absichtlich unangetastet — sie tragen die Druckwerte des
 Designers. Offen: die PDFs haben kein ICC-Profil und keinen OutputIntent,
@@ -172,7 +209,7 @@ bestehenden Familie zurückgerechnet (Treffer ≤ 0.006 pt):
 - Fakt Bold, Schriftgrad **39.789 pt** (Versalhöhe 27.375 pt), Laufweite 0
 - Grundlinie der letzten Zeile **y = 107.496**, Pen-Ursprung **x = 208.503**
 - Durchschuss mehrzeilig **1.0 em** — wie die dreizeilige Dachmarken-Schriftmarke
-- Schwarz `#1a1a1a`, Orange `#ff6300` (siehe «Farbräume der Downloads»)
+- Schwarz `#000000`, Orange `#ff6300` (siehe «Farbräume der Downloads»)
 
 Die Wortmarken sind **gekernt**. Fakt Bold hat keine `kern`-Tabelle, nur GPOS —
 darum shapet das Tool mit Chromium und liest die Pen-Positionen aus dem DOM.

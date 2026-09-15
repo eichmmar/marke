@@ -35,12 +35,17 @@ export const ABTEILUNGEN = {
 
 // Kompakter Fallback, falls die Live-MD nicht erreichbar ist.
 export const FALLBACK_KNOWLEDGE = [
-  'Farben: VK Orange #FF6300 (Primär), VK Schwarz #1A1A1A (Text), VK Blau #2F5D77 (Akzent), VK Weiss #F8F8F8 (Flächen). Keine Verläufe.',
-  'Schrift: Inter (Hausschrift, SIL OFL) — Bold (700) für Schriftmarke/Titel/Slogans, Regular (400) für Fliesstext, Light (300) für Claim/Fliesstext, Italic punktuell. Office-Ersatz: Calibri. Fakt wird nur noch im Logo verwendet.',
+  'Namen: Die Marke heisst «Verkehrskadetten». Trägerorganisation ist der «Schweizerische Verkehrskadetten Verband» (kurz SVKV) — dieser Name gehört nur in rechtliche Kontexte (Copyright, Impressum, Verträge), nie in die Markenkommunikation. «Verkehrskadetten Schweiz» ist die Absender-Schreibweise der Wortmarke im Kollaborations-Fall, kein eigener Markenname.',
+  'Claim: «Jugend bewegt Verkehr». Identität: WAS — Verkehr und Zugänge bei Veranstaltungen sichern, verlässlich, wirksam, ehrenamtlich. WIE — mit geschulten Jugendlichen, klarem Ablauf, menschlichem Auftreten, regional verankert. WARUM — weil gesellschaftliches Miteinander sichere Mobilität und Verantwortung braucht.',
+  'Farben: Primärfarbe VK Orange #FF6300 (CMYK 0/75/100/0, Pantone 1585), Sekundärfarbe VK Blau #2F5D77 (CMYK 86/57/37/15, Pantone 7699), Weiss #FFFFFF, Schwarz #000000. Keine Verläufe.',
+  'Farbregeln: Primärfarbe vor allem für das «V» der Bildmarke und als Hintergrund, Sekundärfarbe ausschliesslich als Hintergrund. Text jeder Art nie in Primär- oder Sekundärfarbe — nur Schwarz oder Weiss.',
+  'Schrift: Inter (Hausschrift, SIL OFL) — Bold (700) für Titel/Slogans, Regular (400) für Fliesstext, Light (300) für Claim/Fliesstext, Italic punktuell. Office-Ersatz: Calibri. Fakt bleibt ausschliesslich Logo und Wortmarke vorbehalten.',
   'Tonalität: «Reduce to the max» — kurze, präzise, aktive Sätze. Immer «Uniform», nie «Weste».',
-  'Logos: nur freigegebene SVG/PDF verwenden, Schutzraum einhalten, nicht verzerren/umfärben/mit Effekten versehen.',
+  'Logo: besteht aus Bildmarke, Wortmarke und deren Kombination. Nur freigegebene SVG/PDF verwenden, Schutzraum einhalten, nicht verzerren/umfärben/mit Effekten versehen. Minimalgrösse richtet sich nach der Leserlichkeit der Wortmarke.',
+  'Markenarchitektur: drei Auftrittsformen — Familie (Abteilung übernimmt Logo und Design der Dachmarke, Regionalname integriert), Endorsed (eigenes Logo, Designsystem der Dachmarke, nationales Logo als Absender), Kollaboration (eigenständiger Auftritt, punktuell ergänzt durch die Wortmarke «Verkehrskadetten Schweiz»).',
   'Abteilungslogos: assets/logos/abteilungen/{id}_{RGB|CMYK}_{schwarz|weiss}.svg; ZIP: downloads/logos-abteilungen/{id}.zip.',
-  'Bildsprache: authentische Fotografie echter Einsätze, Gesichter & Emotionen — keine gestellten Stock-Bilder.',
+  'Bildsprache: authentische Fotografie echter Einsätze, von vorne, nah an der Person, Hintergrund unscharf, Gesichter und Emotionen. Keine Aufnahmen von hinten, keine angeschnittenen Köpfe, keine unscharfen Fotos.',
+  'Rechte: Nutzungsrechte liegen vollständig bei den Verkehrskadetten; die Urheberrechte verbleiben bei LOOKINGLATELY | Heimspiel. Designs dürfen nur mit vorheriger Zustimmung verändert oder von Dritten bearbeitet werden.',
 ].join('\n');
 
 const ROLE = `Du bist der «Marken-Coach» der Verkehrskadetten — ein hilfreicher Assistent im Markenportal (marke.verkehrskadetten.ch).
