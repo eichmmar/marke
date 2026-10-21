@@ -74,6 +74,8 @@ Versionierung — ein `git push` veröffentlicht nichts.
 
 ```bash
 bash deploy.sh
+# oder
+npm run deploy
 ```
 
 In VS Code alternativ über die Task **«Deploy: FTP Upload»** (`.vscode/tasks.json`).
