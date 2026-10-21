@@ -9,9 +9,8 @@ MODEL = "claude-sonnet-4-6"
 ALLOWED_ORIGINS = "https://marke.verkehrskadetten.ch,http://localhost:8080,http://127.0.0.1:8080"
 
 # Rate-Limit pro IP: 20 Anfragen / 60 s (period muss 10 oder 60 sein).
-[[unsafe.bindings]]
+[[ratelimits]]
 name = "RATE_LIMITER"
-type = "ratelimit"
 namespace_id = "1001"
 simple = { limit = 20, period = 60 }
 
