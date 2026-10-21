@@ -15,6 +15,7 @@ Statisches Brand-Manual-Portal für die Dachmarke «Verkehrskadetten».
 index.html               ← Gesamte Seite (single scrolling page)
 crop-svg.py              ← Tool: SVG-Whitespace entfernen (viewBox anpassen)
 make-abteilungslogo.py   ← Tool: neues Abteilungslogo setzen (SVG + PDF + ZIP)
+make-farbpalette.py      ← Tool: downloads/farbpalette.ase aus den Markenfarben (CMYK)
 _generate-social.js      ← Tool: Social-Media-Karten 1080×1080 (Playwright)
 assets/
   css/style.css          ← Alle Styles, CSS Custom Properties am Anfang
@@ -87,7 +88,7 @@ Wegen `--delete` gilt: Was lokal fehlt, wird auf dem Server gelöscht.
 Hochgeladen wird nur das, was die Website tatsächlich braucht: `index.html`,
 `assets/` und `downloads/`. Alles andere hält die Ausschlussliste im Skript
 zurück — Quellen (`Ressourcen/`), Git- und Editor-Verzeichnisse, Zugangsdaten
-(`.env`), die Agenten-Dokumentation (`CLAUDE.md`, `AGENTS.md`, `SETUP.md`,
+(`.env`), die Agenten-Dokumentation (`CLAUDE.md`, `SETUP.md`,
 `docs/`), die Build-Tools (`*.py`, `*.sh`, `_generate-social.js`), das
 Node-Umfeld (`node_modules/`, `package*.json`), der separat deployte
 Cloudflare-Worker (`worker/`) sowie lokale Artefakte (`ruvector.db`,
@@ -181,7 +182,7 @@ kreisförmig beschnitten — lange zweite Zeilen brauchen ein
 |---|---|---|
 | `*.svg` | RGB | Orange `#ff6300`, Schwarz `#000000` |
 | `_RGB_*.pdf` | echtes **DeviceRGB** | dieselben Werte wie die SVGs |
-| `_CMYK_*.pdf` | **DeviceCMYK** | Druckwerte des Designers, Orange `0/74.8/100/0` |
+| `_CMYK_*.pdf` | **DeviceCMYK** | Markenwerte: Orange `0/75/100/0`, Schwarz `0/0/0/100` |
 
 Alle digitalen Assets tragen ausschliesslich die Markenfarben. Drei bereinigte
 Altlasten, die hier zusammenliefen:
@@ -196,9 +197,16 @@ Altlasten, die hier zusammenliefen:
   `_RGB_`-PDFs `#000000` — die Dachmarken-SVGs hatten das schon immer (kein
   `fill`-Attribut = SVG-Default `black`). **`#1a1a1a` darf nicht mehr vorkommen.**
 
-Die CMYK-Dateien sind absichtlich unangetastet — sie tragen die Druckwerte des
-Designers. Offen: die PDFs haben kein ICC-Profil und keinen OutputIntent,
-Druckereien bekommen also unkalibriertes DeviceCMYK.
+Die Abteilungs-`_CMYK_`-PDFs trugen bis Oktober 2026 die Designer-Werte Orange
+`0.47/74.8/100/0` und Tiefschwarz `74/65/62/81` (283 % Farbauftrag). Seither
+erzeugt `make-abteilungslogo.py` sie mit den Markenwerten aus
+`design-system.md` — alle 21 Abteilungen sind damit neu generiert. Offen: die
+PDFs haben kein ICC-Profil und keinen OutputIntent, Druckereien bekommen also
+unkalibriertes DeviceCMYK.
+
+**Achtung Dachmarke:** Die `_CMYK_`-PDFs in `logos-dachmarke.zip` sind trotz
+Namen **kein CMYK**, sondern ICCBased sRGB (nur der OutputIntent ist SWOP).
+Offen: Neuexport aus Illustrator.
 
 ### Wie die Wortmarke gesetzt wird
 

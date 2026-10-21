@@ -22,6 +22,12 @@ import json, os, re, subprocess, sys, tempfile, zlib
 ROOT = os.path.dirname(os.path.abspath(__file__))
 FONT = os.path.join(ROOT, 'assets/fonts/FaktBold.ttf')
 TEMPLATE = os.path.join(ROOT, 'assets/logos/abteilungen/zug_RGB_schwarz.svg')
+# Bildmarke einmal beim Start ausschneiden: `make-abteilungslogo.py zug Zug`
+# überschreibt das Template selbst, bevor die übrigen Varianten gebaut sind.
+# Der Block (2x schwarz, dann orange in <g clip-path>) ist in Designer- und
+# Tool-Ausgabe gleich, die Zahl der clipPaths davor nicht.
+BILDMARKE = re.search(r'<path fill-rule="nonzero" fill="[^"]*"[^>]*d="M 180\.097656.*?</g>',
+                      open(TEMPLATE).read(), re.S).group(0)
 
 # ── Satzparameter (aus der bestehenden Familie vermessen) ────────────────────
 UPEM, CAPU = 1000, 688          # Fakt Bold: units/em, capHeight
@@ -35,12 +41,12 @@ HEIGHT     = 140.26             # Höhe der Bildmarke, in allen Logos gleich
 BLACK_SVG  = '#000000'                                # VK-Schwarz
 WHITE_SVG  = 'rgb(100%, 100%, 100%)'
 ORANGE_SVG = '#ff6300'
-# PDF-Farben. _CMYK_ trägt die Druckwerte des Designers, _RGB_ echtes
-# DeviceRGB mit den exakten Markenwerten — die Dateinamen sagen also die
-# Wahrheit (früher waren beide Varianten CMYK).
-BLACK_K    = '0.744141 0.652344 0.621094 0.814453 k'
+# PDF-Farben. _CMYK_ trägt DeviceCMYK mit den Markenwerten (design-system.md),
+# _RGB_ echtes DeviceRGB mit den exakten Markenwerten — die Dateinamen sagen
+# also die Wahrheit (früher waren beide Varianten CMYK).
+BLACK_K    = '0 0 0 1 k'                       # VK-Schwarz CMYK 0/0/0/100
 WHITE_K    = '0 0 0 0 k'
-ORANGE_K   = '0.00466919 0.748047 1 0 k'
+ORANGE_K   = '0 0.75 1 0 k'                    # VK Orange CMYK 0/75/100/0
 BLACK_RG   = '0 0 0 rg'                        # VK-Schwarz #000000
 WHITE_RG   = '1 1 1 rg'
 ORANGE_RG  = '1 0.388235 0 rg'                 # #ff6300 exakt
@@ -182,18 +188,15 @@ def ink_bbox(word, pens, baseline):
 # ── Bildmarke (wortwörtlich aus einem bestehenden Logo) ──────────────────────
 def bildmarke_svg(color):
     """Bildmarke aus dem Template, alle Nicht-Orange-Fills auf `color` gesetzt."""
-    src = open(TEMPLATE).read()
-    m = re.search(r'<path fill-rule="nonzero" fill="[^"]*"[^>]*d="M 180\.097656.*?</g>', src, re.S)
-    block = m.group(0)
     # Orange bleibt immer Orange; alles andere ist die Schwarz/Weiss-Fläche.
     return re.sub(r'fill="((?!%s)[^"]*)"' % re.escape(ORANGE_SVG),
-                  'fill="%s"' % color, block)
+                  'fill="%s"' % color, BILDMARKE)
 
 
 def bildmarke_ds():
     """die drei Bildmarken-Pfade: 2x schwarz, 1x orange"""
-    ds = re.findall(r'\sd="([^"]*)"', open(TEMPLATE).read())
-    return [ds[2], ds[3]], ds[4]      # ds[0], ds[1] sind die clipPaths
+    ds = re.findall(r'\sd="([^"]*)"', BILDMARKE)
+    return [ds[0], ds[1]], ds[2]
 
 
 def parse_d(d):

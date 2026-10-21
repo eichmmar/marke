@@ -20,7 +20,6 @@ mirror --reverse --delete --verbose \
   --exclude "^\.claude/" \
   --exclude "^\.superpowers/" \
   --exclude "^CLAUDE\.md$" \
-  --exclude "^AGENTS\.md$" \
   --exclude "^SETUP\.md$" \
   --exclude "^ruvector\.db$" \
   --exclude "^agentdb\.rvf" \

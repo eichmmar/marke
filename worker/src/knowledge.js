@@ -37,7 +37,7 @@ export const ABTEILUNGEN = {
 export const FALLBACK_KNOWLEDGE = [
   'Namen: Die Marke heisst «Verkehrskadetten». Trägerorganisation ist der «Schweizerische Verkehrskadetten Verband» (kurz SVKV) — dieser Name gehört nur in rechtliche Kontexte (Copyright, Impressum, Verträge), nie in die Markenkommunikation. «Verkehrskadetten Schweiz» ist die Absender-Schreibweise der Wortmarke im Kollaborations-Fall, kein eigener Markenname.',
   'Claim: «Jugend bewegt Verkehr». Identität: WAS — Verkehr und Zugänge bei Veranstaltungen sichern, verlässlich, wirksam, ehrenamtlich. WIE — mit geschulten Jugendlichen, klarem Ablauf, menschlichem Auftreten, regional verankert. WARUM — weil gesellschaftliches Miteinander sichere Mobilität und Verantwortung braucht.',
-  'Farben: Primärfarbe VK Orange #FF6300 (CMYK 0/75/100/0, Pantone 1585), Sekundärfarbe VK Blau #2F5D77 (CMYK 86/57/37/15, Pantone 7699), Weiss #FFFFFF, Schwarz #000000. Keine Verläufe.',
+  'Farben: Primärfarbe VK Orange #FF6300 (CMYK 0/75/100/0, Pantone 1585 C), Sekundärfarbe VK Blau #2F5D77 (CMYK 86/57/37/15, Pantone 7699 C), Weiss #FFFFFF (CMYK 0/0/0/0), Schwarz #000000 (CMYK 0/0/0/100, Pantone Black C). Keine Verläufe.',
   'Farbregeln: Primärfarbe vor allem für das «V» der Bildmarke und als Hintergrund, Sekundärfarbe ausschliesslich als Hintergrund. Text jeder Art nie in Primär- oder Sekundärfarbe — nur Schwarz oder Weiss.',
   'Schrift: Inter (Hausschrift, SIL OFL) — Bold (700) für Titel/Slogans, Regular (400) für Fliesstext, Light (300) für Claim/Fliesstext, Italic punktuell. Office-Ersatz: Calibri. Fakt bleibt ausschliesslich Logo und Wortmarke vorbehalten.',
   'Tonalität: «Reduce to the max» — kurze, präzise, aktive Sätze. Immer «Uniform», nie «Weste».',
@@ -94,7 +94,7 @@ export function buildAbteilungContext(abteilung) {
 Verfügbare Logo-Dateien dieser Abteilung:
 - assets/logos/abteilungen/${abteilung}_RGB_schwarz.svg (für helle Hintergründe)
 - assets/logos/abteilungen/${abteilung}_RGB_weiss.svg (für dunkle Hintergründe)
-- assets/logos/abteilungen/${abteilung}_CMYK_schwarz.svg / _CMYK_weiss.svg (für Druck)
+- downloads/abteilungen/${abteilung}_CMYK_schwarz.pdf / _CMYK_weiss.pdf (für Druck)
 - downloads/abteilungen/social/${abteilung}.png (Social-Media-Vorschau)
 - downloads/logos-abteilungen/${abteilung}.zip (komplettes Logo-Paket)
 Beziehe dich, wo sinnvoll, konkret auf «${name}» und diese Dateien.`;

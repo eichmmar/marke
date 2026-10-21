@@ -114,7 +114,7 @@
           "k": 0
         },
         "cmykString": "CMYK 0 · 75 · 100 · 0",
-        "pantone": "Pantone 1585",
+        "pantone": "Pantone 1585 C",
         "usage": "Hauptsächlich für das «V» der Bildmarke, daneben als Hintergrundfarbe",
         "onColor": "white",
         "notes": "Primärfarbe. Nie für Text verwenden — weder Titel noch Fliesstext."
@@ -138,7 +138,7 @@
           "k": 15
         },
         "cmykString": "CMYK 86 · 57 · 37 · 15",
-        "pantone": "Pantone 7699",
+        "pantone": "Pantone 7699 C",
         "usage": "Ausschliesslich als Hintergrundfarbe",
         "onColor": "white",
         "notes": "Sekundärfarbe. Nie für Text verwenden — weder Titel noch Fliesstext."
@@ -179,12 +179,13 @@
         },
         "rgbString": "rgb(0, 0, 0)",
         "cmyk": {
-          "c": 100,
-          "m": 100,
-          "y": 100,
+          "c": 0,
+          "m": 0,
+          "y": 0,
           "k": 100
         },
-        "cmykString": "CMYK 100 · 100 · 100 · 100",
+        "cmykString": "CMYK 0 · 0 · 0 · 100",
+        "pantone": "Pantone Black C",
         "usage": "«CH»/Region, Hintergrund, «V», Text",
         "onColor": "white",
         "notes": "Reines Schwarz gemäss Marken-Manual, Kap. 8."
@@ -809,7 +810,7 @@
         "name": "Farbpalette",
         "file": "downloads/farbpalette.ase",
         "format": "ASE",
-        "contents": "Adobe Swatch Exchange: HEX, RGB und CMYK für alle Adobe-Programme",
+        "contents": "Adobe Swatch Exchange: CMYK für alle Adobe-Programme",
         "status": "available"
       },
       {

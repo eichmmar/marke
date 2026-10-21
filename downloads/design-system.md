@@ -183,10 +183,10 @@ Die Farbwelt kennt genau vier Werte: Primärfarbe, Sekundärfarbe, Weiss und Sch
 
 | Rolle | Token | Name | HEX | RGB | CMYK | Pantone |
 |---|---|---|---|---|---|---|
-| Primärfarbe | `--orange` | VK Orange | `#FF6300` | 255 · 99 · 0 | 0 · 75 · 100 · 0 | 1585 |
-| Sekundärfarbe | `--blue` | VK Blau | `#2F5D77` | 47 · 93 · 119 | 86 · 57 · 37 · 15 | 7699 |
+| Primärfarbe | `--orange` | VK Orange | `#FF6300` | 255 · 99 · 0 | 0 · 75 · 100 · 0 | 1585 C |
+| Sekundärfarbe | `--blue` | VK Blau | `#2F5D77` | 47 · 93 · 119 | 86 · 57 · 37 · 15 | 7699 C |
 | Weiss | `--white` | VK Weiss | `#FFFFFF` | 255 · 255 · 255 | 0 · 0 · 0 · 0 | — |
-| Schwarz | `--black` | VK Schwarz | `#000000` | 0 · 0 · 0 | 100 · 100 · 100 · 100 | — |
+| Schwarz | `--black` | VK Schwarz | `#000000` | 0 · 0 · 0 | 0 · 0 · 0 · 100 | Black C |
 
 ### Einsatz der Farben
 
@@ -494,7 +494,7 @@ Dev:         python3 -m http.server 8080
 | `downloads/logos-abteilungen/{id}.zip` | ZIP | Logos je Abteilung (SVG + PDF) |
 | `downloads/Verkehrskadetten_Marken-Manual.pdf` | PDF | Vollständiges Marken-Manual |
 | `downloads/illustrator.zip` | ZIP | Original-.ai-Dateien für Druck |
-| `downloads/farbpalette.ase` | ASE | Adobe Swatch Exchange (HEX, RGB, CMYK) |
+| `downloads/farbpalette.ase` | ASE | Adobe Swatch Exchange (CMYK) |
 | `downloads/web-guidelines.pdf` | PDF | Richtlinien für digitale Auftritte |
 | `downloads/inter.zip` | ZIP | Inter OTF + TTF (Light/Regular/Bold + Italics), SIL OFL |
 | `downloads/design-system.json` | JSON | Maschinenlesbares Design System |
