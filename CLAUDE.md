@@ -113,7 +113,14 @@ gecacht via Prompt-Caching; Abteilung aus dem `abteilung`-Cookie) → ruft Claud
 mit Streaming → reicht Text-Deltas als SSE an den Browser zurück.
 
 **Modell:** `claude-sonnet-5-5` (in `worker/wrangler.toml` unter `[vars] MODEL`
-änderbar — Alternativen `claude-haiku-4-5` / `claude-opus-4-8`).
+änderbar — Alternativen `claude-haiku-5-5` / `claude-opus-5-5`). Sonnet 5.5
+lehnt `thinking: {type: 'disabled'}` ab; «kein Thinking» heisst dort
+`{type: 'between_tools'}` (`worker/src/index.js`). Beim Modellwechsel prüfen.
+
+**Domain:** `https://marke-coach.vka-albis.ch` — Custom Domain, in
+`worker/wrangler.toml` unter `routes` (Zone `vka-albis.ch` im selben
+Cloudflare-Konto). Die alte `*.workers.dev`-Adresse ist abgeschaltet
+(`workers_dev = false`). `chat.js` → `WORKER_URL_PROD` zeigt auf die Domain.
 
 **Worker-Setup / Deploy:**
 
@@ -121,15 +128,20 @@ mit Streaming → reicht Text-Deltas als SSE an den Browser zurück.
 cd worker
 npm install
 npx wrangler login                       # einmalig
-npx wrangler secret put ANTHROPIC_API_KEY # API-Key eingeben (nicht committen)
-npx wrangler deploy                       # gibt die Worker-URL aus
+npx wrangler secret put ANTHROPIC_API_KEY # Key erst in die Abfrage einfügen
+npx wrangler deploy
 ```
 
-Nach dem Deploy die ausgegebene URL in `assets/js/chat.js` bei `WORKER_URL_PROD`
-eintragen, dann Portal deployen.
+Beim `secret put` steht im Befehl **nur der Name** `ANTHROPIC_API_KEY`; der Key
+selbst kommt erst in die Abfrage `Enter a secret value:`. Secret-Namen sind
+Klartext — ein Key im Namen ist geleakt. Ein neuer Wert ist sofort aktiv, ohne
+Deploy. Fehlersuche: `npx wrangler tail marke-coach` zeigt die Anthropic-Antwort
+hinter einem 502 (`401` = Key ungültig, `400` = Request-Parameter).
 
-**Lokal testen:** `cd worker && npx wrangler dev` (Port 8787) — `chat.js` zeigt auf
-`localhost` automatisch dorthin. Portal parallel mit `python3 -m http.server 8080`.
+**Lokal testen:** `cd worker && npx wrangler dev` (Port 8787) und in `chat.js`
+`USE_LOCAL_WORKER = true` setzen (braucht `worker/.dev.vars` mit dem API-Key).
+Standardmässig spricht auch das lokale Portal den deployten Worker an. Portal
+parallel mit `python3 -m http.server 8080`.
 
 **Wissensbasis:** Single Source of Truth ist `downloads/design-system.md` (wird vom
 Worker zur Laufzeit geladen + 1 h gecacht). Bei Design-Änderungen reicht das

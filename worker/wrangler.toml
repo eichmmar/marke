@@ -2,8 +2,15 @@ name = "marke-coach"
 main = "src/index.js"
 compatibility_date = "2025-01-01"
 
+# Eigene Domain (Zone vka-albis.ch im selben Cloudflare-Konto; DNS + Zertifikat
+# legt Cloudflare automatisch an). Die alte workers.dev-Adresse ist abgeschaltet.
+workers_dev = false
+routes = [
+  { pattern = "marke-coach.vka-albis.ch", custom_domain = true },
+]
+
 # Modell & erlaubte Origins (per `wrangler.toml` änderbar, kein Code-Edit nötig).
-# Modell-Alternativen: claude-haiku-4-5 (günstiger) · claude-opus-4-8 (stärker).
+# Modell-Alternativen: claude-haiku-5-5 (günstiger) · claude-opus-5-5 (stärker).
 [vars]
 MODEL = "claude-sonnet-5-5"
 ALLOWED_ORIGINS = "https://marke.verkehrskadetten.ch,http://localhost:8080,http://127.0.0.1:8080"

@@ -76,7 +76,7 @@ export default {
       model: env.MODEL || 'claude-sonnet-5-5',
       max_tokens: MAX_TOKENS,
       stream: true,
-      thinking: { type: 'disabled' },
+      thinking: { type: 'between_tools' }, // = kein Thinking (Sonnet 5.5 lehnt 'disabled' ab)
       system: [
         {
           type: 'text',
