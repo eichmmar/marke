@@ -112,7 +112,7 @@ Worker baut den System-Prompt (Wissensbasis = live geladene `design-system.md`,
 gecacht via Prompt-Caching; Abteilung aus dem `abteilung`-Cookie) → ruft Claude
 mit Streaming → reicht Text-Deltas als SSE an den Browser zurück.
 
-**Modell:** `claude-sonnet-4-6` (in `worker/wrangler.toml` unter `[vars] MODEL`
+**Modell:** `claude-sonnet-5-5` (in `worker/wrangler.toml` unter `[vars] MODEL`
 änderbar — Alternativen `claude-haiku-4-5` / `claude-opus-4-8`).
 
 **Worker-Setup / Deploy:**

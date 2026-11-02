@@ -73,7 +73,7 @@ export default {
 
     const knowledge = await getKnowledge();
     const payload = {
-      model: env.MODEL || 'claude-sonnet-4-6',
+      model: env.MODEL || 'claude-sonnet-5-5',
       max_tokens: MAX_TOKENS,
       stream: true,
       thinking: { type: 'disabled' },
