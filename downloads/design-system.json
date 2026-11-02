@@ -3,8 +3,25 @@
   "$id": "https://marke.verkehrskadetten.ch/design-system.json",
   "meta": {
     "name": "Verkehrskadetten Markenportal",
-    "version": "2.0.0",
-    "updated": "2026-09-15",
+    "version": "2.1.0",
+    "updated": "2026-11-02",
+    "changelog": [
+      {
+        "version": "2.1.0",
+        "date": "2026-11-02",
+        "anlass": "Abgleich mit der Abteilungs-Website vka-albis.ch",
+        "changes": [
+          "VK Orange als Textfarbe für einzelne Akzentwörter in Titeln (H1/H2, ab 24 px, Bold)",
+          "Gedämpftes Grau #6b6b6b statt #777777, Verwendung festgelegt",
+          "Off-White #f2f2f2 statt #f8f8f8",
+          "Inter-Self-Hosting für Teams erlaubt, die es sicher umsetzen können",
+          "Generisches Maskulinum für Personenbezeichnungen",
+          "Ein Favicon-Set für Dachmarke und alle Abteilungen",
+          "Neuer Abschnitt «UI-Elemente & Drittanbieter»"
+        ],
+        "abweichungManual": "Die Regeln zu Orange als Textfarbe, zum gedämpften Grau, zum Off-White und zum Gendern ergänzen das Marken-Manual vom November 2025 bzw. weichen davon ab."
+      }
+    ],
     "url": "https://marke.verkehrskadetten.ch",
     "operator": "VK Albis",
     "contact": "marke@verkehrskadetten.ch",
@@ -80,6 +97,19 @@
         "correct": "Uniform",
         "incorrect": "Weste",
         "note": "Immer 'Uniform', nie 'Weste'"
+      },
+      "gendern": {
+        "regel": "Personenbezeichnungen in der männlichen Form ohne Genderzeichen (generisches Maskulinum)",
+        "correct": [
+          "Verkehrskadett",
+          "Verkehrskadetten",
+          "Veranstalter",
+          "Auftraggeber"
+        ],
+        "incorrect": [
+          "Verkehrskadett:in",
+          "Veranstalter*innen"
+        ]
       }
     },
     "markenName": "Verkehrskadetten",
@@ -115,9 +145,9 @@
         },
         "cmykString": "CMYK 0 · 75 · 100 · 0",
         "pantone": "Pantone 1585 C",
-        "usage": "Hauptsächlich für das «V» der Bildmarke, daneben als Hintergrundfarbe",
-        "onColor": "white",
-        "notes": "Primärfarbe. Nie für Text verwenden — weder Titel noch Fliesstext."
+        "usage": "Hauptsächlich für das «V» der Bildmarke, daneben als Hintergrundfarbe und für einzelne Akzentwörter in Titeln",
+        "onColor": "var(--black)",
+        "notes": "Primärfarbe. Als Textfarbe nur für einzelne Akzentwörter in Titeln (Display/H1 und H2, ab 24 px, Bold). Nie für Fliesstext, Links, Buttons, Navigation, Labels/Captions oder ganze Titel. Auf Orange-Flächen schwarze Schrift (7,0:1), nicht weisse (2,98:1)."
       },
       {
         "token": "--blue",
@@ -141,7 +171,7 @@
         "pantone": "Pantone 7699 C",
         "usage": "Ausschliesslich als Hintergrundfarbe",
         "onColor": "white",
-        "notes": "Sekundärfarbe. Nie für Text verwenden — weder Titel noch Fliesstext."
+        "notes": "Sekundärfarbe. Nie als Textfarbe verwenden."
       },
       {
         "token": "--white",
@@ -192,9 +222,11 @@
       }
     ],
     "functional": {
-      "offWhite": "#f8f8f8",
+      "offWhite": "#f2f2f2",
       "border": "#eeeeee",
-      "textMuted": "#777777",
+      "textMuted": "#6b6b6b",
+      "textMutedUsage": "Fliesstext, Beschreibungen, Meta-Angaben und Navigations-Links. Titel, Labels und Buttons bleiben Schwarz bzw. Weiss.",
+      "textMutedContrast": "5,3:1 auf Weiss, 4,8:1 auf Off-White",
       "success": "#2d7a4f",
       "successBg": "#f0faf4",
       "successBorder": "#c3e6d0",
@@ -207,14 +239,34 @@
       "_note": "Funktionale UI-Werte, keine Markenfarben."
     },
     "rules": {
-      "primaerfarbe": "Hauptsächlich für das «V» der Bildmarke, darüber hinaus als Hintergrundfarbe",
+      "primaerfarbe": "Hauptsächlich für das «V» der Bildmarke, darüber hinaus als Hintergrundfarbe und für einzelne Akzentwörter in Titeln",
       "sekundaerfarbe": "Ausschliesslich als Hintergrundfarbe",
-      "text": "Text jeder Art (Titel, Fliesstext etc.) nie in Primär- oder Sekundärfarbe — nur Schwarz oder Weiss",
-      "background": "white (#ffffff) für Seitengrund, #f8f8f8 für Karten/Sektionen",
+      "text": "Text in Schwarz oder Weiss, nie in Sekundärfarbe. Gedämpftes Grau #6b6b6b ist für Fliesstext, Beschreibungen, Meta-Angaben und Navigations-Links erlaubt; Titel, Labels und Buttons bleiben Schwarz bzw. Weiss.",
+      "orangeText": {
+        "erlaubt": "Einzelne Akzentwörter in Titeln: Display/H1 und H2, ab 24 px, Bold",
+        "minSizePx": 24,
+        "weight": 700,
+        "levels": [
+          "Display / H1",
+          "Headline / H2"
+        ],
+        "beispiel": "Jugend bewegt «Verkehr» — nur «Verkehr» in Orange",
+        "nie": [
+          "Fliesstext",
+          "Links",
+          "Buttons",
+          "Navigation",
+          "Labels/Captions",
+          "ganze Titel"
+        ],
+        "begruendung": "Orange auf Weiss hat nur 2,98:1 Kontrast, also zu wenig für normalen Text (WCAG AA verlangt 4,5:1). Es taugt deshalb nur als Akzent in grosser, fetter Schrift, deren Aussage auch ohne die Farbe verständlich ist."
+      },
+      "blueText": "VK Blau ist als Textfarbe ausgeschlossen",
+      "background": "white (#ffffff) für Seitengrund, #f2f2f2 für Karten/Sektionen",
       "interactive": "#ff6300 für aktive Links und CTAs — dokumentierte Abweichung, gilt nur für das Markenportal",
       "noGradients": true,
       "noShadows": "Nur subtile Schatten für interaktive Karten (box-shadow on hover)",
-      "portalAusnahme": "Das Markenportal setzt Labels, Links und Akzente bewusst in Orange. Diese Abweichung gilt nur für marke.verkehrskadetten.ch und ist kein Vorbild für Abteilungs-Anwendungen."
+      "portalAusnahme": "Das Markenportal setzt Labels und Links bewusst in Orange. Diese Abweichung gilt nur für marke.verkehrskadetten.ch und ist kein Vorbild für Abteilungs-Anwendungen."
     }
   },
   "typography": {
@@ -224,12 +276,28 @@
       "license": "SIL Open Font License 1.1 — frei verwendbar (auch extern).",
       "source": "https://rsms.me/inter/ oder Google Fonts; Download-Paket (Print/Office): downloads/inter.zip",
       "webIntegration": {
-        "method": "rsms.me CDN (kein Self-Hosting)",
+        "method": "rsms.me CDN (Standard)",
         "head": [
           "<link rel=\"preconnect\" href=\"https://rsms.me/\">",
           "<link rel=\"stylesheet\" href=\"https://rsms.me/inter/inter.css\">"
         ],
-        "cssFamily": "Inter; InterVariable (wenn font-variation-settings unterstützt)"
+        "cssFamily": "Inter; InterVariable (wenn font-variation-settings unterstützt)",
+        "selfHosting": {
+          "erlaubt": "Für Teams, die es sicher umsetzen können. Standard bleibt das rsms.me-CDN.",
+          "files": [
+            "InterVariable.woff2 (optional nur das Latin-Subset)",
+            "InterVariable-Italic.woff2 (für Italic)"
+          ],
+          "fontFace": "@font-face { font-family: InterVariable; font-style: normal; font-weight: 100 900; font-display: swap; src: url('/fonts/InterVariable.woff2') format('woff2'); }",
+          "preload": "<link rel=\"preload\" href=\"/fonts/InterVariable.woff2\" as=\"font\" type=\"font/woff2\" crossorigin>",
+          "pflichten": [
+            "font-display: swap",
+            "Preload im <head>",
+            "Lizenzdatei (SIL OFL) mitliefern",
+            "Bei neuen Inter-Versionen selbst aktualisieren"
+          ],
+          "vorteile": "Keine Besucher-IPs an einen Dritten (Datenschutz), die Schrift lädt schneller."
+        }
       },
       "weights": {
         "300": "Light — Claim, ruhiger Fliesstext",
@@ -390,12 +458,12 @@
       "scrolledShadow": "0 2px 16px rgba(0,0,0,0.08)",
       "logo": {
         "height": "36px",
-        "label": "10px, 700, uppercase, letter-spacing 0.12em, color: #777"
+        "label": "10px, 700, uppercase, letter-spacing 0.12em, color: #6b6b6b"
       },
       "links": {
         "fontSize": "13px",
         "fontWeight": 700,
-        "color": "#777 → #ff6300 (hover/active)",
+        "color": "#6b6b6b → #ff6300 (hover/active)",
         "activeIndicator": "2px solid var(--orange) border-bottom",
         "gap": "28px"
       },
@@ -406,11 +474,11 @@
       "padding": "72px 40px 64px",
       "borderBottom": "1px solid #eee",
       "eyebrow": "11px, 700, uppercase, letter-spacing 0.2em, color: var(--orange)",
-      "title": "56px, 700, line-height 1.0, letter-spacing -0.025em — accent span in orange",
-      "lead": "16px, 400, color: #777, line-height 1.65, max-width 380px",
+      "title": "56px, 700, line-height 1.0, letter-spacing -0.025em — accent span in orange (regelkonformes Akzentwort, Titel ab 24 px, Bold)",
+      "lead": "16px, 400, color: #6b6b6b, line-height 1.65, max-width 380px",
       "rule": "48px × 4px, background: var(--orange), border-radius 2px",
       "logoBox": {
-        "background": "#f8f8f8",
+        "background": "#f2f2f2",
         "border": "1px solid #eee",
         "borderRadius": "12px",
         "padding": "36px",
@@ -424,10 +492,10 @@
       "borderBottom": "1px solid #eee",
       "label": "11px, 700, uppercase, letter-spacing 0.18em, color: var(--orange)",
       "title": "32px, 700, color: var(--black)",
-      "description": "15px, 400, color: #777, line-height 1.65, max-width 580px, margin-bottom 32px"
+      "description": "15px, 400, color: #6b6b6b, line-height 1.65, max-width 580px, margin-bottom 32px"
     },
     "identityCard": {
-      "background": "#f8f8f8",
+      "background": "#f2f2f2",
       "borderRadius": "10px",
       "borderLeft": "3px solid var(--orange)",
       "padding": "24px",
@@ -447,7 +515,7 @@
         "bg-orange": "#ff6300"
       },
       "logoMaxHeight": "64px",
-      "footerBackground": "#f8f8f8",
+      "footerBackground": "#f2f2f2",
       "footerPadding": "10px 14px",
       "nameStyle": "11px, 700, color: var(--black)",
       "downloadButton": "10px, 700, color: var(--orange), background: #fff4ee, padding 4px 10px, border-radius 4px"
@@ -459,7 +527,7 @@
       "bodyPadding": "12px 14px",
       "roleStyle": "9px, 700, uppercase, letter-spacing 0.12em, color: var(--orange)",
       "nameStyle": "13px, 700, color: var(--black)",
-      "hexStyle": "12px, color: #777, monospace",
+      "hexStyle": "12px, color: #6b6b6b, monospace",
       "rgbStyle": "11px, color: #aaa, monospace",
       "cmykStyle": "11px, color: #bbb, monospace",
       "behavior": "Klick kopiert HEX in Clipboard, Toast-Feedback ('Kopiert!')",
@@ -475,10 +543,10 @@
       "iconSize": "36px",
       "iconBorderRadius": "8px",
       "nameStyle": "14px, 700, color: var(--black)",
-      "descStyle": "12px, color: #777, line-height 1.45",
+      "descStyle": "12px, color: #6b6b6b, line-height 1.45",
       "button": {
         "background": "#000000 → #ff6300 (hover)",
-        "fontSize": "10px, 700, uppercase, letter-spacing 0.08em",
+        "fontSize": "12px, 700, keine Grossbuchstaben",
         "padding": "8px 14px",
         "borderRadius": "5px",
         "unavailable": "background: #ccc, pointer-events: none"
@@ -498,6 +566,30 @@
         "bulletIcon": "✗ (color: #c0392b)"
       },
       "sharedStyle": "border-radius 10px, padding 20px, font-size 13px, gap 7px"
+    },
+    "uiElemente": {
+      "tagsBadges": {
+        "erlaubt": [
+          "Fläche VK Orange (#ff6300) mit schwarzer Schrift (7,0:1)",
+          "Fläche VK Blau (#2F5D77) mit weisser Schrift (7,1:1)"
+        ],
+        "verboten": "Weiss auf Orange (2,98:1)"
+      },
+      "kartenOverlays": "VK Orange als Linien- bzw. Umrandungsfarbe für Gebiete und Routen erlaubt, optional mit halbtransparenter Füllung",
+      "drittanbieter": {
+        "beispiele": [
+          "Cookie-Banner",
+          "Formulare wie Tally",
+          "Kartenwidgets"
+        ],
+        "soweitKonfigurierbar": [
+          "Schrift Inter",
+          "Schwarze Schrift",
+          "Buttons nach der Button-Spezifikation: Schwarz, Radius 4–5 px, keine Grossbuchstaben",
+          "Links nicht in Blau"
+        ],
+        "toleranz": "Wo sich ein Tool nicht anpassen lässt, wird die Abweichung toleriert."
+      }
     },
     "footer": {
       "background": "#000000",
@@ -705,6 +797,13 @@
           "name": "VK Zug"
         }
       ]
+    },
+    "favicons": {
+      "file": "downloads/favicons.zip",
+      "motiv": "Bildmarke weiss auf VK Blau",
+      "gilt": "Ein Set für die Dachmarke und alle Abteilungen",
+      "abteilungsspezifisch": false,
+      "hinweis": "Es gibt keine abteilungsspezifischen Favicons. Wechselt jemand im Header die Abteilung, bleibt der Favicon-Download derselbe."
     }
   },
   "imagery": {
@@ -722,7 +821,7 @@
       "Jugendliche im Einsatz, Gesichtsausdruck authentisch zeigen",
       "Situationen mit Verantwortung, Konzentration und Bewegung — möglichst von vorne fotografiert",
       "Nähe: buchstäblich nah an der Person, Bildausschnitt optimieren",
-      "Hintergrund unscharf halten, Fokus auf die Verkehrskadett:in",
+      "Hintergrund unscharf halten, Fokus auf den Verkehrskadetten",
       "Uniform als Zeichen für Haltung, nicht für Strenge",
       "Handzeichen und Körperposition zeigen, Verkehrssituation einbeziehen",
       "Teamgeist: mehrere Jugendliche im Einsatz, im Austausch oder in Vorbereitung"
@@ -731,7 +830,7 @@
       "Aufnahmen von hinten — abwehrend, exkludierend, befremdend",
       "Problematischer Bildschnitt, z. B. angeschnittene Köpfe",
       "Keine erkennbare Bildaussage",
-      "Verkehrskadett:in in Aktion zu klein im Bild",
+      "Verkehrskadett in Aktion zu klein im Bild",
       "Unscharfe Fotos"
     ],
     "format": "webp bevorzugt für Web-Assets",
@@ -743,9 +842,9 @@
     "--orange": "#ff6300",
     "--black": "#000000",
     "--blue": "#2F5D77",
-    "--off-white": "#f8f8f8",
+    "--off-white": "#f2f2f2",
     "--border": "#eeeeee",
-    "--text-muted": "#777777",
+    "--text-muted": "#6b6b6b",
     "--max-w": "900px",
     "--pad": "40px",
     "--section-gap": "64px"
@@ -826,6 +925,13 @@
         "format": "ZIP",
         "contents": "Inter OTF + TTF (Light/Regular/Bold + Italics) — Lizenz: SIL Open Font License, frei verwendbar",
         "status": "available"
+      },
+      {
+        "name": "Favicons",
+        "file": "downloads/favicons.zip",
+        "format": "ZIP",
+        "contents": "Favicon-Set für Dachmarke und alle Abteilungen (keine abteilungsspezifischen Favicons): ICO, SVG, PNG 16–512 px, Apple Touch Icon — Bildmarke weiss auf VK Blau",
+        "status": "available — unabhängig von der Abteilungsauswahl"
       }
     ]
   },
@@ -850,6 +956,11 @@
         "id": "typografie",
         "label": "Typografie",
         "title": "Inter"
+      },
+      {
+        "id": "ui-elemente",
+        "label": "UI-Elemente",
+        "title": "UI-Elemente & Drittanbieter"
       },
       {
         "id": "bildsprache",
@@ -880,9 +991,13 @@
   "accessibility": {
     "lang": "de",
     "colorContrast": {
-      "orangeOnWhite": "Nicht WCAG AA für Kleintext — ausschliesslich für grosse Bold-Elemente und Dekor verwenden",
-      "blackOnWhite": "Sehr hoher Kontrast — primäre Textkombination",
-      "whiteOnBlue": "Ausreichend für Navigationstext"
+      "orangeOnWhite": "2,98:1 — nicht WCAG AA für normalen Text (4,5:1). Als Textfarbe nur für Akzentwörter in Titeln (H1/H2, ab 24 px, Bold), deren Aussage auch ohne die Farbe verständlich ist",
+      "blackOnOrange": "7,0:1 — Schrift auf Orange-Flächen (z. B. Tags/Badges)",
+      "whiteOnOrange": "2,98:1 — nicht erlaubt für Tags/Badges",
+      "blackOnWhite": "21:1 — primäre Textkombination",
+      "whiteOnBlue": "7,1:1 — Schrift auf Blau-Flächen",
+      "textMutedOnWhite": "5,3:1 (#6b6b6b)",
+      "textMutedOnOffWhite": "4,8:1 (#6b6b6b auf #f2f2f2)"
     },
     "notes": [
       "Logo-Bilder haben alt-Texte",
@@ -946,7 +1061,7 @@
         "merksatz": "Erfahrungen, die man brauchen kann."
       }
     ],
-    "veranstaltende": [
+    "veranstalter": [
       {
         "titel": "Zuverlässigkeit",
         "kurzformel": "Ehrenamtlich, aber geschult",
@@ -1005,7 +1120,7 @@
         ]
       },
       {
-        "zielgruppe": "Veranstalter:innen",
+        "zielgruppe": "Veranstalter",
         "fokus": "Warum man mit uns gut zusammenarbeitet",
         "kernbotschaft": "Wir sichern Ihren Anlass — verlässlich, freundlich, unkompliziert und mit Haltung.",
         "argumente": [

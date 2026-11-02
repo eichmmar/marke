@@ -37,14 +37,15 @@ Ressourcen/              ← Quelldateien (nicht im Git, nicht auf Server)
 | `#marke` | Markenidentität — 3 Karten: Wofür / Wie / Was verbindet |
 | `#logo` | Logo-System — Dachmarke SVGs + Abteilungslogos |
 | `#farben` | Farbpalette — 4 Kacheln, Klick kopiert HEX in Clipboard |
-| `#typografie` | Inter (Light/Regular/Bold + Italic) + Schriftgrössentabelle |
+| `#typografie` | Inter (Light/Regular/Bold + Italic) + Schriftgrössentabelle + Web-Einbindung |
+| `#ui-elemente` | UI-Elemente & Drittanbieter — Tags/Badges, Karten-Overlays, eingebettete Tools |
 | `#bildsprache` | Bildwelt — Kriterien-Chips + Gut/Schlecht-Beispiele + Dos&Don'ts |
 | `#downloads` | Brand Assets — Download-Karten |
 
 ## Marke
 
 - **Primärfarbe:** `#ff6300` (VK Orange)
-- **Schwarz:** `#000000` | **Blau (Sekundär):** `#2F5D77` | **UI-Background:** `#f8f8f8`
+- **Schwarz:** `#000000` | **Blau (Sekundär):** `#2F5D77` | **UI-Background:** `#f2f2f2` | **Text gedämpft:** `#6b6b6b`
 - **Schrift:** Inter — Bold (Titel/Slogans), Regular (Fliesstext), Light (Claim), Italic punktuell; Fakt nur im Logo
 - **Sprache:** Deutsch — immer «Uniform», nie «Weste»
 - **Ton:** Klar, direkt, professionell — «Reduce to the max»
@@ -52,10 +53,13 @@ Ressourcen/              ← Quelldateien (nicht im Git, nicht auf Server)
 - **Namen:** Die Marke heisst **Verkehrskadetten**. Träger ist der **Schweizerische
   Verkehrskadetten Verband (SVKV)** — dieser Name nur in rechtlichen Kontexten
   (Copyright, Impressum, Verträge), nicht in der Markenkommunikation.
-- **Farbregel (Manual Kap. 8):** Primärfarbe vor allem für das «V» der Bildmarke,
-  Sekundärfarbe ausschliesslich als Hintergrund, **Text nie in Primär- oder
-  Sekundärfarbe**. Das Portal selbst weicht bewusst ab (orange Labels und Links) —
+- **Farbregel (Manual Kap. 8, ergänzt in Design System 2.1.0):** Primärfarbe vor allem
+  für das «V» der Bildmarke, Sekundärfarbe ausschliesslich als Hintergrund. Text in
+  Schwarz oder Weiss (Grau `#6b6b6b` für Fliesstext/Meta/Nav-Links), **nie in
+  Sekundärfarbe**; Orange nur für einzelne Akzentwörter in Titeln (H1/H2, ab 24 px,
+  Bold). Das Portal selbst weicht bewusst ab (orange Labels und Links) —
   dokumentiert in `downloads/design-system.md`.
+- **Gendern:** generisches Maskulinum, keine Genderzeichen («Verkehrskadett», «Veranstalter»).
 - **Verbindliche Quelle:** `downloads/Verkehrskadetten_Marken-Manual.pdf`
   (Stand November 2025). Änderungen am Design nur mit Zustimmung von
   LOOKINGLATELY | Heimspiel (Urheberrecht).

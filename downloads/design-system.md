@@ -1,9 +1,17 @@
 # Design System — Verkehrskadetten
 
-**Version:** 2.0.0 · **Stand:** 2026-09-15  
+**Version:** 2.1.0 · **Stand:** 2026-11-02  
 **Quelle:** Marken-Manual Verkehrskadetten, November 2025 (`downloads/Verkehrskadetten_Marken-Manual.pdf`)  
 **URL:** marke.verkehrskadetten.ch
 **Kontakt:** marke@verkehrskadetten.ch
+
+> **Änderungen in 2.1.0 (2026-11-02)** — nach einem Abgleich mit der Abteilungs-Website
+> vka-albis.ch: VK Orange als Textfarbe für Akzentwörter in Titeln · gedämpftes Grau
+> `#6b6b6b` statt `#777777`, mit festgelegter Verwendung · Off-White `#f2f2f2` statt
+> `#f8f8f8` · Inter-Self-Hosting für Geübte erlaubt · generisches Maskulinum · ein
+> Favicon-Set für alle · neuer Abschnitt «UI-Elemente & Drittanbieter».
+> Die Regeln zu Orange als Textfarbe, zum gedämpften Grau, zum Off-White und zum Gendern
+> **ergänzen das Marken-Manual vom November 2025 bzw. weichen davon ab.**
 
 ---
 
@@ -62,6 +70,9 @@ von der Website bis zum Roll-up.
 - Kurze, präzise Sätze · Aktive Sprache · Fakten vor Adjektiven
 - Kein Marketingsprech, keine Übertreibungen, keine Mehrdeutigkeiten
 - Immer **«Uniform»**, nie «Weste»
+- Personenbezeichnungen in der **männlichen Form ohne Genderzeichen** (generisches
+  Maskulinum): «Verkehrskadett» / «Verkehrskadetten», «Veranstalter», «Auftraggeber» —
+  nicht «Verkehrskadett:in», «Veranstalter*innen» o. Ä.
 
 ---
 
@@ -102,7 +113,7 @@ funktionalen Nutzen mit persönlichem Wert — für Veranstalter, für Jugendlic
 | Sinnvolle Freizeit mit Effekt | Mitwirken statt mitmachen | «Weil Du mitmachst, wird's besser für alle.» |
 | Erste, echte Berufserfahrung | Gut für die eigene Zukunft | «Erfahrungen, die man brauchen kann.» |
 
-### Was wir Veranstalter:innen versprechen
+### Was wir Veranstaltern versprechen
 
 | Versprechen | Kurzformel | Merksatz |
 |---|---|---|
@@ -147,7 +158,7 @@ gemeinnützig, verlässlich und von Jugendlichen getragen.
 - Es gewinnt Einblick in sicherheitsnahe Berufe, von der Polizei bis zur Sanität.
 - Unsere Organisation ist gemeinnützig, lokal verankert und mit Herz geführt.
 
-### Pfeiler 3 — Veranstalter:innen: Warum man mit uns gut zusammenarbeitet
+### Pfeiler 3 — Veranstalter: Warum man mit uns gut zusammenarbeitet
 
 > Wir sichern Ihren Anlass — verlässlich, freundlich, unkompliziert und mit Haltung.
 
@@ -192,13 +203,24 @@ Die Farbwelt kennt genau vier Werte: Primärfarbe, Sekundärfarbe, Weiss und Sch
 
 | Farbe | Erlaubte Verwendung |
 |---|---|
-| Primärfarbe | «V» der Bildmarke · Hintergrund |
+| Primärfarbe | «V» der Bildmarke · Hintergrund · Akzentwort in Titeln |
 | Sekundärfarbe | ausschliesslich Hintergrund |
 | Weiss | «CH» / Region · Hintergrund · «V» · Text |
 | Schwarz | «CH» / Region · Hintergrund · «V» · Text |
 
-> **Text jeder Art** (Titel, Fliesstext etc.) wird **nie** in Primär- oder
-> Sekundärfarbe gesetzt. Text steht in Schwarz oder Weiss.
+> **Text** steht in Schwarz oder Weiss — **nie in Sekundärfarbe**. Für Fliesstext,
+> Beschreibungen, Meta-Angaben und Navigations-Links ist zusätzlich das gedämpfte Grau
+> `#6b6b6b` erlaubt (siehe «Funktionale Farben»). Titel, Labels und Buttons bleiben
+> Schwarz bzw. Weiss.
+>
+> **VK Orange als Textfarbe** nur für **einzelne Akzentwörter in Titeln**: Display/H1
+> und H2, **ab 24 px, Bold**. Beispiel: «Jugend bewegt **Verkehr**» mit «Verkehr» in
+> Orange. **Nie** in Orange: Fliesstext, Links, Buttons, Navigation, Labels/Captions,
+> ganze Titel.
+>
+> **Warum:** Orange auf Weiss hat nur 2,98:1 Kontrast, also zu wenig für normalen Text
+> (WCAG AA verlangt 4,5:1). Es taugt deshalb nur als Akzent in grosser, fetter Schrift,
+> deren Aussage auch ohne die Farbe verständlich ist.
 
 ### Funktionale Farben
 
@@ -206,9 +228,9 @@ Diese Werte sind **keine Markenfarben**, sondern UI-Hilfswerte für digitale Obe
 
 | Zweck | Wert |
 |---|---|
-| Off-White (Karten-/Sektions-Hintergrund) | `#f8f8f8` |
+| Off-White (Karten-/Sektions-Hintergrund) | `#f2f2f2` |
 | Border | `#eeeeee` |
-| Text (gedämpft) | `#777777` |
+| Text (gedämpft) — Fliesstext, Beschreibungen, Meta-Angaben, Navigations-Links | `#6b6b6b` (5,3:1 auf Weiss, 4,8:1 auf Off-White) |
 | Erfolg | `#2d7a4f` / Hintergrund `#f0faf4` |
 | Fehler | `#c0392b` / Hintergrund `#fef5f5` |
 | Orange-Tint | `#fff4ee` (Tags, Icon-Hintergründe) |
@@ -216,14 +238,17 @@ Diese Werte sind **keine Markenfarben**, sondern UI-Hilfswerte für digitale Obe
 ### Farbregeln
 
 - Primärfarbe hauptsächlich für das «V» der Bildmarke, darüber hinaus als Hintergrundfarbe
+  und für einzelne Akzentwörter in Titeln (H1/H2, ab 24 px, Bold)
 - Sekundärfarbe ausschliesslich als Hintergrundfarbe
-- Text nie in Primär- oder Sekundärfarbe
-- Seitengrund: `white` (#ffffff) · Karten/Sektionen: `#f8f8f8`
+- Text in Schwarz oder Weiss; gedämpftes Grau `#6b6b6b` für Fliesstext, Beschreibungen,
+  Meta-Angaben und Navigations-Links. Titel, Labels und Buttons bleiben Schwarz bzw. Weiss
+- Text nie in Sekundärfarbe, in Primärfarbe nur als Akzentwort in Titeln
+- Seitengrund: `white` (#ffffff) · Karten/Sektionen: `#f2f2f2`
 - **Keine Verläufe** (Gradients)
 - Schatten nur auf interaktiven Hover-States
 
-> **Ausnahme Markenportal:** Dieses Portal (marke.verkehrskadetten.ch) setzt Labels,
-> Links und Akzente bewusst in Orange. Das ist eine dokumentierte Abweichung für die
+> **Ausnahme Markenportal:** Dieses Portal (marke.verkehrskadetten.ch) setzt Labels
+> und Links bewusst in Orange. Das ist eine dokumentierte Abweichung für die
 > Portal-Oberfläche und **kein Vorbild** für Abteilungs-Anwendungen.
 
 ---
@@ -233,9 +258,32 @@ Diese Werte sind **keine Markenfarben**, sondern UI-Hilfswerte für digitale Obe
 ### Hausschrift: Inter
 
 **Lizenz:** SIL Open Font License 1.1 — frei verwendbar (auch extern).  
-**Web-Einbindung:** via rsms.me CDN (kein Self-Hosting). Im `<head>`: `<link rel="preconnect" href="https://rsms.me/">` + `<link rel="stylesheet" href="https://rsms.me/inter/inter.css">`. CSS nutzt `font-family: Inter` bzw. `InterVariable` (Variable Font, wenn unterstützt) — deckt alle Gewichte 100–900 + Italic ab.  
+**Web-Einbindung (Standard):** via rsms.me CDN. Im `<head>`: `<link rel="preconnect" href="https://rsms.me/">` + `<link rel="stylesheet" href="https://rsms.me/inter/inter.css">`. CSS nutzt `font-family: Inter` bzw. `InterVariable` (Variable Font, wenn unterstützt) — deckt alle Gewichte 100–900 + Italic ab.  
 **Bezug:** gratis via https://rsms.me/inter/ oder Google Fonts; Download-Paket (OTF/TTF) unter `downloads/inter.zip`  
 **CSS:** `font-family: 'Inter', system-ui, sans-serif;`
+
+#### Self-Hosting
+
+Standard bleibt das rsms.me-CDN. **Self-Hosting ist erlaubt für Teams, die es sicher
+umsetzen können.** Vorteil: Es gehen keine Besucher-IPs an einen Dritten (Datenschutz),
+und die Schrift lädt schneller.
+
+- Datei `InterVariable.woff2` selbst hosten (optional nur das Latin-Subset); für Italic
+  zusätzlich `InterVariable-Italic.woff2`
+- `@font-face` mit `font-display: swap`
+- Im `<head>` vorladen: `<link rel="preload" href="/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>`
+- Lizenzdatei (SIL OFL) mitliefern
+- Bei neuen Inter-Versionen selbst aktualisieren
+
+```css
+@font-face {
+  font-family: InterVariable;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/InterVariable.woff2') format('woff2');
+}
+```
 
 | Schnitt | Weight | Verwendung |
 |---|---|---|
@@ -280,9 +328,9 @@ Falls Inter nicht verfügbar ist (z. B. E-Mail/Office ohne Installation):
 --orange:      #ff6300
 --black:       #000000
 --blue:        #2F5D77
---off-white:   #f8f8f8
+--off-white:   #f2f2f2
 --border:      #eeeeee
---text-muted:  #777777
+--text-muted:  #6b6b6b
 --max-w:       900px
 --pad:         40px   /* 20px auf Mobile */
 --section-gap: 64px   /* 48px auf Mobile */
@@ -385,6 +433,13 @@ Kapitel 6 des Marken-Manuals.
 | zuerichsee | VK Zürichsee |
 | zug | VK Zug |
 
+### Favicons
+
+**Ein Set für alle:** Das Favicon-Set (Bildmarke weiss auf VK Blau,
+`downloads/favicons.zip`) gilt für die Dachmarke **und alle Abteilungen**. Es gibt
+**keine abteilungsspezifischen Favicons**. Wechselt jemand im Header die Abteilung,
+bleibt der Favicon-Download derselbe.
+
 ---
 
 ## Bildsprache
@@ -398,7 +453,7 @@ Kapitel 6 des Marken-Manuals.
 - Jugendliche im Einsatz, Gesichtsausdruck authentisch zeigen
 - Situationen mit Verantwortung, Konzentration und Bewegung — möglichst von vorne fotografiert
 - Nähe: buchstäblich nah an der Person, Bildausschnitt optimieren
-- Hintergrund unscharf halten, Fokus auf die Verkehrskadett:in
+- Hintergrund unscharf halten, Fokus auf den Verkehrskadetten
 - Uniform als Zeichen für Haltung, nicht für Strenge
 
 **Kompetenz** — Professionalität wird über die Person sichtbar:
@@ -417,7 +472,7 @@ Kapitel 6 des Marken-Manuals.
 
 ✗ Aufnahmen von hinten — abwehrend, exkludierend, befremdend  
 ✗ Problematischer Bildschnitt (z. B. angeschnittene Köpfe)  
-✗ Keine erkennbare Bildaussage / Verkehrskadett:in in Aktion zu klein  
+✗ Keine erkennbare Bildaussage / Verkehrskadett in Aktion zu klein  
 ✗ Unscharfe Fotos
 
 ---
@@ -428,7 +483,7 @@ Kapitel 6 des Marken-Manuals.
 
 - Sticky, `z-index: 100`, Höhe 60 px, weisser Hintergrund
 - Scrolled-State: `box-shadow 0 2px 16px rgba(0,0,0,0.08)`
-- Links: 13 px, Bold, Farbe `#777` → `#ff6300` (hover/active) + 2 px orange Unterstrich
+- Links: 13 px, Bold, Farbe `#6b6b6b` → `#ff6300` (hover/active) + 2 px orange Unterstrich
 - Mobile (≤768 px): Links ausgeblendet
 
 ### Abteilungs-Bar
@@ -441,14 +496,14 @@ Kapitel 6 des Marken-Manuals.
 
 - Desktop: 2-Spalten-Grid (`1fr 280px`), Mobile: 1-spaltig, Logo-Box ausgeblendet
 - Titel: 56 px, Bold, `letter-spacing: -0.025em`
-- Akzent-Span: `color: var(--orange)`
+- Akzent-Span: `color: var(--orange)` — regelkonformes Akzentwort (Titel ab 24 px, Bold)
 
 ### Sektions-Struktur
 
 ```
 .section-label   11px · Bold · Uppercase · Orange · letter-spacing 0.18em
 .section-title   32px · Bold · Schwarz
-.section-desc    15px · Normal · #777 · max-width 580px
+.section-desc    15px · Normal · #6b6b6b · max-width 580px
 ```
 
 ### Karten (allgemein)
@@ -464,12 +519,32 @@ Kapitel 6 des Marken-Manuals.
 ### Download-Button
 
 - Standard: `background: #000000` · Hover: `background: #ff6300`
+- Schrift: 12 px, Bold, weiss, **keine Grossbuchstaben** · Radius 5 px
 - Nicht verfügbar: `background: #ccc`, `pointer-events: none`
 
 ### Dos & Don'ts
 
 - Grün (`#f0faf4` / `#2d7a4f`) für erlaubte Verwendungen
 - Rot (`#fef5f5` / `#c0392b`) für verbotene Verwendungen
+
+### UI-Elemente & Drittanbieter
+
+**Tags/Badges**
+
+- Fläche VK Orange mit schwarzer Schrift (7,0:1) oder Fläche VK Blau mit weisser
+  Schrift (7,1:1)
+- Weiss auf Orange ist nicht erlaubt (2,98:1)
+
+**Karten-Overlays**
+
+- VK Orange ist als Linien- bzw. Umrandungsfarbe für Gebiete und Routen erlaubt,
+  optional mit halbtransparenter Füllung
+
+**Drittanbieter-Komponenten** (Cookie-Banner, Formulare wie Tally, Kartenwidgets)
+
+- So weit konfigurierbar: Inter, schwarze Schrift, Buttons nach der Button-Spezifikation
+  (Schwarz, Radius 4–5 px, keine Grossbuchstaben), Links nicht in Blau
+- Wo sich ein Tool nicht anpassen lässt, wird die Abweichung toleriert
 
 ---
 
@@ -499,7 +574,7 @@ Dev:         python3 -m http.server 8080
 | `downloads/inter.zip` | ZIP | Inter OTF + TTF (Light/Regular/Bold + Italics), SIL OFL |
 | `downloads/design-system.json` | JSON | Maschinenlesbares Design System |
 | `downloads/design-system.md` | MD | Dieses Dokument |
-| `downloads/favicons.zip` | ZIP | Favicon-Set: ICO, SVG, PNG 16–512 px, Apple Touch Icon |
+| `downloads/favicons.zip` | ZIP | Favicon-Set für Dachmarke und alle Abteilungen (keine abteilungsspezifischen Favicons): ICO, SVG, PNG 16–512 px, Apple Touch Icon |
 
 ---
 

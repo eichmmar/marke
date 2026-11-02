@@ -36,6 +36,7 @@
         <li><a href="#logo">Logo</a></li>
         <li><a href="#farben">Farben</a></li>
         <li><a href="#typografie">Typografie</a></li>
+        <li><a href="#ui-elemente">UI-Elemente</a></li>
         <li><a href="#bildsprache">Bildsprache</a></li>
         <li><a href="#downloads">Downloads</a></li>
       </ul>
@@ -72,7 +73,7 @@
   <p class="section-desc">
     Über 20 Abteilungen in der ganzen Schweiz tragen dieselbe orange Uniform —
     ein einheitliches Erscheinungsbild schafft Wiedererkennung und Vertrauen
-    bei Jugendlichen, Eltern, Behörden und Veranstaltenden.
+    bei Jugendlichen, Eltern, Behörden und Veranstaltern.
     Der Claim <strong>«Jugend bewegt Verkehr»</strong> verbindet drei Ebenen:
     <strong>Jugend</strong> als Herz der Organisation, <strong>bewegt</strong> als
     sichtbare Wirkung und <strong>Verkehr</strong> als Einsatzfeld und Symbol für
@@ -217,6 +218,19 @@
     <div class="logo-grid" id="abt-logos-grid"></div>
   </div>
 
+  <div class="logo-subsection">
+    <h3>Favicons</h3>
+    <div class="logo-note">
+      <img src="assets/favicon/favicon.svg" alt="Favicon: Bildmarke weiss auf VK Blau">
+      <p>
+        Ein Set für alle: Das Favicon-Set (Bildmarke weiss auf VK Blau) gilt für die
+        Dachmarke <strong>und alle Abteilungen</strong>. Abteilungsspezifische Favicons gibt
+        es nicht — wer im Header die Abteilung wechselt, lädt dasselbe Set.
+        <a href="#downloads">Zum Download</a>
+      </p>
+    </div>
+  </div>
+
   <div class="logo-subsection" style="margin-bottom: 0;">
     <h3>Anwendungsregeln</h3>
 
@@ -325,13 +339,14 @@
   <div class="color-rules">
     <h3>Einsatzregeln</h3>
     <ul>
-      <li><strong>Primärfarbe</strong> — hauptsächlich für das «V» der Bildmarke, daneben als Hintergrundfarbe.</li>
+      <li><strong>Primärfarbe</strong> — hauptsächlich für das «V» der Bildmarke, daneben als Hintergrundfarbe und für einzelne Akzentwörter in Titeln.</li>
       <li><strong>Sekundärfarbe</strong> — ausschliesslich als Hintergrundfarbe.</li>
       <li><strong>Weiss und Schwarz</strong> — für «CH»/Region, Hintergrund, das «V» und für Text.</li>
-      <li>Text jeder Art (Titel, Fliesstext etc.) <strong>nie</strong> in Primär- oder Sekundärfarbe setzen.</li>
+      <li>Text steht in Schwarz oder Weiss, <strong>nie</strong> in Sekundärfarbe. Gedämpftes Grau <code>#6B6B6B</code> ist erlaubt für Fliesstext, Beschreibungen, Meta-Angaben und Navigations-Links; Titel, Labels und Buttons bleiben Schwarz bzw. Weiss.</li>
+      <li><strong>Orange als Textfarbe</strong> nur für einzelne Akzentwörter in Titeln (H1/H2, ab 24 px, Bold), z. B. «Jugend bewegt <strong>Verkehr</strong>». Nie für Fliesstext, Links, Buttons, Navigation, Labels oder ganze Titel — Orange auf Weiss hat nur 2,98:1 Kontrast, WCAG AA verlangt für normalen Text 4,5:1.</li>
     </ul>
     <p class="color-rules-note">
-      Für Bildschirmflächen wird zusätzlich das Off-White <code>#F8F8F8</code> als
+      Für Bildschirmflächen wird zusätzlich das Off-White <code>#F2F2F2</code> als
       funktionaler Hintergrund eingesetzt — es ist keine Markenfarbe.
     </p>
   </div>
@@ -409,6 +424,23 @@
     </p>
   </div>
 
+  <div class="type-web">
+    <h4>Im Web einbinden</h4>
+    <p>
+      <strong>Standard: rsms.me-CDN.</strong> Im <code>&lt;head&gt;</code>
+      <code>&lt;link rel="preconnect" href="https://rsms.me/"&gt;</code> und
+      <code>&lt;link rel="stylesheet" href="https://rsms.me/inter/inter.css"&gt;</code> einfügen.
+    </p>
+    <p>
+      <strong>Self-Hosting ist erlaubt</strong> für Teams, die es sicher umsetzen können:
+      <code>InterVariable.woff2</code> selbst hosten (optional nur das Latin-Subset),
+      <code>@font-face</code> mit <code>font-display: swap</code>,
+      <code>&lt;link rel="preload" as="font" type="font/woff2" crossorigin&gt;</code>,
+      Lizenzdatei (SIL OFL) mitliefern und bei neuen Inter-Versionen selbst aktualisieren.
+      Vorteil: Es gehen keine Besucher-IPs an einen Dritten, und die Schrift lädt schneller.
+    </p>
+  </div>
+
   <div class="type-fallback">
     <h4>Ersatzschriftarten</h4>
     <p class="type-fallback-intro">Falls Inter nicht verfügbar ist (z. B. E-Mail oder Office ohne Installation), diese Alternativen verwenden:</p>
@@ -425,6 +457,60 @@
       </div>
     </div>
     <p class="type-fallback-intro" style="margin-top: 16px;">Fakt ist die Logo-Schrift und fest in den Logo-Dateien hinterlegt — nicht für Fliesstext verwenden.</p>
+  </div>
+</section>
+
+<!-- ══ UI-ELEMENTE & DRITTANBIETER ══ -->
+<section class="section" id="ui-elemente">
+  <p class="section-label">UI-Elemente</p>
+  <h2 class="section-title">UI-Elemente &amp; Drittanbieter</h2>
+  <p class="section-desc">
+    Kleine Bausteine, die auf jeder Website vorkommen: Tags, Kartenausschnitte und
+    eingebettete Tools von Drittanbietern.
+  </p>
+
+  <div class="ui-grid">
+    <div class="ui-card">
+      <h3>Tags &amp; Badges</h3>
+      <div class="ui-demo">
+        <div class="ui-badge-item">
+          <span class="ui-badge ui-badge--orange">Einsatz</span>
+          <span class="ui-ratio">7,0:1</span>
+        </div>
+        <div class="ui-badge-item">
+          <span class="ui-badge ui-badge--blue">Einsatz</span>
+          <span class="ui-ratio">7,1:1</span>
+        </div>
+        <div class="ui-badge-item is-wrong">
+          <span class="ui-badge ui-badge--wrong">Einsatz</span>
+          <span class="ui-ratio">✗ 2,98:1</span>
+        </div>
+      </div>
+      <p>Fläche VK Orange mit schwarzer Schrift oder Fläche VK Blau mit weisser Schrift. Weiss auf Orange ist nicht erlaubt.</p>
+    </div>
+
+    <div class="ui-card">
+      <h3>Karten-Overlays</h3>
+      <div class="ui-demo" aria-hidden="true">
+        <svg viewBox="0 0 240 96" preserveAspectRatio="xMidYMid slice">
+          <path d="M0 70 L240 52 M40 0 L70 96 M150 0 L180 96 M0 22 L240 34" stroke="#ffffff" stroke-width="6" fill="none"/>
+          <polygon points="88,18 140,12 160,48 128,78 82,62" fill="#ff6300" fill-opacity="0.15" stroke="#ff6300" stroke-width="2"/>
+          <polyline points="12,84 60,66 110,58 168,44 228,16" stroke="#ff6300" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <p>VK Orange als Linien- bzw. Umrandungsfarbe für Gebiete und Routen, optional mit halbtransparenter Füllung.</p>
+    </div>
+
+    <div class="ui-card">
+      <h3>Drittanbieter</h3>
+      <p>Cookie-Banner, Formulare wie Tally, Kartenwidgets — so weit konfigurierbar:</p>
+      <ul>
+        <li>Schrift Inter, schwarze Schrift</li>
+        <li>Buttons Schwarz, Radius 4–5 px, keine Grossbuchstaben</li>
+        <li>Links nicht in Blau</li>
+      </ul>
+      <p>Lässt sich ein Tool nicht anpassen, wird die Abweichung toleriert.</p>
+    </div>
   </div>
 </section>
 
@@ -472,7 +558,7 @@
         <li>Jugendliche im Einsatz, Gesichtsausdruck authentisch zeigen</li>
         <li>Verantwortung, Konzentration und Bewegung — möglichst von vorne fotografiert</li>
         <li>Nähe: buchstäblich nah an der Person, Bildausschnitt optimieren</li>
-        <li>Hintergrund unscharf halten — Fokus auf die Verkehrskadett:in</li>
+        <li>Hintergrund unscharf halten — Fokus auf den Verkehrskadetten</li>
         <li>Uniform als Zeichen für Haltung, nicht für Strenge</li>
         <li>Handzeichen und Körperposition zeigen, Verkehrssituation einbeziehen</li>
         <li>Teamgeist: mehrere Jugendliche im Einsatz, Austausch oder Vorbereitung</li>
@@ -484,7 +570,7 @@
         <li>Aufnahmen von hinten — abwehrend, exkludierend, befremdend</li>
         <li>Problematischer Bildschnitt, z. B. angeschnittene Köpfe</li>
         <li>Keine erkennbare Bildaussage</li>
-        <li>Verkehrskadett:in in Aktion zu klein im Bild</li>
+        <li>Verkehrskadett in Aktion zu klein im Bild</li>
         <li>Unscharfe Fotos</li>
       </ul>
     </div>
@@ -613,7 +699,7 @@
         </svg>
       </div>
       <p class="dl-name">Favicons</p>
-      <p class="dl-desc">Favicon-Set für Web-Projekte: ICO, SVG, PNG (16–512 px) und Apple Touch Icon. Bildmarke weiss auf VK Blau.</p>
+      <p class="dl-desc">Ein Set für die Dachmarke und alle Abteilungen — keine abteilungsspezifischen Favicons. ICO, SVG, PNG (16–512 px) und Apple Touch Icon, Bildmarke weiss auf VK Blau.</p>
       <a href="downloads/favicons.zip" download class="dl-btn">↓ ZIP</a>
     </div>
 
