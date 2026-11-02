@@ -3,7 +3,7 @@
 
 // ── Konfiguration ──
 // Nach dem Deploy hier die echte Worker-URL eintragen (npx wrangler deploy gibt sie aus).
-const WORKER_URL_PROD = 'https://marke-coach.mark-eichmann.workers.dev/';
+const WORKER_URL_PROD = 'https://marke-coach.vka-albis.ch/';
 // Standardmässig immer der deployte Worker (funktioniert auch beim lokalen Testen,
 // da dessen CORS localhost:8080 erlaubt). Nur für echte lokale Worker-Entwicklung
 // (npx wrangler dev + worker/.dev.vars mit dem API-Key) auf true setzen:
