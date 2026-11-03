@@ -97,7 +97,7 @@ zurück — Quellen (`Ressourcen/`), Git- und Editor-Verzeichnisse, Zugangsdaten
 (`.env`), die Agenten-Dokumentation (`CLAUDE.md`, `SETUP.md`,
 `docs/`), die Build-Tools (`*.py`, `*.sh`, `_generate-social.js`), das
 Node-Umfeld (`node_modules/`, `package*.json`), der separat deployte
-Cloudflare-Worker (`worker/`) sowie lokale Artefakte (`ruvector.db`,
+Cloudflare-Worker (`worker/`) sowie lokale Artefakte (`.playwright-mcp/`, `ruvector.db`,
 `agentdb.rvf*`, `__pycache__/`, `.DS_Store`).
 
 Ausgeschlossene Dateien werden von `lftp` komplett ignoriert — `--delete`

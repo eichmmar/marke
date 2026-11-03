@@ -46,7 +46,7 @@ a:hover:not(.dl-btn) { text-decoration-color: currentColor; }
 .abt-bar-inner {
   max-width: var(--max-w); margin: 0 auto; padding: 0 var(--pad);
   height: 34px; display: flex; align-items: center; gap: 12px;
-  overflow-x: auto; scrollbar-width: none;
+  overflow-x: auto; overflow-y: hidden; scrollbar-width: none;
 }
 .abt-bar-inner::-webkit-scrollbar { display: none; }
 .abt-label {
@@ -59,7 +59,6 @@ a:hover:not(.dl-btn) { text-decoration-color: currentColor; }
   padding: 3px 8px; border-radius: 3px; cursor: pointer;
   font-family: inherit; min-width: 180px;
   transition: background 0.15s, color 0.15s, border-color 0.15s;
-  font-family: inherit;
 }
 .abt-select:hover, .abt-select:focus { background: rgba(255,255,255,0.2); outline: none; }
 .abt-select option { background-color: #fff; color: #000000; }
@@ -287,7 +286,7 @@ a:hover:not(.dl-btn) { text-decoration-color: currentColor; }
 .type-web h4 { font-size: 11px; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 12px; }
 .type-web p { max-width: var(--text-max-w); font-size: 13px; color: var(--black); line-height: 1.6; }
 .type-web p + p { margin-top: 10px; }
-.type-web code { font-family: monospace; font-size: 11px; }
+.type-web code { font-family: monospace; font-size: 11px; overflow-wrap: anywhere; }
 
 /* ── UI-ELEMENTE & DRITTANBIETER ── */
 .ui-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
@@ -388,16 +387,27 @@ a.dl-btn { display: inline-flex; align-items: center; justify-content: center; g
 .footer-meta a:hover { color: var(--orange); }
 
 /* ── RESPONSIVE ── */
-/* Nav: Logo + 7 Links brauchen ~760px (gap 28px) bzw. ~710px (gap 18px) — darunter würde sie umbrechen */
+/* Nav: Logo + 7 Links brauchen ~760px (gap 28px) bzw. ~710px (gap 18px) — darunter
+   rutschen die Links in eine eigene, horizontal wischbare Zeile unter dem Logo. */
 @media (max-width: 1000px) { .nav-links { gap: 18px; } }
-@media (max-width: 840px)  { .nav-links { display: none; } }
+@media (max-width: 840px) {
+  .nav-inner { flex-wrap: wrap; height: auto; padding-top: 12px; }
+  .site-nav nav {
+    flex-basis: calc(100% + 2 * var(--pad)); margin: 0 calc(-1 * var(--pad));
+    /* overflow-y explizit sperren — sonst macht overflow-x:auto die Zeile auch
+       vertikal scrollbar (Subpixel-Höhe → 1 px Wackeln, v. a. Safari/iOS) */
+    overflow-x: auto; overflow-y: hidden; scrollbar-width: none;
+    -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
+  }
+  .site-nav nav::-webkit-scrollbar { display: none; }
+  .nav-links { gap: 20px; width: max-content; padding: 10px var(--pad) 8px; white-space: nowrap; }
+}
 
 @media (max-width: 768px) {
   :root { --pad: 20px; --section-gap: 48px; }
   .hero { grid-template-columns: 1fr; padding: 48px var(--pad); }
   .hero-logo-box { display: none; }
   .hero-title { font-size: 40px; }
-  .nav-links { display: none; }
   .id-grid, .family-grid, .dos-donts, .ui-grid { grid-template-columns: 1fr; }
   .bild-examples { grid-template-columns: 1fr; }
   .logo-grid { grid-template-columns: repeat(2, 1fr); }
@@ -405,10 +415,20 @@ a.dl-btn { display: inline-flex; align-items: center; justify-content: center; g
   .dl-grid { grid-template-columns: repeat(2, 1fr); }
   .section-title { font-size: 26px; }
   .footer-meta { text-align: left; }
+  /* Typo-Zeilen: Schnitt + Verwendung oben, Muster darunter auf voller Breite */
+  .type-row { flex-wrap: wrap; gap: 4px 16px; }
+  .type-use { order: 1; flex-shrink: 1; }
+  .type-sample { order: 2; flex-basis: 100%; font-size: 24px; }
 }
 
 @media (max-width: 480px) {
   .logo-grid, .dl-grid { grid-template-columns: 1fr; }
+  /* Wähler füllt den Rest der Leiste und darf schrumpfen (sonst ab ~300 px Überlauf) */
+  .abt-select { min-width: 0; flex: 1 1 auto; }
+  /* Schriftgrössen-Tabelle: Bezeichnung über dem Wert statt fixer 140-px-Spalte */
+  .type-scale, .type-web { padding: 16px; }
+  .type-scale td { display: block; }
+  .type-scale td:first-child { width: auto; padding-bottom: 0; border-bottom: none; }
 }
 
 /* ── MARKEN-COACH (Chat-Widget) ── */

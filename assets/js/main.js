@@ -7,13 +7,26 @@ window.addEventListener('scroll', () => {
 // Active nav link via IntersectionObserver
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
+const navScroller = document.querySelector('.site-nav nav');
+
+// Mobile: Link-Zeile ist horizontal scrollbar — aktiven Link mittig ins Bild holen
+function centerNavLink(link) {
+  if (navScroller.scrollWidth <= navScroller.clientWidth) return;
+  const n = navScroller.getBoundingClientRect(), l = link.getBoundingClientRect();
+  navScroller.scrollTo({
+    left: navScroller.scrollLeft + (l.left - n.left) - (n.width - l.width) / 2,
+    behavior: 'smooth',
+  });
+}
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const id = entry.target.id;
       navLinks.forEach(link => {
-        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+        const active = link.getAttribute('href') === `#${id}`;
+        link.classList.toggle('active', active);
+        if (active) centerNavLink(link);
       });
     }
   });

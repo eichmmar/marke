@@ -19,6 +19,7 @@ mirror --reverse --delete --verbose \
   --exclude "^\.vscode/" \
   --exclude "^\.claude/" \
   --exclude "^\.superpowers/" \
+  --exclude "^\.playwright-mcp/" \
   --exclude "^CLAUDE\.md$" \
   --exclude "^SETUP\.md$" \
   --exclude "^ruvector\.db$" \
