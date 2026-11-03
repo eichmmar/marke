@@ -2,6 +2,11 @@ name = "marke-coach"
 main = "src/index.js"
 compatibility_date = "2025-01-01"
 
+# Konto «Verkehrskadetten-Abteilung Albis» fest verdrahten: Das Login sieht
+# mehrere Konten, ohne diese Zeile landen deploy und `secret put` sonst in
+# unterschiedlichen Konten (→ Worker ohne API-Key → 500).
+account_id = "4331012086103fc468859e293f5503e0"
+
 # Eigene Domain (Zone vka-albis.ch im selben Cloudflare-Konto; DNS + Zertifikat
 # legt Cloudflare automatisch an). Die alte workers.dev-Adresse ist abgeschaltet.
 workers_dev = false
