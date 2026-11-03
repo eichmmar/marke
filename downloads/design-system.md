@@ -1,10 +1,14 @@
 # Design System — Verkehrskadetten
 
-**Version:** 2.1.0 · **Stand:** 2026-11-02  
+**Version:** 2.1.1 · **Stand:** 2026-11-03  
 **Quelle:** Marken-Manual Verkehrskadetten, November 2025 (`downloads/Verkehrskadetten_Marken-Manual.pdf`)  
 **URL:** marke.verkehrskadetten.ch
 **Kontakt:** marke@verkehrskadetten.ch
 
+> **Änderungen in 2.1.1 (2026-11-03)** — Weiss auf Orange ist nicht mehr verboten,
+> sondern wegen der Lesbarkeit sparsam einzusetzen · maximale Inhaltsbreite
+> `--max-w` 1080px statt 900px, Fliesstext über `--text-max-w` auf 820px begrenzt.
+>
 > **Änderungen in 2.1.0 (2026-11-02)** — nach einem Abgleich mit der Abteilungs-Website
 > vka-albis.ch: VK Orange als Textfarbe für Akzentwörter in Titeln · gedämpftes Grau
 > `#6b6b6b` statt `#777777`, mit festgelegter Verwendung · Off-White `#f2f2f2` statt
@@ -306,7 +310,7 @@ Lizenz: OurType, intern. Dateien verbleiben unter `assets/fonts/FaktBold.ttf`,
 | Display / H1 | 40–64 px | 700 | 1.0–1.1 | letter-spacing −0.025em |
 | Headline / H2 | 24–32 px | 700 | 1.15 | — |
 | Subheading / H3 | 16–20 px | 700 | 1.3 | — |
-| Body Text | 14–16 px | 400 | 1.6–1.7 | max-width 580px |
+| Body Text | 14–16 px | 400 | 1.6–1.7 | max-width 820px |
 | Caption / Label | 9–12 px | 700 | 1.4 | uppercase, letter-spacing 0.10–0.20em |
 
 ### Ersatzschriften
@@ -331,14 +335,15 @@ Falls Inter nicht verfügbar ist (z. B. E-Mail/Office ohne Installation):
 --off-white:   #f2f2f2
 --border:      #eeeeee
 --text-muted:  #6b6b6b
---max-w:       900px
+--max-w:       1080px
+--text-max-w:  820px
 --pad:         40px   /* 20px auf Mobile */
 --section-gap: 64px   /* 48px auf Mobile */
 ```
 
 ### Maximale Inhaltsbreite
 
-`900px` — zentriert mit `margin: 0 auto`
+`1080px` — zentriert mit `margin: 0 auto`. Fliesstext (Sektionsbeschreibungen, Regel-Boxen) bleibt auf `820px` begrenzt, damit die Zeilen lesbar bleiben.
 
 ### Abstände (gebräuchliche Werte)
 
@@ -348,7 +353,9 @@ Falls Inter nicht verfügbar ist (z. B. E-Mail/Office ohne Installation):
 
 | Breakpoint | Änderungen |
 |---|---|
-| ≤ 768 px | Padding → 20px, Section-Gap → 48px, Hero 1-spaltig, Nav-Links ausgeblendet, Grids auf 1–2 Spalten |
+| ≤ 1000 px | Abstand der Nav-Links → 18px |
+| ≤ 840 px | Nav-Links ausgeblendet |
+| ≤ 768 px | Padding → 20px, Section-Gap → 48px, Hero 1-spaltig, Grids auf 1–2 Spalten |
 | ≤ 480 px | Logo-Grid und Download-Grid → 1 Spalte |
 
 ### Border-Radius
@@ -484,7 +491,7 @@ bleibt der Favicon-Download derselbe.
 - Sticky, `z-index: 100`, Höhe 60 px, weisser Hintergrund
 - Scrolled-State: `box-shadow 0 2px 16px rgba(0,0,0,0.08)`
 - Links: 13 px, Bold, Farbe `#6b6b6b` → `#ff6300` (hover/active) + 2 px orange Unterstrich
-- Mobile (≤768 px): Links ausgeblendet
+- ≤ 1000 px: Abstand der Links 18 px statt 28 px · ≤ 840 px: Links ausgeblendet
 
 ### Abteilungs-Bar
 
@@ -533,7 +540,9 @@ bleibt der Favicon-Download derselbe.
 
 - Fläche VK Orange mit schwarzer Schrift (7,0:1) oder Fläche VK Blau mit weisser
   Schrift (7,1:1)
-- Weiss auf Orange ist nicht erlaubt (2,98:1)
+- Weiss auf Orange sparsam einsetzen: nur 2,98:1 Kontrast, also schlechter lesbar.
+  Wenn, dann für kurze Wörter in grosser, fetter Schrift, nie für Fliesstext. Im
+  Zweifel Schwarz auf Orange.
 
 **Karten-Overlays**
 

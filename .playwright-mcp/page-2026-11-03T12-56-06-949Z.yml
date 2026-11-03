@@ -1,0 +1,507 @@
+- generic [active] [ref=f1e1]:
+  - banner [ref=f1e2]:
+    - generic [ref=f1e4]:
+      - generic [ref=f1e5]: Abteilung
+      - combobox "Abteilung" [ref=f1e6] [cursor=pointer]:
+        - option "Dachmarke"
+        - option "VK Albis" [selected]
+        - option "VK Ausserschwyz"
+        - option "VK Kadetten Korps Basel"
+        - option "VK Bern"
+        - option "VK Chur"
+        - option "VK Fürstenland"
+        - option "VK Glarnerland"
+        - option "VK Luzern"
+        - option "VK Nordwest Schweiz"
+        - option "VK Rapperswil-Jona"
+        - option "VK Saanenland"
+        - option "VK Samstagern-Richterswil"
+        - option "VK Schaffhausen"
+        - option "VK St. Gallen"
+        - option "VK St. Galler Oberland"
+        - option "VK Thurgau"
+        - option "VK Winterthur"
+        - option "VK Zürcher Oberland"
+        - option "VK Zürcher Unterland"
+        - option "VK Zürichsee"
+        - option "VK Zug"
+    - generic [ref=f1e7]:
+      - link "Verkehrskadetten Markenportal" [ref=f1e8] [cursor=pointer]:
+        - /url: "#"
+        - img "Verkehrskadetten" [ref=f1e9]
+        - generic [ref=f1e10]: Markenportal
+      - navigation [ref=f1e11]:
+        - list [ref=f1e12]:
+          - listitem [ref=f1e13]:
+            - link "Marke" [ref=f1e14] [cursor=pointer]:
+              - /url: "#marke"
+          - listitem [ref=f1e15]:
+            - link "Logo" [ref=f1e16] [cursor=pointer]:
+              - /url: "#logo"
+          - listitem [ref=f1e17]:
+            - link "Farben" [ref=f1e18] [cursor=pointer]:
+              - /url: "#farben"
+          - listitem [ref=f1e19]:
+            - link "Typografie" [ref=f1e20] [cursor=pointer]:
+              - /url: "#typografie"
+          - listitem [ref=f1e21]:
+            - link "UI-Elemente" [ref=f1e22] [cursor=pointer]:
+              - /url: "#ui-elemente"
+          - listitem [ref=f1e23]:
+            - link "Bildsprache" [ref=f1e24] [cursor=pointer]:
+              - /url: "#bildsprache"
+          - listitem [ref=f1e25]:
+            - link "Downloads" [ref=f1e26] [cursor=pointer]:
+              - /url: "#downloads"
+  - generic [ref=f1e27]:
+    - generic [ref=f1e28]:
+      - paragraph [ref=f1e29]: Markenportal · Verkehrskadetten
+      - heading "Jugend bewegt Verkehr." [level=1] [ref=f1e30]: JugendbewegtVerkehr.
+      - paragraph [ref=f1e31]: Das visuelle Erscheinungsbild der Dachmarke Verkehrskadetten — Logos, Farben, Typografie und alle Brand-Assets für Abteilungen.
+    - generic [ref=f1e33]:
+      - img "Verkehrskadetten Logo" [ref=f1e34]
+      - img "VK Albis" [ref=f1e37]
+  - generic [ref=f1e38]:
+    - paragraph [ref=f1e39]: Markenidentität
+    - heading "Warum eine Marke?" [level=2] [ref=f1e40]
+    - paragraph [ref=f1e41]:
+      - text: Über 20 Abteilungen in der ganzen Schweiz tragen dieselbe orange Uniform — ein einheitliches Erscheinungsbild schafft Wiedererkennung und Vertrauen bei Jugendlichen, Eltern, Behörden und Veranstaltern. Der Claim
+      - strong [ref=f1e42]: «Jugend bewegt Verkehr»
+      - text: "verbindet drei Ebenen:"
+      - strong [ref=f1e43]: Jugend
+      - text: als Herz der Organisation,
+      - strong [ref=f1e44]: bewegt
+      - text: als sichtbare Wirkung und
+      - strong [ref=f1e45]: Verkehr
+      - text: als Einsatzfeld und Symbol für Ordnung, Sicherheit und gesellschaftliches Zusammenwirken.
+    - generic [ref=f1e46]:
+      - generic [ref=f1e47]:
+        - paragraph [ref=f1e48]: Was wir konkret tun
+        - paragraph [ref=f1e49]: Wir sichern Verkehr und Zugänge bei Veranstaltungen — verlässlich, wirksam, ehrenamtlich.
+      - generic [ref=f1e50]:
+        - paragraph [ref=f1e51]: Wie wir es tun
+        - paragraph [ref=f1e52]: Mit geschulten Jugendlichen, klarem Ablauf, menschlichem Auftreten — und regionaler Verankerung.
+      - generic [ref=f1e53]:
+        - paragraph [ref=f1e54]: Warum wir tun, was wir tun
+        - paragraph [ref=f1e55]: Weil gesellschaftliches Miteinander sichere Mobilität und Verantwortung braucht.
+  - generic [ref=f1e56]:
+    - paragraph [ref=f1e57]: Logo-System
+    - heading "Logos & Varianten" [level=2] [ref=f1e58]
+    - paragraph [ref=f1e59]: Das Logo-System besteht aus Bildmarke, Wortmarke und deren Kombination — je in verschiedenen Farbvarianten für unterschiedliche Hintergründe und Druckverfahren. Immer nur die freigegebenen Varianten verwenden.
+    - generic [ref=f1e60]:
+      - heading "Dachmarke Verkehrskadetten" [level=3] [ref=f1e61]
+      - generic [ref=f1e62]:
+        - generic [ref=f1e63]:
+          - img "Kombination orange+schwarz" [ref=f1e65]
+          - generic [ref=f1e66]:
+            - generic [ref=f1e67]: Kombination sw
+            - link "↓ SVG" [ref=f1e68] [cursor=pointer]:
+              - /url: assets/logos/Verkehrskadetten_Kombination_RGB_orange+schwarz.svg
+        - generic [ref=f1e69]:
+          - img "Kombination orange+weiss" [ref=f1e71]
+          - generic [ref=f1e72]:
+            - generic [ref=f1e73]: Kombination weiss
+            - link "↓ SVG" [ref=f1e74] [cursor=pointer]:
+              - /url: assets/logos/Verkehrskadetten_Kombination_RGB_orange+weiss.svg
+        - generic [ref=f1e75]:
+          - img "Kombination outline" [ref=f1e77]
+          - generic [ref=f1e78]:
+            - generic [ref=f1e79]: Kombination outline
+            - link "↓ SVG" [ref=f1e80] [cursor=pointer]:
+              - /url: assets/logos/Verkehrskadetten_Kombination_RGB_outline+schwarz.svg
+        - generic [ref=f1e81]:
+          - img "Bildmarke orange+schwarz" [ref=f1e83]
+          - generic [ref=f1e84]:
+            - generic [ref=f1e85]: Bildmarke sw
+            - link "↓ SVG" [ref=f1e86] [cursor=pointer]:
+              - /url: assets/logos/Verkehrskadetten_Bildmarke_RGB_orange+schwarz.svg
+        - generic [ref=f1e87]:
+          - img "Bildmarke orange+weiss" [ref=f1e89]
+          - generic [ref=f1e90]:
+            - generic [ref=f1e91]: Bildmarke weiss
+            - link "↓ SVG" [ref=f1e92] [cursor=pointer]:
+              - /url: assets/logos/Verkehrskadetten_Bildmarke_RGB_orange+weiss.svg
+        - generic [ref=f1e93]:
+          - img "Wortmarke schwarz" [ref=f1e95]
+          - generic [ref=f1e96]:
+            - generic [ref=f1e97]: Wortmarke sw
+            - link "↓ SVG" [ref=f1e98] [cursor=pointer]:
+              - /url: assets/logos/Verkehrskadetten_Schriftmarke_RGB_schwarz.svg
+        - generic [ref=f1e99]:
+          - img "Wortmarke weiss" [ref=f1e101]
+          - generic [ref=f1e102]:
+            - generic [ref=f1e103]: Wortmarke weiss
+            - link "↓ SVG" [ref=f1e104] [cursor=pointer]:
+              - /url: assets/logos/Verkehrskadetten_Schriftmarke_RGB_weiss.svg
+        - generic [ref=f1e105]:
+          - img "Kombination outline+weiss" [ref=f1e107]
+          - generic [ref=f1e108]:
+            - generic [ref=f1e109]: Kombination outline w
+            - link "↓ SVG" [ref=f1e110] [cursor=pointer]:
+              - /url: assets/logos/Verkehrskadetten_Kombination_RGB_outline+weiss.svg
+        - generic [ref=f1e111]:
+          - img "Bildmarke outline+schwarz" [ref=f1e113]
+          - generic [ref=f1e114]:
+            - generic [ref=f1e115]: Bildmarke outline sw
+            - link "↓ SVG" [ref=f1e116] [cursor=pointer]:
+              - /url: assets/logos/Verkehrskadetten_Bildmarke_RGB_outline+schwarz.svg
+        - generic [ref=f1e117]:
+          - img "Bildmarke outline+weiss" [ref=f1e119]
+          - generic [ref=f1e120]:
+            - generic [ref=f1e121]: Bildmarke outline w
+            - link "↓ SVG" [ref=f1e122] [cursor=pointer]:
+              - /url: assets/logos/Verkehrskadetten_Bildmarke_RGB_outline+weiss.svg
+    - generic [ref=f1e123]:
+      - 'heading "Abteilung: VK Albis" [level=3] [ref=f1e124]'
+      - generic [ref=f1e125]:
+        - generic [ref=f1e126]:
+          - img "Kombination sw" [ref=f1e128]
+          - generic [ref=f1e129]:
+            - generic [ref=f1e130]: Kombination sw
+            - generic [ref=f1e131]:
+              - link "↓ SVG" [ref=f1e132] [cursor=pointer]:
+                - /url: assets/logos/abteilungen/albis_RGB_schwarz.svg
+              - link "↓ PDF RGB" [ref=f1e133] [cursor=pointer]:
+                - /url: downloads/abteilungen/albis_RGB_schwarz.pdf
+              - link "↓ PDF CMYK" [ref=f1e134] [cursor=pointer]:
+                - /url: downloads/abteilungen/albis_CMYK_schwarz.pdf
+        - generic [ref=f1e135]:
+          - img "Kombination weiss" [ref=f1e137]
+          - generic [ref=f1e138]:
+            - generic [ref=f1e139]: Kombination weiss
+            - generic [ref=f1e140]:
+              - link "↓ SVG" [ref=f1e141] [cursor=pointer]:
+                - /url: assets/logos/abteilungen/albis_RGB_weiss.svg
+              - link "↓ PDF RGB" [ref=f1e142] [cursor=pointer]:
+                - /url: downloads/abteilungen/albis_RGB_weiss.pdf
+              - link "↓ PDF CMYK" [ref=f1e143] [cursor=pointer]:
+                - /url: downloads/abteilungen/albis_CMYK_weiss.pdf
+        - generic [ref=f1e144]:
+          - img "Social Media" [ref=f1e146]
+          - generic [ref=f1e147]:
+            - generic [ref=f1e148]: Social Media
+            - link "↓ PNG" [ref=f1e150] [cursor=pointer]:
+              - /url: downloads/abteilungen/social/albis.png
+    - generic [ref=f1e151]:
+      - heading "Favicons" [level=3] [ref=f1e152]
+      - generic [ref=f1e153]:
+        - 'img "Favicon: Bildmarke weiss auf VK Blau" [ref=f1e154]'
+        - paragraph [ref=f1e155]:
+          - text: "Ein Set für alle: Das Favicon-Set (Bildmarke weiss auf VK Blau) gilt für die Dachmarke"
+          - strong [ref=f1e156]: und alle Abteilungen
+          - text: . Abteilungsspezifische Favicons gibt es nicht — wer im Header die Abteilung wechselt, lädt dasselbe Set.
+          - link "Zum Download" [ref=f1e157] [cursor=pointer]:
+            - /url: "#downloads"
+    - generic [ref=f1e158]:
+      - heading "Anwendungsregeln" [level=3] [ref=f1e159]
+      - generic "Schutzraum-Diagramm" [ref=f1e160]:
+        - img "Logo" [ref=f1e163]
+        - paragraph [ref=f1e164]: Schutzraum rundum freilassen — die verbindliche Markierung zeigt das Marken-Manual (Kap. 6). Die Minimalgrösse definiert sich über die Leserlichkeit der Wortmarke.
+      - generic [ref=f1e165]:
+        - generic [ref=f1e166]:
+          - heading "So verwenden" [level=4] [ref=f1e167]
+          - list [ref=f1e168]:
+            - listitem [ref=f1e169]: ✓ Nur freigegebene SVG- und PDF-Dateien verwenden
+            - listitem [ref=f1e170]: ✓ Ausreichend Schutzraum um das Logo freilassen
+            - listitem [ref=f1e171]: ✓ Auf kontrastreichem Hintergrund platzieren
+            - listitem [ref=f1e172]: ✓ Proportionen beim Skalieren beibehalten
+            - listitem [ref=f1e173]: ✓ Bei Unklarheiten das Markenteam kontaktieren
+        - generic [ref=f1e174]:
+          - heading "Nicht erlaubt" [level=4] [ref=f1e175]
+          - list [ref=f1e176]:
+            - listitem [ref=f1e177]: ✗ Logo verzerren, drehen oder neu einfärben
+            - listitem [ref=f1e178]: ✗ Elemente entfernen oder umordnen
+            - listitem [ref=f1e179]: ✗ Auf ähnlich farbenem Hintergrund platzieren
+            - listitem [ref=f1e180]: ✗ Schatten, Verläufe oder Effekte hinzufügen
+            - listitem [ref=f1e181]: ✗ Eigene Varianten oder Kombinationen erstellen
+  - generic [ref=f1e182]:
+    - paragraph [ref=f1e183]: Farben
+    - heading "Farbpalette" [level=2] [ref=f1e184]
+    - paragraph [ref=f1e185]: Die Farbwelt besteht aus Primär- und Sekundärfarbe sowie Weiss und Schwarz. Auf eine Farbkachel klicken, um den HEX-Wert in die Zwischenablage zu kopieren.
+    - generic [ref=f1e186]:
+      - generic [ref=f1e187] [cursor=pointer]:
+        - generic [ref=f1e189]:
+          - paragraph [ref=f1e190]: Primärfarbe
+          - paragraph [ref=f1e191]: VK Orange
+          - paragraph [ref=f1e192]: "#FF6300"
+          - paragraph [ref=f1e193]: RGB 255 · 99 · 0
+          - paragraph [ref=f1e194]: CMYK 0 · 75 · 100 · 0
+          - paragraph [ref=f1e195]: Pantone 1585 C
+        - generic: Kopiert!
+      - generic [ref=f1e196] [cursor=pointer]:
+        - generic [ref=f1e198]:
+          - paragraph [ref=f1e199]: Sekundärfarbe
+          - paragraph [ref=f1e200]: VK Blau
+          - paragraph [ref=f1e201]: "#2F5D77"
+          - paragraph [ref=f1e202]: RGB 47 · 93 · 119
+          - paragraph [ref=f1e203]: CMYK 86 · 57 · 37 · 15
+          - paragraph [ref=f1e204]: Pantone 7699 C
+        - generic: Kopiert!
+      - generic [ref=f1e205] [cursor=pointer]:
+        - generic [ref=f1e207]:
+          - paragraph [ref=f1e208]: Weiss
+          - paragraph [ref=f1e209]: VK Weiss
+          - paragraph [ref=f1e210]: "#FFFFFF"
+          - paragraph [ref=f1e211]: RGB 255 · 255 · 255
+          - paragraph [ref=f1e212]: CMYK 0 · 0 · 0 · 0
+          - paragraph [ref=f1e213]
+        - generic: Kopiert!
+      - generic [ref=f1e214] [cursor=pointer]:
+        - generic [ref=f1e216]:
+          - paragraph [ref=f1e217]: Schwarz
+          - paragraph [ref=f1e218]: VK Schwarz
+          - paragraph [ref=f1e219]: "#000000"
+          - paragraph [ref=f1e220]: RGB 0 · 0 · 0
+          - paragraph [ref=f1e221]: CMYK 0 · 0 · 0 · 100
+          - paragraph [ref=f1e222]: Pantone Black C
+        - generic: Kopiert!
+    - generic [ref=f1e223]:
+      - heading "Einsatzregeln" [level=3] [ref=f1e224]
+      - list [ref=f1e225]:
+        - listitem [ref=f1e226]:
+          - text: —
+          - strong [ref=f1e227]: Primärfarbe
+          - text: — hauptsächlich für das «V» der Bildmarke, daneben als Hintergrundfarbe und für einzelne Akzentwörter in Titeln.
+        - listitem [ref=f1e228]:
+          - text: —
+          - strong [ref=f1e229]: Sekundärfarbe
+          - text: — ausschliesslich als Hintergrundfarbe.
+        - listitem [ref=f1e230]:
+          - text: —
+          - strong [ref=f1e231]: Weiss und Schwarz
+          - text: — für «CH»/Region, Hintergrund, das «V» und für Text.
+        - listitem [ref=f1e232]:
+          - text: — Text steht in Schwarz oder Weiss,
+          - strong [ref=f1e233]: nie
+          - text: in Sekundärfarbe. Gedämpftes Grau
+          - code [ref=f1e234]: "#6B6B6B"
+          - text: ist erlaubt für Fliesstext, Beschreibungen, Meta-Angaben und Navigations-Links; Titel, Labels und Buttons bleiben Schwarz bzw. Weiss.
+        - listitem [ref=f1e235]:
+          - text: —
+          - strong [ref=f1e236]: Orange als Textfarbe
+          - text: nur für einzelne Akzentwörter in Titeln (H1/H2, ab 24 px, Bold), z. B. «Jugend bewegt
+          - strong [ref=f1e237]: Verkehr
+          - text: ». Nie für Fliesstext, Links, Buttons, Navigation, Labels oder ganze Titel — Orange auf Weiss hat nur 2,98:1 Kontrast, WCAG AA verlangt für normalen Text 4,5:1.
+      - paragraph [ref=f1e238]:
+        - text: Für Bildschirmflächen wird zusätzlich das Off-White
+        - code [ref=f1e239]: "#F2F2F2"
+        - text: als funktionaler Hintergrund eingesetzt — es ist keine Markenfarbe.
+  - generic [ref=f1e240]:
+    - paragraph [ref=f1e241]: Typografie
+    - heading "Inter" [level=2] [ref=f1e242]
+    - paragraph [ref=f1e243]:
+      - text: Inter ist die Hausschrift der Verkehrskadetten — für alle Anwendungen in Web, Print und Dokumenten. Bold (700) für Titel und Slogans, Regular (400) für Fliesstext, Light (300) für Claim und ruhigen Fliesstext; Italic punktuell für Betonungen.
+      - strong [ref=f1e244]: Fakt bleibt ausschliesslich dem Logo vorbehalten.
+    - generic [ref=f1e245]:
+      - generic [ref=f1e246]:
+        - generic [ref=f1e247]: Bold · 700
+        - generic [ref=f1e248]: Jugend bewegt Verkehr
+        - generic [ref=f1e249]: Titel, Slogans
+      - generic [ref=f1e250]:
+        - generic [ref=f1e251]: Regular · 400
+        - generic [ref=f1e252]: Jugend bewegt Verkehr
+        - generic [ref=f1e253]: Fliesstext
+      - generic [ref=f1e254]:
+        - generic [ref=f1e255]: Light · 300
+        - generic [ref=f1e256]: Jugend bewegt Verkehr
+        - generic [ref=f1e257]: Claim, Fliesstext
+      - generic [ref=f1e258]:
+        - generic [ref=f1e259]: Italic
+        - generic [ref=f1e260]: Jugend bewegt Verkehr
+        - generic [ref=f1e261]: punktuell — Betonungen, Zitate
+    - generic [ref=f1e262]:
+      - heading "Empfohlene Schriftgrössen" [level=4] [ref=f1e263]
+      - table [ref=f1e264]:
+        - rowgroup [ref=f1e265]:
+          - row [ref=f1e266]:
+            - cell "Display / H1" [ref=f1e267]
+            - cell "40–64 px · Bold · Zeilenabstand 1.0–1.1" [ref=f1e268]
+          - row [ref=f1e269]:
+            - cell "Headline / H2" [ref=f1e270]
+            - cell "24–32 px · Bold · Zeilenabstand 1.15" [ref=f1e271]
+          - row [ref=f1e272]:
+            - cell "Subheading / H3" [ref=f1e273]
+            - cell "16–20 px · Bold · Zeilenabstand 1.3" [ref=f1e274]
+          - row [ref=f1e275]:
+            - cell "Body Text" [ref=f1e276]
+            - cell "14–16 px · Normal · Zeilenabstand 1.6–1.7" [ref=f1e277]
+          - row [ref=f1e278]:
+            - cell "Caption / Label" [ref=f1e279]
+            - cell "10–12 px · Bold · Grossbuchstaben + Letter-Spacing" [ref=f1e280]
+    - generic [ref=f1e281]:
+      - link "Inter Schriftarten herunterladen" [ref=f1e282] [cursor=pointer]:
+        - /url: downloads/inter.zip
+      - paragraph [ref=f1e286]:
+        - text: "OTF + TTF (Light, Regular, Bold + Italics) · Lizenz: SIL Open Font License — frei verwendbar. Auch gratis via"
+        - link "rsms.me/inter" [ref=f1e287] [cursor=pointer]:
+          - /url: https://rsms.me/inter/
+        - text: oder Google Fonts.
+    - generic [ref=f1e288]:
+      - heading "Im Web einbinden" [level=4] [ref=f1e289]
+      - paragraph [ref=f1e290]:
+        - strong [ref=f1e291]: "Standard: rsms.me-CDN."
+        - text: Im
+        - code [ref=f1e292]: <head>
+        - code [ref=f1e293]: <link rel="preconnect" href="https://rsms.me/">
+        - text: und
+        - code [ref=f1e294]: <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        - text: einfügen.
+      - paragraph [ref=f1e295]:
+        - strong [ref=f1e296]: Self-Hosting ist erlaubt
+        - text: "für Teams, die es sicher umsetzen können:"
+        - code [ref=f1e297]: InterVariable.woff2
+        - text: selbst hosten (optional nur das Latin-Subset),
+        - code [ref=f1e298]: "@font-face"
+        - text: mit
+        - code [ref=f1e299]: "font-display: swap"
+        - text: ","
+        - code [ref=f1e300]: <link rel="preload" as="font" type="font/woff2" crossorigin>
+        - text: ", Lizenzdatei (SIL OFL) mitliefern und bei neuen Inter-Versionen selbst aktualisieren. Vorteil: Es gehen keine Besucher-IPs an einen Dritten, und die Schrift lädt schneller."
+    - generic [ref=f1e301]:
+      - heading "Ersatzschriftarten" [level=4] [ref=f1e302]
+      - paragraph [ref=f1e303]: "Falls Inter nicht verfügbar ist (z. B. E-Mail oder Office ohne Installation), diese Alternativen verwenden:"
+      - generic [ref=f1e304]:
+        - generic [ref=f1e305]:
+          - generic [ref=f1e306]: E-Mail · Office
+          - generic [ref=f1e307]: Calibri
+          - generic [ref=f1e308]: Vorinstalliert auf Windows/macOS, ähnliche Proportionen
+        - generic [ref=f1e309]:
+          - generic [ref=f1e310]: Universal
+          - generic [ref=f1e311]: Arial / Helvetica
+          - generic [ref=f1e312]: Universell verfügbar — nur als letzter Fallback
+      - paragraph [ref=f1e313]: Fakt ist die Logo-Schrift und fest in den Logo-Dateien hinterlegt — nicht für Fliesstext verwenden.
+  - generic [ref=f1e314]:
+    - paragraph [ref=f1e315]: UI-Elemente
+    - heading "UI-Elemente & Drittanbieter" [level=2] [ref=f1e316]
+    - paragraph [ref=f1e317]: "Kleine Bausteine, die auf jeder Website vorkommen: Tags, Kartenausschnitte und eingebettete Tools von Drittanbietern."
+    - generic [ref=f1e318]:
+      - generic [ref=f1e319]:
+        - heading "Tags & Badges" [level=3] [ref=f1e320]
+        - generic [ref=f1e321]:
+          - generic [ref=f1e322]:
+            - generic [ref=f1e323]: Einsatz
+            - generic [ref=f1e324]: 7,0:1
+          - generic [ref=f1e325]:
+            - generic [ref=f1e326]: Einsatz
+            - generic [ref=f1e327]: 7,1:1
+          - generic [ref=f1e328]:
+            - generic [ref=f1e329]: Einsatz
+            - generic [ref=f1e330]: 2,98:1 · sparsam
+        - paragraph [ref=f1e331]: Fläche VK Orange mit schwarzer Schrift oder Fläche VK Blau mit weisser Schrift. Weiss auf Orange ist schlechter lesbar — sparsam einsetzen, höchstens für kurze Wörter in grosser, fetter Schrift.
+      - generic [ref=f1e332]:
+        - heading "Karten-Overlays" [level=3] [ref=f1e333]
+        - paragraph [ref=f1e339]: VK Orange als Linien- bzw. Umrandungsfarbe für Gebiete und Routen, optional mit halbtransparenter Füllung.
+      - generic [ref=f1e340]:
+        - heading "Drittanbieter" [level=3] [ref=f1e341]
+        - paragraph [ref=f1e342]: "Cookie-Banner, Formulare wie Tally, Kartenwidgets — so weit konfigurierbar:"
+        - list [ref=f1e343]:
+          - listitem [ref=f1e344]: — Schrift Inter, schwarze Schrift
+          - listitem [ref=f1e345]: — Buttons Schwarz, Radius 4–5 px, keine Grossbuchstaben
+          - listitem [ref=f1e346]: — Links nicht in Blau
+        - paragraph [ref=f1e347]: Lässt sich ein Tool nicht anpassen, wird die Abweichung toleriert.
+  - generic [ref=f1e348]:
+    - paragraph [ref=f1e349]: Bildsprache
+    - heading "Bildwelt" [level=2] [ref=f1e350]
+    - paragraph [ref=f1e351]: "Die Bildwelt zeigt Jugendliche im echten Einsatz — authentisch, nah und kompetent. Bilder transportieren, was Worte allein nicht können: echte Verantwortung, echter Teamgeist."
+    - generic [ref=f1e352]:
+      - generic [ref=f1e353]: Authentische Situationen
+      - generic [ref=f1e354]: Sichtbare Verantwortung
+      - generic [ref=f1e355]: Nähe zu den Menschen
+      - generic [ref=f1e356]: Unscharfer Hintergrund
+      - generic [ref=f1e357]: Teamgeist
+      - generic [ref=f1e358]: Kompetenz & Professionalität
+    - generic [ref=f1e359]:
+      - generic [ref=f1e360]:
+        - heading "Gute Beispiele" [level=3] [ref=f1e361]
+        - generic [ref=f1e362]:
+          - img "Kaderausbildung — Kompetenz und Professionalität" [ref=f1e364]
+          - img "Verkehrskadett am Zebrastreifen — Gesicht, Verantwortung" [ref=f1e366]
+          - img "Gruppenfoto am Abend — Teamgeist und Gemeinschaft" [ref=f1e368]
+      - generic [ref=f1e369]:
+        - heading "Schlechte Beispiele" [level=3] [ref=f1e370]
+        - generic [ref=f1e371]:
+          - img "Schlechtes Beispiel — unklarer Kontext" [ref=f1e373]
+          - img "Schlechtes Beispiel — Aufnahme von hinten, kein Gesichtsbezug" [ref=f1e375]
+          - img "Schlechtes Beispiel — Aufnahme von hinten, kein Gesichtsbezug" [ref=f1e377]
+    - generic [ref=f1e378]:
+      - generic [ref=f1e379]:
+        - heading "Verwenden" [level=4] [ref=f1e380]
+        - list [ref=f1e381]:
+          - listitem [ref=f1e382]: ✓ Jugendliche im Einsatz, Gesichtsausdruck authentisch zeigen
+          - listitem [ref=f1e383]: ✓ Verantwortung, Konzentration und Bewegung — möglichst von vorne fotografiert
+          - listitem [ref=f1e384]: "✓ Nähe: buchstäblich nah an der Person, Bildausschnitt optimieren"
+          - listitem [ref=f1e385]: ✓ Hintergrund unscharf halten — Fokus auf den Verkehrskadetten
+          - listitem [ref=f1e386]: ✓ Uniform als Zeichen für Haltung, nicht für Strenge
+          - listitem [ref=f1e387]: ✓ Handzeichen und Körperposition zeigen, Verkehrssituation einbeziehen
+          - listitem [ref=f1e388]: "✓ Teamgeist: mehrere Jugendliche im Einsatz, Austausch oder Vorbereitung"
+      - generic [ref=f1e389]:
+        - heading "Vermeiden" [level=4] [ref=f1e390]
+        - list [ref=f1e391]:
+          - listitem [ref=f1e392]: ✗ Aufnahmen von hinten — abwehrend, exkludierend, befremdend
+          - listitem [ref=f1e393]: ✗ Problematischer Bildschnitt, z. B. angeschnittene Köpfe
+          - listitem [ref=f1e394]: ✗ Keine erkennbare Bildaussage
+          - listitem [ref=f1e395]: ✗ Verkehrskadett in Aktion zu klein im Bild
+          - listitem [ref=f1e396]: ✗ Unscharfe Fotos
+  - generic [ref=f1e397]:
+    - paragraph [ref=f1e398]: Downloads
+    - heading "Brand Assets" [level=2] [ref=f1e399]
+    - paragraph [ref=f1e400]:
+      - text: "Alle offiziellen Dateien zum Download. Nur diese freigegebenen Versionen verwenden. Bei Fragen:"
+      - link "marke@verkehrskadetten.ch" [ref=f1e401] [cursor=pointer]:
+        - /url: mailto:marke@verkehrskadetten.ch
+    - generic [ref=f1e402]:
+      - generic [ref=f1e403]:
+        - paragraph [ref=f1e408]: Logos Dachmarke
+        - paragraph [ref=f1e409]: "Alle Varianten: Kombination, Bildmarke, Wortmarke — SVG (RGB) und PDF (CMYK) in orange, weiss und outline."
+        - link "↓ ZIP" [ref=f1e410] [cursor=pointer]:
+          - /url: downloads/logos-dachmarke.zip
+      - generic [ref=f1e411]:
+        - paragraph [ref=f1e417]: Logos VK Albis
+        - paragraph [ref=f1e418]: Alle Logos der VK Albis — SVG und PDF (CMYK/RGB) als komplettes Paket.
+        - link "↓ ZIP" [ref=f1e419] [cursor=pointer]:
+          - /url: downloads/logos-abteilungen/albis.zip
+      - generic [ref=f1e420]:
+        - paragraph [ref=f1e426]: Brand Manual
+        - paragraph [ref=f1e427]: Das vollständige Marken-Manual der Verkehrskadetten. Strategie, Identität und Anwendung.
+        - link "↓ PDF" [ref=f1e428] [cursor=pointer]:
+          - /url: downloads/Verkehrskadetten_Marken-Manual.pdf
+      - generic [ref=f1e429]:
+        - paragraph [ref=f1e434]: Adobe Illustrator
+        - paragraph [ref=f1e435]: Original-.ai-Dateien für alle Marken und Familienmarken. Für Druckproduktionen.
+        - link "↓ ZIP" [ref=f1e436] [cursor=pointer]:
+          - /url: downloads/illustrator.zip
+      - generic [ref=f1e437]:
+        - paragraph [ref=f1e444]: Farbpalette
+        - paragraph [ref=f1e445]: Alle Farbwerte als Adobe ASE Swatch-Datei. CMYK für alle Adobe-Programme.
+        - link "↓ ASE" [ref=f1e446] [cursor=pointer]:
+          - /url: downloads/farbpalette.ase
+      - generic [ref=f1e447]:
+        - paragraph [ref=f1e452]: Web Guidelines
+        - paragraph [ref=f1e453]: "Richtlinien für digitale Auftritte: Farben, Typografie und Logonutzung im Web."
+        - link "↓ PDF" [ref=f1e454] [cursor=pointer]:
+          - /url: downloads/web-guidelines.pdf
+      - generic [ref=f1e455]:
+        - paragraph [ref=f1e461]: Design System
+        - paragraph [ref=f1e462]: Alle Tokens, Farben, Typografie, Komponenten und Markenregeln als maschinenlesbares JSON — für KI-Tools und Entwickler.
+        - link "↓ JSON" [ref=f1e463] [cursor=pointer]:
+          - /url: downloads/design-system.json
+      - generic [ref=f1e464]:
+        - paragraph [ref=f1e470]: Design System Docs
+        - paragraph [ref=f1e471]: Alle Markenregeln, Tokens und Komponenten als lesbare Markdown-Dokumentation — für Menschen und KI gleichermassen.
+        - link "↓ MD" [ref=f1e472] [cursor=pointer]:
+          - /url: downloads/design-system.md
+      - generic [ref=f1e473]:
+        - paragraph [ref=f1e479]: Favicons
+        - paragraph [ref=f1e480]: Ein Set für die Dachmarke und alle Abteilungen — keine abteilungsspezifischen Favicons. ICO, SVG, PNG (16–512 px) und Apple Touch Icon, Bildmarke weiss auf VK Blau.
+        - link "↓ ZIP" [ref=f1e481] [cursor=pointer]:
+          - /url: downloads/favicons.zip
+  - contentinfo [ref=f1e482]:
+    - generic [ref=f1e483]:
+      - img "Verkehrskadetten" [ref=f1e485]
+      - generic [ref=f1e486]:
+        - text: Markenportal der Verkehrskadetten
+        - link "marke@verkehrskadetten.ch" [ref=f1e487] [cursor=pointer]:
+          - /url: mailto:marke@verkehrskadetten.ch
+        - text: © 2026 Schweizerischer Verkehrskadetten Verband
+  - button "Marken-Coach öffnen" [ref=f1e488] [cursor=pointer]:
+    - generic [ref=f1e491]: Marken-Coach

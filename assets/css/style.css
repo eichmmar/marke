@@ -11,7 +11,8 @@
   --off-white: #f2f2f2;
   --border: #eee;
   --text-muted: #6b6b6b;
-  --max-w: 900px;
+  --max-w: 1080px;
+  --text-max-w: 820px; /* Zeilenlänge für Fliesstext — breiter liest sich schlecht */
   --pad: 40px;
   --section-gap: 64px;
 
@@ -137,7 +138,7 @@ a:hover:not(.dl-btn) { text-decoration-color: currentColor; }
   text-transform: uppercase; letter-spacing: 0.18em; margin-bottom: 4px;
 }
 .section-title { font-size: 32px; font-weight: 700; color: var(--black); margin-bottom: 8px; }
-.section-desc { font-size: 15px; color: var(--text-muted); line-height: 1.65; margin-bottom: 32px; }
+.section-desc { font-size: 15px; color: var(--text-muted); line-height: 1.65; max-width: var(--text-max-w); margin-bottom: 32px; }
 
 /* ── 01 IDENTITY CARDS ── */
 .id-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
@@ -234,10 +235,10 @@ a:hover:not(.dl-btn) { text-decoration-color: currentColor; }
 /* Einsatzregeln der Farbwelt (Marken-Manual, Kap. 8) */
 .color-rules { margin-top: 28px; padding: 20px 24px; background: var(--off-white); border-radius: 10px; }
 .color-rules h3 { font-size: 11px; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 12px; }
-.color-rules ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.color-rules ul { max-width: var(--text-max-w); list-style: none; display: flex; flex-direction: column; gap: 8px; }
 .color-rules li { font-size: 13px; color: var(--black); line-height: 1.5; padding-left: 14px; position: relative; }
 .color-rules li::before { content: '—'; position: absolute; left: 0; color: var(--text-muted); }
-.color-rules-note { font-size: 12px; color: var(--text-muted); margin-top: 14px; line-height: 1.5; }
+.color-rules-note { max-width: var(--text-max-w); font-size: 12px; color: var(--text-muted); margin-top: 14px; line-height: 1.5; }
 .color-rules-note code { font-family: monospace; font-size: 11px; }
 .color-toast {
   position: absolute; top: 8px; right: 8px;
@@ -278,7 +279,7 @@ a:hover:not(.dl-btn) { text-decoration-color: currentColor; }
 /* Web-Einbindung (CDN-Standard + Self-Hosting) */
 .type-web { margin-top: 24px; padding: 20px 24px; background: var(--off-white); border-radius: 10px; }
 .type-web h4 { font-size: 11px; font-weight: 700; color: var(--orange); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 12px; }
-.type-web p { font-size: 13px; color: var(--black); line-height: 1.6; }
+.type-web p { max-width: var(--text-max-w); font-size: 13px; color: var(--black); line-height: 1.6; }
 .type-web p + p { margin-top: 10px; }
 .type-web code { font-family: monospace; font-size: 11px; }
 
@@ -300,9 +301,8 @@ a:hover:not(.dl-btn) { text-decoration-color: currentColor; }
 .ui-badge { font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 4px; line-height: 1.4; }
 .ui-badge--orange { background: var(--orange); color: var(--black); }
 .ui-badge--blue { background: var(--blue); color: white; }
-.ui-badge--wrong { background: var(--orange); color: white; }
+.ui-badge--sparsam { background: var(--orange); color: white; }
 .ui-ratio { font-size: 11px; font-family: monospace; color: var(--text-muted); }
-.ui-badge-item.is-wrong .ui-ratio { color: #c0392b; }
 
 /* ── 05 BILDSPRACHE ── */
 .bild-criteria {
@@ -378,6 +378,10 @@ a.dl-btn { display: inline-flex; align-items: center; justify-content: center; g
 .footer-meta a:hover { color: var(--orange); }
 
 /* ── RESPONSIVE ── */
+/* Nav: Logo + 7 Links brauchen ~760px (gap 28px) bzw. ~710px (gap 18px) — darunter würde sie umbrechen */
+@media (max-width: 1000px) { .nav-links { gap: 18px; } }
+@media (max-width: 840px)  { .nav-links { display: none; } }
+
 @media (max-width: 768px) {
   :root { --pad: 20px; --section-gap: 48px; }
   .hero { grid-template-columns: 1fr; padding: 48px var(--pad); }
