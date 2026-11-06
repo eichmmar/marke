@@ -1,10 +1,14 @@
 # Design System — Verkehrskadetten
 
-**Version:** 2.1.1 · **Stand:** 2026-11-03  
+**Version:** 2.1.2 · **Stand:** 2026-11-06  
 **Quelle:** Marken-Manual Verkehrskadetten, November 2025 (`downloads/Verkehrskadetten_Marken-Manual.pdf`)  
 **URL:** marke.verkehrskadetten.ch
 **Kontakt:** marke@verkehrskadetten.ch
 
+> **Änderungen in 2.1.2 (2026-11-06)** — Fliesstext-Breite einheitlich 820px
+> (`--text-max-w`); veraltete 580px-Angaben bei `.section-desc` und `maxLineLength`
+> korrigiert.
+>
 > **Änderungen in 2.1.1 (2026-11-03)** — Weiss auf Orange ist nicht mehr verboten,
 > sondern wegen der Lesbarkeit sparsam einzusetzen · maximale Inhaltsbreite
 > `--max-w` 1080px statt 900px, Fliesstext über `--text-max-w` auf 820px begrenzt.
@@ -310,7 +314,7 @@ Lizenz: OurType, intern. Dateien verbleiben unter `assets/fonts/FaktBold.ttf`,
 | Display / H1 | 40–64 px | 700 | 1.0–1.1 | letter-spacing −0.025em |
 | Headline / H2 | 24–32 px | 700 | 1.15 | — |
 | Subheading / H3 | 16–20 px | 700 | 1.3 | — |
-| Body Text | 14–16 px | 400 | 1.6–1.7 | max-width 820px |
+| Body Text | 14–16 px | 400 | 1.6–1.7 | max-width 820px (`--text-max-w`) |
 | Caption / Label | 9–12 px | 700 | 1.4 | uppercase, letter-spacing 0.10–0.20em |
 
 ### Ersatzschriften
@@ -510,7 +514,7 @@ bleibt der Favicon-Download derselbe.
 ```
 .section-label   11px · Bold · Uppercase · Orange · letter-spacing 0.18em
 .section-title   32px · Bold · Schwarz
-.section-desc    15px · Normal · #6b6b6b · max-width 580px
+.section-desc    15px · Normal · #6b6b6b · max-width 820px (--text-max-w)
 ```
 
 ### Karten (allgemein)

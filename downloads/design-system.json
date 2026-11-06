@@ -3,9 +3,16 @@
   "$id": "https://marke.verkehrskadetten.ch/design-system.json",
   "meta": {
     "name": "Verkehrskadetten Markenportal",
-    "version": "2.1.1",
-    "updated": "2026-11-03",
+    "version": "2.1.2",
+    "updated": "2026-11-06",
     "changelog": [
+      {
+        "version": "2.1.2",
+        "date": "2026-11-06",
+        "changes": [
+          "Fliesstext-Breite einheitlich 820px (--text-max-w); veraltete 580px-Angaben bei .section-desc und maxLineLength korrigiert"
+        ]
+      },
       {
         "version": "2.1.1",
         "date": "2026-11-03",
@@ -370,6 +377,7 @@
         "sizePx": "14–16",
         "weight": 400,
         "lineHeight": "1.6–1.7",
+        "maxWidth": "820px (--text-max-w)",
         "usage": "Fliesstext, Beschreibungen"
       },
       {
@@ -385,7 +393,7 @@
     "rules": {
       "italicUsage": "Inter-Italic punktuell für Betonungen/Zitate — nicht flächig einsetzen",
       "lineHeight": "body: 1.6, headlines: 1.0–1.15",
-      "maxLineLength": "580px für Fliesstext-Absätze"
+      "maxLineLength": "820px (--text-max-w) für Fliesstext-Absätze"
     }
   },
   "spacing": {
